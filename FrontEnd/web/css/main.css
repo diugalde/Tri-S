@@ -120,7 +120,7 @@ a:focus {
   margin: 0 auto;
 }
 .portfolio-filter {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
   text-align: center;
 }
 .portfolio-filter > li {
@@ -147,25 +147,38 @@ a:focus {
 .portfolio-items.col-6 > li {
   width: 16%;
 }
+.portfolio-item .item-inner{
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	border: 5px solid white;
+}
+.portfolio-item:hover .item-inner{
+	border: 5px solid #3A497C;
+	cursor: pointer;
+}
+
 .portfolio-item .item-inner {
+	position: absolute;
   margin: 0 20px 20px 0;
   text-align: center;
   background: #fff;
-  padding: 10px;
+  padding: 10px 10px 25px 10px;
   border-bottom: 1px solid #e1e1e1;
 }
 .portfolio-item img {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	width: 90%;
+	height: 90%;
 	margin: 0 auto;
 }
 .portfolio-item .portfolio-image {
   position: relative;
 }
 .img-container {
+	position: relative;
 	width: 200px;
 	height: 165px;
+	marigin: 0 auto;
 }
 .portfolio-item h5 {
   margin: 0;
