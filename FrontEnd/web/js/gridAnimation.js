@@ -108,9 +108,8 @@
 
 	function loadContent(item) {
 		//Remove tabs.
-		$(".tabs").attr('old-height', parseFloat($(".tabs").height()));
-		$(".tabs").animate({ height: 0}, "slow");
-		
+		$(".tabs").fadeOut(500);
+
 		// add expanding element/placeholder 
 		var dummy = document.createElement('div');
 		dummy.className = 'placeholder';
@@ -152,7 +151,7 @@
 			//classie.addClass(bodyEl, 'noscroll');
 
 			isAnimating = false;
-			var newHeight = parseFloat($('.content--show').prop('scrollHeight'))+20; 
+			var newHeight = parseFloat($('#content1').prop('scrollHeight'))+20; 
 			$("#theGrid").animate({height: newHeight}, "slow");
 			$("html, body").animate({ scrollTop: 0 }, "slow");
 			
@@ -183,7 +182,8 @@
 				classie.remove(gridItem, 'grid__item--animate');
 				lockScroll = false;
 				
-				$(".tabs").animate({ height: $(".tabs").attr('old-height')}, "slow");
+				$(".tabs").fadeIn(500);
+				
 			});
 			
 			// reset current
