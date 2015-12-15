@@ -10,6 +10,11 @@
 		<link href="css/main.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/tabs.css" />
 		<link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style1.css" />
+		<script src="js/jquery.js"></script>
+		<script src="js/modernizr.custom.js"></script>
 		<!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
@@ -42,7 +47,7 @@
 <section id="portfolio">
 	<div class="container">
 		<div class="box">
-			
+
 			<div class="tabs tabs-style-underline">
 				<nav>
 					<ul class="portfolio-filter">
@@ -54,102 +59,132 @@
 				</nav>
 			</div><!-- /tabs -->
 
-			<ul class="portfolio-items col-4">
+			<div id="theGrid" class="main">
+				<section class="grid">
+					<ul class="portfolio-items col-4">
 
-				<li class="portfolio-item admission">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img src="images/requestIcons/inclusion.png" alt="Inclusion">
-						</div>
-						<h5>Inclusión</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->
+						<li class="grid__item portfolio-item admission">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img src="images/requestIcons/inclusion.png" alt="Inclusion">
+								</div>
+								<h5>Inclusión</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->
 
-				<li class="portfolio-item admission">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/levantamientoRequisitos.png" alt="Requirements">
-						</div>
-						<h5>Levantamiento de requisitos</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->
 
-				<li class="portfolio-item admission">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/suficiencia.png" alt="Proficiency Test">
-						</div>
-						<h5>Examen de suficiencia</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->
+						<li class="grid__item portfolio-item admission">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/levantamientoRequisitos.png" alt="Requirements">
+								</div>
+								<h5>Levantamiento de requisitos</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->
 
-				<li class="portfolio-item admin">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/constancia.png" alt="Study Constancy">
-						</div>
-						<h5>Constancia de estudio</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->
+						<li class="grid__item portfolio-item admission">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/suficiencia.png" alt="Proficiency Test">
+								</div>
+								<h5>Examen de suficiencia</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->
 
-				<li class="portfolio-item admin">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/solicitudAsistente.png" alt="Assistance">
-						</div>
-						<h5>Quiero ser asistente</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->
+						<li class="grid__item portfolio-item admin">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/constancia.png" alt="Study Constancy">
+								</div>
+								<h5>Constancia de estudio</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->
 
-				<li class="portfolio-item admin">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/solicitudCompra.png" alt="Buy Request">
-						</div>
-						<h5>Solicitar compra</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->
+						<li class="grid__item portfolio-item admin">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/solicitudAsistente.png" alt="Assistance">
+								</div>
+								<h5>Quiero ser asistente</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->
 
-				<li class="portfolio-item support">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/solicitudLab.png" alt="Lab Request">
-						</div>
-						<h5>Solicitar laboratorio</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->	
+						<li class="grid__item portfolio-item admin">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/solicitudCompra.png" alt="Buy Request">
+								</div>
+								<h5>Compras, copias, impresiones</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->
 
-				<li class="portfolio-item support">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/prestamoEquipo.png" alt="Equipment Request">
-						</div>
-						<h5>Préstamo de equipo</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->									
+						<li class="grid__item portfolio-item support">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/solicitudLab.png" alt="Lab Request">
+								</div>
+								<h5>Espacios de trabajo</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->	
 
-				<li class="portfolio-item support">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/reporteBug.png" alt="Damage Report">
-						</div>
-						<h5>Reporte de daño</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->		
+						<li class="grid__item portfolio-item support">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/prestamoEquipo.png" alt="Equipment Request">
+								</div>
+								<h5>Préstamo de equipo</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->									
 
-				<li class="portfolio-item support">
-					<div class="item-inner">
-						<div class="portfolio-image img-container">
-							<img class="img-responsive" src="images/requestIcons/instalacionSoftware.png" alt="Software Installation">
-						</div>
-						<h5>Instalación de software</h5>          
-					</div>           
-				</li><!--/.portfolio-item-->												
+						<li class="grid__item portfolio-item support">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/reporteBug.png" alt="Damage Report">
+								</div>
+								<h5>Reporte de daño</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->		
 
-			</ul>   
+						<li class="grid__item portfolio-item support">
+							<div class="item-inner">
+								<div class="portfolio-image img-container">
+									<img class="img-responsive" src="images/requestIcons/instalacionSoftware.png" alt="Software Installation">
+								</div>
+								<h5>Instalación de software</h5>          
+							</div>           
+						</li><!--/.portfolio-item-->												
+
+					</ul>   
+				</section>
+				<section class="content">
+					<div id="content1">
+						<article class="content__item">
+							<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.</p>
+														<p>I am fully aware of the shortcomings in these essays. I shall not touch upon those which are characteristic of first efforts at investigation. The others, however, demand a word of explanation.jijijiji</p>
+						</article>
+					</div>
+					<button class="close-button"><i id="go-back-form" class="fa fa-arrow-left fa-2x"></i><span>Close</span></button>
+				</section>
+
+			</div>
 		</div><!--/.box-->
 	</div><!--/.container-->
 </section><!--/#portfolio-->
+
+
 
 <footer id="footer">
 	<div class="container">
@@ -161,9 +196,10 @@
 	</div>
 </footer><!--/#footer-->
 
-<script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.isotope.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/gridAnimation.js"></script>
 </body>
 </html>
