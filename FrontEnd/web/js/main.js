@@ -1,19 +1,17 @@
 jQuery(function($) {
-	
+
 	var elementSize = 250;
-	
+
 	function changePortfolioMargins() {
 		$portfolio = $('.portfolio-items');
 		var currPortfolioWidth = parseFloat($portfolio.css('width'));
 		var currElements = Math.floor(currPortfolioWidth/elementSize);
 		var newPadding = Math.floor((currPortfolioWidth-(currElements*elementSize))/2.0);
-		console.log(newPadding);
 		$portfolio.css('margin-left', (newPadding+20) + 'px');
 		$portfolio.css('margin-right', newPadding + 'px');
 	}
 
-	//Isotope
-	$(window).load(function(){
+	function loadPortfolio() {
 		$portfolio = $('.portfolio-items');
 		$portfolio.isotope({
 			itemSelector : 'li',
@@ -31,18 +29,21 @@ jQuery(function($) {
 			$portfolio.isotope({ filter: selector });
 			return false;
 		});
+	}
 
+	$(window).load(function(){
+		loadPortfolio();
 		changePortfolioMargins();
 	});
-	
+
 	$(window).smartresize(function(){
 		$portfolio = $('.portfolio-items');
 		$portfolio.isotope({
 			masonry: { columnWidth: elementSize }
 		});
-		
+
 		changePortfolioMargins();
-		
+
 	});	
-		
+
 });

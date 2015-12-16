@@ -233,7 +233,7 @@
 	left: 0;
 	width: 100%;
 	pointer-events: none;
-	height: auto;
+	height: 100%;
 	/* Avoid second scroll bar in Chrome! */
 	visibility: hidden;
 	z-index: 4000;
