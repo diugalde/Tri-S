@@ -1,0 +1,54 @@
+.footer-text {
+    text-align: center;
+}
+
+.header {
+    height: 65px;
+}
+
+#logo {
+    display: inline;
+    max-height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#logo-link {
+    height: 60%;
+    width: 100%;
+}
+
+.form-title {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 1.2em;
+}
+
+.form-title img {
+    float:left;
+    position: relative;
+    max-height: 5em;
+    max-width: 5em;
+}
+
+.form-title h3 {
+    margin-left: 1.2em;
+    float: left;
+}
+
+.ui-popup-container {
+    background-color: white !important;
+}
+
+.ui-title {
+    overflow: visible !important;
+}
+
+.submit-container {
+    position: relative;
+    width: 100%;
+}
+
+.submit-button {
+    margin: 0 auto;
+}
