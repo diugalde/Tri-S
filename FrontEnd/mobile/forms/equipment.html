@@ -1,0 +1,84 @@
+<div role="main" class="ui-content">
+    <div class="form-title">
+        <img src="images/prestamoEquipo.png">
+        <h3>Prestamo de equipo</h3>
+    </div>
+
+    <div class="clear-float"></div>
+
+    <form method="post" action="#main-page" data-ajax="false">
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="name">Nombre completo </label>
+                    <input type="text" name="name" id="equip-name" placeholder="">
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="email">Correo electronico </label>
+                    <input type="email" id="equip-email" name="email" placeholder="">
+                </div>
+            </div>
+        </div><!-- /grid-a -->
+
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="student-id">Carne </label>
+                    <input type="number" name="student-id" id="equip-student-id" placeholder="">
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="id">Cedula </label>
+                    <input type="number" id="equip-id" name="id" placeholder="">
+                </div>
+            </div>
+        </div><!-- /grid-a -->
+        
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="description">Descripcion del equipo a solicitar </label>
+                <textarea name="description" id="equip-description" placeholder=""></textarea>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="justify">Justificacion de la solicitud </label>
+                <textarea name="justify" id="equip-justify" placeholder=""></textarea>
+                </div>
+            </div>
+        </div><!-- /grid-a -->
+        
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="use-day">Fecha de uso </label>
+                    <input type="text" data-role="datebox" data-options='{"mode":"flipbox", "overrideDateFormat": "%d/%m/%Y"}' id="equip-use-day" name="use-day">
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="start-time">Hora de uso (inicial) </label>
+                    <input type="text" data-role="datebox" data-options='{"mode":"timeflipbox"}' id="equip-start-time" name="start-time">
+                </div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-body ui-body-d">
+                    <label for="end-time">Hora de uso (final)</label>
+                    <input type="text" data-role="datebox" data-options='{"mode":"timeflipbox"}' id="equip-end-time" name="end-time">
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+        
+        <div class="submit-container">
+            <input type="submit" data-inline="true" value="Enviar solicitud" data-theme="b" class="submit-button">
+        </div>
+    </form>
+</div><!-- /content -->
+
+<div data-role="footer">
+    <p class="footer-text">Creative Commons. Tecnologico de Costa Rica. 2015.</p>
+</div><!-- /footer -->

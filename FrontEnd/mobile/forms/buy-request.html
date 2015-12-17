@@ -1,39 +1,47 @@
-<div data-role="header" class="header">
-    <a href="#main-page" id="logo-link">
-        <img src="images/logo.png" class="ui-btn-left" id="logo"/>
-    </a>
-</div><!-- /header -->
-
 <div role="main" class="ui-content">
     <div class="form-title">
         <img src="images/solicitudCompra.png">
-        <h3>Compras, copias, impresiones</h3>
+        <h3>Solicitud de compra</h3>
     </div>
-    
+
+    <div class="clear-float"></div>
+
     <form method="post" action="#main-page" data-ajax="false">
-        <label for="name">Name : <span>*</span></label>
-        <input type="text" name="name" id="name" placeholder="Name">
-        <label for="email">Email: <span>*</span></label>
-        <input type="email" id="email" name="email" placeholder="Email"/>
-        <fieldset data-role="controlgroup">
-            <legend>Gender:</legend>
-            <label for="male">Male</label>
-            <input type="radio" name="gender" id="male" value="male">
-            <label for="female">Female</label>
-            <input type="radio" name="gender" id="female" value="female">
-        </fieldset>
-        <fieldset data-role="controlgroup">
-            <legend>Qualification:</legend>
-            <label for="graduation">Graduation</label>
-            <input type="checkbox" id="graduation" value="graduation">
-            <label for="postgraduation">Post Graduation</label>
-            <input type="checkbox" id="postgraduation" value="postgraduation">
-            <label for="other">Other</label>
-            <input type="checkbox" id="other" value="other">
-        </fieldset>
-        <label for="info">Message:</label>
-        <textarea name="addinfo" id="info" placeholder="Message"></textarea>
-        <input type="submit" data-inline="true" value="Enviar solicitud" data-theme="b">
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="name">Nombre completo </label>
+                    <input type="text" name="name" id="buy-name" placeholder="">
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="email">Correo electronico </label>
+                    <input type="email" id="buy-email" name="email" placeholder="">
+                </div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-body ui-body-d">
+                    <label for="id">Cedula </label>
+                    <input type="number" id="buy-id" name="id" placeholder="">
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <label for="detail">Detalle de la compra </label>
+                <textarea name="detail" id="buy-detail" placeholder=""></textarea>
+            </div>
+            <div class="ui-block-b">
+                <label for="justify">Justificacion de la compra </label>
+                <textarea name="justify" id="buy-justify" placeholder=""></textarea>
+            </div>
+        </div><!-- /grid-a -->
+
+        <div class="submit-container">
+            <input type="submit" data-inline="true" value="Enviar solicitud" data-theme="b" class="submit-button">
+        </div>
     </form>
 </div><!-- /content -->
 
