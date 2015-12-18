@@ -12,6 +12,12 @@ h6 {
   color: #777;
   font-weight: 300;
 }
+
+.clear-form {
+	clear: both;
+	margin: 0 !important;
+	display: !important;
+}
 h5 {
 	font-weight: bolder;
 }

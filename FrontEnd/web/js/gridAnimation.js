@@ -108,6 +108,10 @@ var ready = function() {
 		}
 
 		function loadContent(item) {
+			
+			itemID = item.getAttribute("linked-div");
+			$selectedItem = $("#"+itemID);
+			selectedItem = $selectedItem[0];
 			//Remove tabs.
 			$(".tabs").fadeOut(500);
 
@@ -145,14 +149,15 @@ var ready = function() {
 				// show the main content container
 				classie.add(contentItemsContainer, 'content--show');
 				// show content item:
-				classie.add(contentItems[0], 'content__item--show');
+				classie.add(selectedItem, 'content__item--show');
 				// show close control
 				classie.add(closeCtrl, 'close-button--show');
 				// sets overflow hidden to the body and allows the switch to the content scroll
 				//classie.addClass(bodyEl, 'noscroll');
 
 				isAnimating = false;
-				var newHeight = parseFloat($('#content1').prop('scrollHeight')); 
+				var newHeight = parseFloat($selectedItem.prop('scrollHeight'));
+				$selectedItem.css("z-index", 9999);
 				$("#theGrid").animate({height: newHeight}, "slow");
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 				$(".portfolio-items").hide();
@@ -161,7 +166,7 @@ var ready = function() {
 		}
 
 		function hideContent() {
-			var gridItem = gridItems[current], contentItem = contentItems[0];
+			var gridItem = gridItems[current], contentItem = selectedItem;
 
 			classie.remove(contentItem, 'content__item--show');
 			classie.remove(contentItemsContainer, 'content--show');
@@ -187,6 +192,7 @@ var ready = function() {
 					$(".tabs").fadeIn(500);
 					$(".portfolio-items").show();
 					$("#theGrid").css('height','auto');
+					$selectedItem.css("z-index", -1);
 
 				});
 
