@@ -114,3 +114,5 @@ Entregables semana #3 (14 de diciembre, 2015)
 
 	19 de diciembre:
 		- Archivo requests.js listo, envía cualquier formulario y muestra notificaciones de error o éxito.
+		- Removiendo cdn y agregando archivos de JS y CSS locales para el módulo móvil.
+		- Subiendo ambos prototipos a mi dominio dieg8.com y dieg8.com/mobile para poder visualizarlo más fácilmente.

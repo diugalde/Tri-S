@@ -1,6 +1,6 @@
 var ready = function() {
 
-	var baseURL = "http://192.168.1.108:3000/posts";
+	var baseURL = "http://jsonplaceholder.typicode.com/posts";
 
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
@@ -11,15 +11,17 @@ var ready = function() {
 			data: form.serialize()
 		}).success(function(data) {
 			console.log(data);
-			generateNotification("success", data);
+			generateNotification("success", "Solicitud enviada exitosamente. Se ha enviado un correo de recibido.");
 		}).fail(function(data) {
-			generateNotification("error", data);
+			generateNotification("error", "Error en los campos del formulario.");
+		}).always(function() {
+			$("html, body").animate({ scrollTop: 0 }, "slow");
 		});
 	});
 
 
 	function generateNotification(notificationType, message) {
-		message = JSON.stringify(message);
+		//message = JSON.stringify(message);
 		noty({
 			text        : message,
 			type        : notificationType,
