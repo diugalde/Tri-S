@@ -3,7 +3,18 @@ var ready = function() {
 		$("#form-content-section > div").each(function( index ) {
 			var htmlFile = $(this).attr('linked-form');
 			$(this).children().first().load("forms/" + htmlFile, function() {
-				$(this).find(".bootstrap-datepicker").datepicker().on('changeDate', function (ev) {
+				$(this).find(".bootstrap-timepicker").datetimepicker({
+					format: 'HH:ii p',
+					autoclose: true,
+					// todayHighlight: true,
+					showMeridian: true,
+					startView: 1,
+					maxView: 1
+				}).on('changeDate', function (ev) {
+					var inputField = $(this);
+					( inputField.val() == '' ) ? inputField.prev().removeClass('float') : inputField.prev().addClass('float');
+				});
+				$(this).find(".bootstrap-datepicker").datetimepicker({format: 'dd-mm-yyyy', autoclose: true, minView: 2}).on('changeDate', function (ev) {
 					var inputField = $(this);
 					( inputField.val() == '' ) ? inputField.prev().removeClass('float') : inputField.prev().addClass('float');
 				});
