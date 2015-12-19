@@ -1,90 +1,141 @@
 <form class="cd-form floating-labels">
-	<fieldset>
-		<legend>
-			<div class="form-header">
-				<img src="images/requestIcons/inclusionComp.png" class="img-responsive"/>
-				<h3>Inclusión para Computación</h3>
-			</div>
-		</legend>
-		
-		<section class="clear-float"></section>
+    <fieldset>
+        <legend>
+            <div class="form-header">
+                <img src="images/requestIcons/inclusionComp.png" class="img-responsive"/>
+                <h3>Inclusión para Computación</h3>
+            </div>
+        </legend>
 
-		<div class="icon">
-			<label class="cd-label" for="cd-name">Nombre</label>
-			<input class="use form-field" type="text" name="name" id="cd-name" required>
-		</div> 
+        <section class="clear-float"></section>
 
-		<div class="icon">
-			<label class="cd-label" for="cd-company">Hora</label>
-			<input class="company form-field bootstrap-timepicker" type="text" name="time" id="cd-company">
-		</div> 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="studentName">Nombre completo</label>
+                    <input class="use form-field" type="text" name="studentName" id="inc-name" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label form-field" for="email">Correo electrónico</label>
+                    <input class="email form-field" type="email" name="email" id="inc-email" required>
+                </div>
+            </div>
+        </div>
 
-		<div class="icon">
-			<label class="cd-label form-field" for="cd-email">Email</label>
-			<input class="email form-field" type="email" name="email" id="cd-email" required>
-		</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="student-id">Carné</label>
+                    <input class="use form-field" type="text" name="studentId" id="inc-student-id" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="telephone">Teléfono (opcional)</label>
+                    <input class="use form-field" type="text" name="telephone" id="inc-telephone" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="cellphone">Celular</label>
+                    <input class="use form-field" type="text" name="cellphone" id="inc-cellphone" required>
+                </div> 
+            </div>
+        </div>
 
-		<div>
-			<h4 class="header-label">Sede</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="career">Carrera</label>
+                    <input class="use form-field" type="text" name="career" id="inc-career" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="enrollDate">Día de matricula</label>
+                    <input class="form-field bootstrap-datepicker" type="text" name="enrollDate" id="inc-enroll-day">
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="enrollTime">Hora de matricula</label>
+                    <input class="form-field bootstrap-timepicker" type="text" name="enrollTime" id="inc-enroll-time">
+                </div> 
+            </div>
+        </div>
 
-			<p class="cd-select icon">
-				<select class="budget" name="campus">
-					<option value="Alajuela">Alajuela</option>
-					<option value="Cartago">Cartago</option>
-					<option value="San Jose">San Jose</option>
-				</select>
-			</p>
-		</div> 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseName">Nombre del curso</label>
+                    <input class="use form-field" type="text" name="courseName" id="inc-course" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseCode">Código del curso</label>
+                    <input class="use form-field" type="text" name="courseCode" id="inc-course-code" required>
+                </div> 
+            </div>
+        </div>
 
-		<div>
-			<h4 class="header-label">Tipo levantamiento</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseGroup">Número de grupo</label>
+                    <input class="use form-field" type="text" name="courseGroup" id="inc-group" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="professorName">Nombre del profesor</label>
+                    <input class="use form-field" type="text" name="professorName" id="inc-prof" required>
+                </div> 
+            </div>
+        </div>
 
-			<ul class="cd-form-list">
-				<li>
-					<input type="radio" name="req" value="RN" checked>
-					<label for="cd-radio-1">RN</label>
-				</li>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label>
+                        <input class="toggle-bootstrap" type="checkbox" name="fulfillRequisites" checked data-toggle="toggle" id="inc-req"> Tiene los requisitos?
+                    </label>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label>
+                        <input class="toggle-bootstrap" type="checkbox" name="hasTimeConflict" checked data-toggle="toggle" id="inc-time-conflict"> Tiene choque de horario?
+                    </label>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="rn">Inidque el RN (solo si tiene)</label>
+                    <input class="use form-field" type="text" name="rn" id="inc-rn" required>
+                </div> 
+            </div>
+        </div>
 
-				<li>
-					<input type="radio" name="req" value="Requisitos">
-					<label for="cd-radio-2">Requisitos</label>
-				</li>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="enrolledCourses">Cursos matriculados este semestre (separados por coma)</label>
+                    <textarea class="message form-field" name="enrolledCourses" id="inc-curr-courses" required></textarea>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="justification">Justificación de la inclusión</label>
+                    <textarea class="message form-field" name="justification" id="inc-justify" required></textarea>
+                </div> 
+            </div>
+        </div>
 
-				<li>
-					<input type="radio" name="req" value="Choque horarios">
-					<label for="cd-radio-3">Choque horarios</label>
-				</li>
-			</ul>
-		</div>
-
-		<div>
-			<h4 class="header-label">Profesor</h4>
-
-			<ul class="cd-form-list">
-				<li>
-					<input type="checkbox" name="teacher" value="Eddy">
-					<label for="cd-checkbox-1">Eddy</label>
-				</li>
-
-				<li>
-					<input type="checkbox" name="teacher" value="Jaime">
-					<label for="cd-checkbox-2">Jaime</label>
-				</li>
-
-				<li>
-					<input type="checkbox" name="teacher" value="Aurelio">
-					<label for="cd-checkbox-3">Aurelio</label>
-				</li>
-			</ul>
-		</div>
-
-		<div class="icon">
-			<label class="cd-label" for="cd-textarea">Justificacion</label>
-			<textarea class="message form-field" name="justifify" id="cd-textarea" required></textarea>
-		</div>
-
-		<div>
-			<input type="submit" value="Send Message">
-		</div>
-	</fieldset>
+        <div>
+            <input type="submit" value="Enviar solicitud">
+        </div>
+    </fieldset>
 </form>
