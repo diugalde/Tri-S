@@ -1,12 +1,87 @@
-Semana 1 (30 de noviembre, 2015):
-	2 de diciembre:
-		- Algo.
-		- Algo.
-	____________________________________
-	3 de diciembre:
-		- Algo.
-		- Algo.
-		- Algo.
+Entregables semana #1 (30 de noviembre, 2015)
 
-_____________________________________________________________________
-Semana 2 (7 de diciembre, 2015):
+	30 de noviembre:
+		- Recolección de ideas para un proyecto para el curso.
+
+	01 de diciembre:
+		- Primera clase, introducción con la profesora y lectura del programa del curso.
+		- Contactamos a Kevin Moraga (cliente) para establecer una reunión.
+		- Investigacíon sobre el programa de uso para el proyecto: Request Tracker. (Para darnos una idea de lo que se busca 			implementar para la institución)
+
+	02 de diciembre:
+		- Reunión con Kevin Moraga para drecolectar información sobre el sistema que busca. 
+		- También nos reunimos con Ingrid Amador y Priscilla Cantillo, funcionarias de la institución involucradas en el 			proyecto, para informarles sobre su desarrollo. 
+		- Creación de una minuta para la reunión con el cliente. 
+		- Estudio de las plantillas para los entregables de la primera semana (Project Charter y Visión)
+
+	03 de diciembre:
+		- Creación de un logo y nombre para el sistema (se consultan con el cliente).
+		- Comienzo del Project Charter con Diego: descripción del proyecto, propósito del proyecto, caso de la organización, 			entregables, hitos.
+		- Comienzo del documento de Visión: establecimeinto de objetivos, riesgos, suposiciones y el alcance.
+
+	04 de diciembre:
+		- Finalización de los documentos de Visión y Project Charter con Diego. 
+		- Adjuntamos los documentos a un correo para enviarlo a la profesora. 
+
+_______________________________________________________________________________________________
+
+Entregables semana #2 (7 de diciembre, 2015)
+
+	07 de diciembre:
+		- Trabajo en conjunto con Diego en una página web para el sistema para tener una idea de como se van a ver los 				prototipos.
+		- Instalación de el programa Pencil en mi computadora personal. 
+		- Reviso los wireframes creados por Diego para discutir sobre algunas ideas y modificaciones. 
+
+	08 de diciembre:
+		- Desarrollo del prototipo móvil en Pencil.
+		- Reunión con Diego para la revisión de los prototipos, comentamos el prototipo que cada uno hizo.
+
+	09 de diciembre:
+		- Segunda reunión con el cliente para recolectar requerimientos a un nivel más detallado y mostrarle el documento de 			Project Charter.
+		- También le mostramos los prototipos hechos para esperar su aprobación. 
+		- Consultamos recomendaciones de papers para el proyecto con Kevin Moraga.
+		- Instalación de Request Tracker en la laptop de Diego para ambos tener claro el procedimiento. 
+
+	10 de diciembre:
+		- Establecemos los temas para los papers de cada uno.
+		- Uso del demo disponible de Requqest Tracker para estudiarlo. 
+
+	11 de diciembre:
+		- El cliente aprueba los prototipos presentados. 
+		- Prototipo y temas de paper se suben al Tec-Digital de cada integrante. 
+
+	12 de diciembre:
+		- Recolección de requerimientos con Ingrid y Priscilla respecto a los flujos seleccionados en el alcance del proyecto.
+		- Creación de la minuta para la reunión.
+
+	13 de diciembre:
+		- Búsqueda y creación de iconos que serán utilizados por la aplicación web y móvil del sistema.
+		- Investigación de los estilos para los comnponentes de los formularios, tanto web como móvil. 
+		- Establecemos Jquery Mobile como la herramienta que se va utilizar para el desarrollo móvil. 
+
+_______________________________________________________________________________________________
+
+Entregables semana #3 (14 de diciembre, 2015)
+
+	14 de diciembre: 
+		- Lectura de la docuemntación para Jquery Mobile.
+		- Creación de una carpeta en Github para el desarrollo móvil.
+		- Inicio de la aplicación móvil, prueba de varios elementos que proporciona Jquery Mobile. 
+
+	15 de diciembre:
+		- La idea principal para los formularios de las aplicaciones se establece, queremos que el usuario no tenga una mala 			experiencia al llenarlos. 
+		- Encuentro de componentes para la selección de fechas que sean amigables con el usuario.
+
+	16 de diciembre:
+		- Trabajo en el desarrollo de página principal móvil donde se listan las posibles solicitudes que el usuario puede 			hacer.
+		- Reunión con la profesora María Estrada para hablar sobre el prototipo, correcciones de documentos y definición de 			fechas para la entrega de la primer iteración (se establece Martes).
+		- Desarrollo de todos los formularios que se utilizaran en el componente móvil. 
+
+	17 de diciembre:
+		- Recolectamos la firma de Ingrid y Priscilla para la minuta de la reunión que habíamos tenido sobre los 
+		requerimientos.
+		- Trabajo  y revisión de los estilos de la página móvil. 
+
+	18 de diciembre:
+		- Actualización de la bitácora personal en Github.
+		- Inicio del desarrollo de los formularios web. 
