@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="name">Nombre completo</label>
-                    <input class="use form-field" type="text" name="name" id="inc-name" required>
+                    <label class="cd-label" for="studentName">Nombre completo</label>
+                    <input class="use form-field" type="text" name="studentName" id="inc-name" required>
                 </div> 
             </div>
             <div class="col-md-6">
@@ -28,7 +28,7 @@
             <div class="col-md-4">
                 <div class="icon">
                     <label class="cd-label" for="student-id">Carné</label>
-                    <input class="use form-field" type="text" name="student-id" id="inc-student-id" required>
+                    <input class="use form-field" type="text" name="studentId" id="inc-student-id" required>
                 </div> 
             </div>
             <div class="col-md-4">
@@ -54,14 +54,14 @@
             </div>
             <div class="col-md-4">
                 <div class="icon">
-                    <label class="cd-label" for="enroll-day">Día de matricula</label>
-                    <input class="form-field bootstrap-datepicker" type="text" name="enroll-day" id="inc-enroll-day">
+                    <label class="cd-label" for="enrollDate">Día de matricula</label>
+                    <input class="form-field bootstrap-datepicker" type="text" name="enrollDate" id="inc-enroll-day">
                 </div> 
             </div>
             <div class="col-md-4">
                 <div class="icon">
-                    <label class="cd-label" for="enroll-time">Hora de matricula</label>
-                    <input class="form-field bootstrap-timepicker" type="text" name="enroll-time" id="inc-enroll-time">
+                    <label class="cd-label" for="enrollTime">Hora de matricula</label>
+                    <input class="form-field bootstrap-timepicker" type="text" name="enrollTime" id="inc-enroll-time">
                 </div> 
             </div>
         </div>
@@ -69,14 +69,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="course">Nombre del curso</label>
-                    <input class="use form-field" type="text" name="course" id="inc-course" required>
+                    <label class="cd-label" for="courseName">Nombre del curso</label>
+                    <input class="use form-field" type="text" name="courseName" id="inc-course" required>
                 </div> 
             </div>
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="course-code">Código del curso</label>
-                    <input class="use form-field" type="text" name="course-code" id="inc-course-code" required>
+                    <label class="cd-label" for="courseCode">Código del curso</label>
+                    <input class="use form-field" type="text" name="courseCode" id="inc-course-code" required>
                 </div> 
             </div>
         </div>
@@ -84,14 +84,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="group">Número de grupo</label>
-                    <input class="use form-field" type="text" name="group" id="inc-group" required>
+                    <label class="cd-label" for="courseGroup">Número de grupo</label>
+                    <input class="use form-field" type="text" name="courseGroup" id="inc-group" required>
                 </div> 
             </div>
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="prof">Nombre del profesor</label>
-                    <input class="use form-field" type="text" name="prof" id="inc-prof" required>
+                    <label class="cd-label" for="professorName">Nombre del profesor</label>
+                    <input class="use form-field" type="text" name="professorName" id="inc-prof" required>
                 </div> 
             </div>
         </div>
@@ -100,14 +100,14 @@
             <div class="col-md-4">
                 <div class="icon">
                     <label>
-                        <input class="toggle-bootstrap" type="checkbox" checked data-toggle="toggle" id="inc-req"> Tiene los requisitos?
+                        <input class="toggle-bootstrap" type="checkbox" name="fulfillRequisites" checked data-toggle="toggle" id="inc-req"> Tiene los requisitos?
                     </label>
                 </div> 
             </div>
             <div class="col-md-4">
                 <div class="icon">
                     <label>
-                        <input class="toggle-bootstrap" type="checkbox" checked data-toggle="toggle" id="inc-time-conflict"> Tiene choque de horario?
+                        <input class="toggle-bootstrap" type="checkbox" name="hasTimeConflict" checked data-toggle="toggle" id="inc-time-conflict"> Tiene choque de horario?
                     </label>
                 </div> 
             </div>
@@ -122,14 +122,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="curr-courses">Cursos matriculados este semestre (separados por coma)</label>
-                    <textarea class="message form-field" name="curr-courses" id="inc-curr-courses" required></textarea>
+                    <label class="cd-label" for="enrolledCourses">Cursos matriculados este semestre (separados por coma)</label>
+                    <textarea class="message form-field" name="enrolledCourses" id="inc-curr-courses" required></textarea>
                 </div> 
             </div>
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="justify">Justificación de la inclusión</label>
-                    <textarea class="message form-field" name="justify" id="inc-justify" required></textarea>
+                    <label class="cd-label" for="justification">Justificación de la inclusión</label>
+                    <textarea class="message form-field" name="justification" id="inc-justify" required></textarea>
                 </div> 
             </div>
         </div>

@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="name">Nombre completo</label>
-                    <input class="use form-field" type="text" name="name" id="assist-name" required>
+                    <label class="cd-label" for="studentName">Nombre completo</label>
+                    <input class="use form-field" type="text" name="studentName" id="assist-name" required>
                 </div> 
             </div>
             <div class="col-md-6">
@@ -27,8 +27,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="icon">
-                    <label class="cd-label" for="student-id">Carné</label>
-                    <input class="use form-field" type="text" name="student-id" id="assist-student-id" required>
+                    <label class="cd-label" for="studentId">Carné</label>
+                    <input class="use form-field" type="text" name="studentId" id="assist-student-id" required>
                 </div> 
             </div>
             <div class="col-md-4">
@@ -54,8 +54,8 @@
             </div>
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="official-name">Nombre del funcionario que voy a asistir</label>
-                    <input class="use form-field" type="text" name="official-name" id="assist-official-name" required>
+                    <label class="cd-label" for="officialName">Nombre del funcionario que voy a asistir</label>
+                    <input class="use form-field" type="text" name="officialName" id="assist-official-name" required>
                 </div> 
             </div>
         </div>
@@ -65,23 +65,23 @@
                 <h4 class="header-label">Tipo de asistencia</h4>
                 <ul class="cd-form-list">
                     <li>
-                        <input type="radio" name="radio-button" id="cd-radio-1 assist-assistant" checked>
+                        <input type="radio" name="assistanceType" id="cd-radio-1 assist-assistant" checked="checked" value="Horas asistente">
                         <label for="cd-radio-1">Horas asistente</label>
                     </li>
                     <li>
-                        <input type="radio" name="radio-button" id="cd-radio-2 assist-student">
+                        <input type="radio" name="assistanceType" id="cd-radio-2 assist-student" value="Horas estudiante">
                         <label for="cd-radio-2">Horas estudiante</label>
                     </li>
                     <li>
-                        <input type="radio" name="radio-button" id="cd-radio-3 assist-special">
+                        <input type="radio" name="assistanceType" id="cd-radio-3 assist-special" value="Asistente especial">
                         <label for="cd-radio-3">Asistente especial</label>
                     </li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="activities">Actividades que realizará el estudiante</label>
-                    <textarea class="message form-field" name="activities" id="assist-activities" required></textarea>
+                    <label class="cd-label" for="assistanceActivities">Actividades que realizará el estudiante</label>
+                    <textarea class="message form-field" name="assistanceActivities" id="assist-activities" required></textarea>
                 </div> 
             </div>
         </div>
@@ -89,20 +89,20 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="icon">
-                    <label class="cd-label" for="course-score">Nota del curso</label>
-                    <input class="use form-field" type="text" name="course-score" id="assist-course-score" required>
+                    <label class="cd-label" for="courseScore">Nota del curso</label>
+                    <input class="use form-field" type="text" name="courseScore" id="assist-course-score" required>
                 </div> 
             </div>
             <div class="col-md-4">
                 <div class="icon">
-                    <label class="cd-label" for="avg-score">Promedio ponderado del semestre pasado</label>
-                    <input class="use form-field" type="text" name="avg-score" id="assist-avg-score" required>
+                    <label class="cd-label" for="studentAverageScore">Promedio ponderado del semestre pasado</label>
+                    <input class="use form-field" type="text" name="studentAverageScore" id="assist-avg-score" required>
                 </div> 
             </div>
             <div class="col-md-4">
                 <div class="icon">
-                    <label class="cd-label" for="hours">Total de horas</label>
-                    <input class="use form-field" type="text" name="hours" id="assist-hours" required>
+                    <label class="cd-label" for="assistanceTotalHours">Total de horas</label>
+                    <input class="use form-field" type="text" name="assistanceTotalHours" id="assist-hours" required>
                 </div> 
             </div>
         </div>
@@ -112,23 +112,23 @@
                 <h4 class="header-label">Banco</h4>
                 <ul class="cd-form-list">
                     <li>
-                        <input type="radio" name="radio-button" id="cd-radio-1 assist-credit-bank" checked>
+                        <input type="radio" name="bankName" id="cd-radio-1 assist-credit-bank" value="Banco Credito Agrícola" checked="checked">
                         <label for="cd-radio-1">Banco Credito Agrícola</label>
                     </li>
                     <li>
-                        <input type="radio" name="radio-button" id="cd-radio-2 assist-nat-bank">
+                        <input type="radio" name="bankName" id="cd-radio-2 assist-nat-bank" value="Banco Nacional">
                         <label for="cd-radio-2">Banco Nacional</label>
                     </li>
                     <li>
-                        <input type="radio" name="radio-button" id="cd-radio-3 assist-pop-bank">
+                        <input type="radio" name="bankName" id="cd-radio-3 assist-pop-bank" value="Banco Popular">
                         <label for="cd-radio-3">Banco Popular</label>
                     </li>
                 </ul>
             </div>
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="client">Numero de cuenta cliente</label>
-                    <input class="use form-field" type="text" name="client" id="assist-client" required>
+                    <label class="cd-label" for="clientAccountNumber">Numero de cuenta cliente</label>
+                    <input class="use form-field" type="text" name="clientAccountNumber" id="assist-client" required>
                 </div> 
             </div>
         </div>
