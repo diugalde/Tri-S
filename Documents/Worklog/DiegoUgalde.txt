@@ -1,12 +1,106 @@
-Semana 1 (30 de noviembre, 2015):
-	2 de diciembre:
-		- Algo.
-		- Algo.
-	____________________________________
-	3 de diciembre:
-		- Algo.
-		- Algo.
-		- Algo.
+Entregables semana #1 (30 de noviembre, 2015)
 
-_____________________________________________________________________
-Semana 2 (7 de diciembre, 2015):
+	30 de noviembre:
+		- Consulta a distintos profesores sobre proyectos para el Centro Académico de Alajuela.
+
+	01 de diciembre:
+		- Primer día de clases, se conoce la dinámica del curso y el proyecto a trabajar.
+		- Leer a fondo la carta al estudiante.
+		- Se programa una cita con Kevin Moraga para el día siguiente hablar sobre el proyecto planteado.
+
+	02 de diciembre:
+		- Primera reunión con el cliente Kevin Moraga y las potenciales usuarias (Ingrid Amador y Priscilla Cantillo).
+		- Se registra en digital todo lo mencionado en la reunión.
+		- Se elabora la minuta y se firma de una vez.
+		- Se crea una estructura de carpetas en Google Drive para trabajar el proyecto.
+		- Se descargan las platillas proporcionadas por la profesora.
+		- Trabajo en Project Charter : Descripción del proyecto, propósito y caso de la organización.
+		- Trabajo en Visión: Todas las partes de la introducción (divididas con Luis).
+
+	03 de diciembre:
+		- Trabajo en Project Charter (en conjunto con Luis): Requerimientos de la organización, Suposiciones, Restricciones, Administrador del proyectoRoles y responsabilidades.
+		- Trabajo en documento de visión (Sección de alcance y limitaciones, perfiles de stakeholders y diagrama de contexto).
+
+	04 de diciembre:
+		- Investigación sobre la metodología de desarrollo escogida (XP).
+		- Finalización de las partes faltantes del documento de visión y project charter (herramientas para el ciclo de vida, riesgos).
+		- Revisión final de los documentos a entregar.
+		- Revisión del diagrama de Gantt creado por Luis.
+		- Se suben al Tec Digital y se envían por correo.
+
+	06 de diciembre:
+		- Elaboración de wireframes.
+
+_______________________________________________________________________________________________
+
+Entregables semana #2 (7 de diciembre, 2015)
+
+	07 de diciembre:
+		- Instalación de Pencil en Firefox Debian.
+		- Creación del prototipo web en la herramienta Pencil siguiendo los wireframes creados.
+
+	08 de diciembre:
+		- Finalización de prototipo web y revisión con mi compañero Luis para ajustar ambas versiones.
+		- Investigación sobre posibles papers.
+
+	09 de diciembre:
+		- Reunión con el cliente Kevin Moraga para recolección de requerimientos y firma del Project Charter.
+		- Muestra del prototipo hecho en Pencil.
+		- Consultamos con Kevin Moraga sobre los temas del paper, algunas recomendaciones.
+		- Prueba de instalación de Request Tracker en mi laptop. Exitosa pero no se han realizado las pruebas respectivas, se decidió aplzarlo.
+		- Búsqueda de solución a problema de agotamiento de espacio en la partición donde se instaló RT (Debian 8 Jessie).
+
+	10 de diciembre:
+		- Formalización de los temas de los papers y un resumen de cada uno.
+		- Investigación no profunda sobre aplicaciones híbridas para desarrollo móvil (tema de mi paper).
+		- Retoques del prototipo en Pencil.
+
+	11 de diciembre:
+		- Revisión de los entregables.
+		- Firma de aceptación del prototipo por parte de Kevin Moraga.
+		- Subir prototipo, carta de aceptación y temas de papers al Tec-Digital.
+		- Comunicación con Ingrid y Priscilla para ver reunión.
+
+	12 de diciembre:
+		- Reunión para recolección de requerimientos con Ingrid Amador y Priscilla Cantillo para cubrir más a fondo los requerimientos funcionales respecto a las solicitudes relacionadas con Admisión y registo y Administración universitaria.
+		- Elaboración de la minuta.
+		- Investigación de temas y componentes a utilizar en la aplicación web. (Bootstrap-jquery).
+
+	13 de diciembre:
+		- Se empieza a desarrollar el prototipo web básico en HTML, CSS y JS.
+		- Se actualizan cambios en GitHub. Se trabajará en un branch develop que pasará a master cuando esté en producción y salga la primera versión.
+		- Se trabajó principalmente en el index.html con los botones centrales y se hicieron pruebas de que sean responsive.
+
+_______________________________________________________________________________________________
+
+Entregables semana #3 (14 de diciembre, 2015)
+
+	14 de diciembre: 
+		- Se cambian los íconos por nuevos que forman parte del mismo paquete. (Fueron imágenes encontradas y modificadas).
+		- Se agregan más estilos a la página.
+		- Se agregan estilos específicos para los formularios, utilizando una plantilla y añadiendo las líneas css y js necesarias.
+
+	15 de diciembre:
+		- Se investigan todas las animaciones y estilos requeridos para pasar de la pantalla principal a un formulario específico.
+		- Uno de los problemas principales fue la carga de un archivo HTML en el index.html, de modo que no se metan los 10 formularios en el mismo archivo. Para esto se utilizó el método de jquery $("elemento").load("file.html").
+		- Dejar listo un formulario sirviendo.
+		- Investigación sobre los Captcha, específicamente el ReCaptcha de Google.
+
+	16 de diciembre:
+		- Trabajando en bugs de la interfaz gráfica web.
+		- Reunión con la profesora María Estrada para hablar sobre el prototipo, correcciones y definir fechas para la entrega de la primer iteración.
+		- Reformulación de los temas para los papers.
+		- Se publica en stack overflow pregunta sobre cómo seleccionar elementos añadidos dinámicamente con jQuery.
+
+	17 de diciembre:
+		- Firma de la tercer minuta por parte de Ingrid Amador y Priscilla Cantillo.
+		- Finalización de los estilos y animaciones para los formularios. Aún falta hacer cada formulario según la solicitud.
+		- Revisión del repositorio de GitHub.
+		- Investigación sobre la diferencia entre API y Servicio web. 
+		- Investigación sobre cómo hacer proyectos con Gradle en java.
+		- Actualización de la bitácora personal.
+
+	18 de diciembre:
+		- Comunicación con el profesor Pablo Gamboa(quién trabajó anteriormente con el TecDigital) para consultarle sobre el acceso a algún web service para recuperar información relacionada a profesores, carreras, cursos, etc).
+		- Investigación sobre cómo crear un servicio web RESTful en java spring.
+		- Desarrollo de web service en spring básico.
