@@ -102,5 +102,6 @@ Entregables semana #3 (14 de diciembre, 2015)
 
 	18 de diciembre:
 		- Comunicación con el profesor Pablo Gamboa(quién trabajó anteriormente con el TecDigital) para consultarle sobre el acceso a algún web service para recuperar información relacionada a profesores, carreras, cursos, etc).
+		- Agregar el componente de bootstrap que permita poner solamente una hora.
 		- Investigación sobre cómo crear un servicio web RESTful en java spring.
 		- Desarrollo de web service en spring básico.

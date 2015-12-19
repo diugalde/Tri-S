@@ -346,7 +346,7 @@ Custom icons
 FLoating labels 
 
 -------------------------------- */
-.js .floating-labels div {
+.js .floating-labels > fieldset > div {
 	margin: 28px 0 !important;
 }
 .js .floating-labels .cd-label {

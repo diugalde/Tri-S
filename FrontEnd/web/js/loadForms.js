@@ -18,6 +18,8 @@ var ready = function() {
 					var inputField = $(this);
 					( inputField.val() == '' ) ? inputField.prev().removeClass('float') : inputField.prev().addClass('float');
 				});
+
+				$(this).find(".toggle-bootstrap").bootstrapToggle();
 			});
 		});	
 	}
