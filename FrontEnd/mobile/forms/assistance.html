@@ -6,12 +6,12 @@
 
     <div class="clear-float"></div>
 
-    <form method="post" action="#main-page" data-ajax="false">
+    <form method="post" action="#main-page" class="cd-form">
         <div class="ui-grid-a ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
-                    <label for="name">Nombre completo </label>
-                    <input type="text" name="name" id="assist-name" placeholder="">
+                    <label for="studentName">Nombre completo </label>
+                    <input type="text" name="studentName" id="assist-name" placeholder="">
                 </div>
             </div>
             <div class="ui-block-b">
@@ -25,8 +25,8 @@
         <div class="ui-grid-b ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
-                    <label for="student-id">Carne </label>
-                    <input type="number" name="student-id" id="assist-student-id" placeholder="">
+                    <label for="studentId">Carne </label>
+                    <input type="number" name="studentId" id="assist-student-id" placeholder="">
                 </div>
             </div>
             <div class="ui-block-b">
@@ -52,30 +52,28 @@
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="official-name">Nombre del funcionario que voy a asistir </label>
-                    <input type="text" id="assist-official-name" name="official-name" placeholder="">
+                    <label for="officialName">Nombre del funcionario que voy a asistir </label>
+                    <input type="text" id="assist-official-name" name="officialName" placeholder="">
                 </div>
             </div>
         </div><!-- /grid-a -->
 
         <div class="ui-grid-a ui-responsive">
             <div class="ui-block-a">
-                <div class="ui-body ui-body-d">
-                    <fieldset data-role="controlgroup">
-                        <legend>Tipo de asistencia</legend>
-                        <label for="assist-assistant">Horas estudiante</label>
-                        <input type="radio" name="assistant" id="assist-assistant" value="1">
-                        <label for="assist-student">Horas estudiante</label>
-                        <input type="radio" name="student" id="assist-student" value="2">
-                        <label for="assist-special">Asistencia especial</label>
-                        <input type="radio" name="special" id="assist-special" value="3">
-                    </fieldset>
-                </div>
+                <fieldset data-role="controlgroup">
+                    <legend>Tipo de asistencia</legend>
+                    <label for="assist-assitant">Horas asistente</label>
+                    <input type="radio" name="assistanceType" id="assist-assitant" value="Horas asistente" checked="checked">
+                    <label for="assist-student">Horas estudiante</label>
+                    <input type="radio" name="assistanceType" id="assist-student" value="Horas estudiante">
+                    <label for="assist-special">Asistencia especial</label>
+                    <input type="radio" name="assistanceType" id="assist-special" value="Asistencia especial">
+                </fieldset>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="activities">Actividades que realizara el estudiante </label>
-                <textarea name="activities" id="assist-activities" placeholder=""></textarea>
+                    <label for="assistanceActivities">Actividades que realizara el estudiante </label>
+                    <textarea name="assistanceActivities" id="assist-activities" placeholder=""></textarea>
                 </div>
             </div>
         </div><!-- /grid-a -->
@@ -83,46 +81,44 @@
         <div class="ui-grid-b ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
-                    <label for="course-score">Nota del curso </label>
-                    <input type="number" name="course-score" id="assist-course-code" placeholder="">
+                    <label for="courseScore">Nota del curso </label>
+                    <input type="number" name="courseScore" id="assist-course-code" placeholder="">
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="avg-score">Promedio ponderado del semestre pasado</label>
-                    <input type="number" id="assist-avg-score" name="avg-score" placeholder="">
+                    <label for="studentAverageScore">Promedio ponderado del semestre pasado</label>
+                    <input type="number" id="assist-avg-score" name="studentAverageScore" placeholder="">
                 </div>
             </div>
             <div class="ui-block-c">
                 <div class="ui-body ui-body-d">
-                    <label for="hours">Total de horas </label>
-                    <input type="number" name="hours" id="assist-hours" placeholder="">
+                    <label for="assistanceTotalHours">Total de horas </label>
+                    <input type="number" name="assistanceTotalHours" id="assist-hours" placeholder="">
                 </div>
             </div>
         </div><!-- /grid-b -->
 
         <div class="ui-grid-a ui-responsive">
             <div class="ui-block-a">
-                <div class="ui-body ui-body-d">
-                    <fieldset data-role="controlgroup">
-                        <legend>Banco</legend>
-                        <label for="assist-credit-bank">Banco Credito Agricola</label>
-                        <input type="radio" name="credit-bank" id="assist-credit-bank" value="1">
-                        <label for="assist-nat-bank">Banco Nacional</label>
-                        <input type="radio" name="nat-bank" id="assist-nat-bank" value="2">
-                        <label for="assist-pop-bank">Banco Popular</label>
-                        <input type="radio" name="pop-bank" id="assist-pop-bank" value="3">
-                    </fieldset>
-                </div>
+                <fieldset data-role="controlgroup">
+                    <legend>Banco</legend>
+                    <label for="assist-credit-bank">Banco Credito Agricola</label>
+                    <input type="radio" name="bankName" id="assist-credit-bank" value="Banco Credito Agricola">
+                    <label for="assist-nat-bank">Banco Nacional</label>
+                    <input type="radio" name="bankName" id="assist-nat-bank" value="Banco Nacional" checked="checked">
+                    <label for="assist-pop-bank">Banco Popular</label>
+                    <input type="radio" name="bankName" id="assist-pop-bank" value="Banco Popular">
+                </fieldset>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="client">Numero de cuenta cliente </label>
-                    <input type="number" name="client" id="assist-client" placeholder="">
+                    <label for="clientAccountNumber">Numero de cuenta cliente </label>
+                    <input type="number" name="clientAccountNumber" id="assist-client" placeholder="">
                 </div>
             </div>
         </div><!-- /grid-a -->
-        
+
         <div class="submit-container">
             <input type="submit" data-inline="true" value="Enviar solicitud" data-theme="b" class="submit-button">
         </div>

@@ -1,91 +1,105 @@
 <form class="cd-form floating-labels">
-	<fieldset>
-		<legend>
-			<div class="form-header">
-				<img src="images/requestIcons/levantamientoRequisitos.png" class="img-responsive"/>
-				<h3>Levantamiento de requisitos</h3>
-			</div>
-		</legend>
-		
-		<section class="clear-float"></section>
+    <fieldset>
+        <legend>
+            <div class="form-header">
+                <img src="images/requestIcons/levantamientoRequisitos.png" class="img-responsive"/>
+                <h3>Levantamiento de requisitos</h3>
+            </div>
+        </legend>
 
-		<div class="icon">
-			<label class="cd-label" for="cd-name">Name</label>
-			<input class="use form-field" type="text" name="cd-name" id="cd-name" required>
-		</div> 
+        <section class="clear-float"></section>
 
-		<div class="icon">
-			<label class="cd-label" for="cd-company">Company</label>
-			<input class="company form-field bootstrap-datepicker" type="text" name="cd-company" id="cd-company">
-		</div> 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="studentName">Nombre completo</label>
+                    <input class="use form-field" type="text" name="studentName" id="req-name" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label form-field" for="email">Correo electrónico</label>
+                    <input class="email form-field" type="email" name="email" id="req-email" required>
+                </div>
+            </div>
+        </div>
 
-		<div class="icon">
-			<label class="cd-label form-field" for="cd-email">Email</label>
-			<input class="email form-field" type="email" name="cd-email" id="cd-email" required>
-		</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="studentId">Carné</label>
+                    <input class="use form-field" type="text" name="studentId" id="req-student-id" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="telephone">Teléfono (opcional)</label>
+                    <input class="use form-field" type="text" name="telephone" id="req-telephone" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <h4 class="header-label">Sede</h4>
+                <p class="cd-select icon">
+                    <select id="req-site" name="campus">
+                        <option value="Campus Central Cartago">Campus Central Cartago</option>
+                        <option value="Sede Regional San Carlos">Sede Regional San Carlos</option>
+                        <option value="Sede Interuniversitaria Alajuela">Sede Interuniversitaria Alajuela</option>
+                        <option value="Centro Académico San José">Centro Académico San José</option>
+                        <option value="Centro Académico Limón">Centro Académico Limón</option>
+                    </select>
+                </p> 
+            </div>
+        </div>
 
-		<div>
-			<h4 class="header-label">Budget</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="courseName">Nombre del curso que desea matricular</label>
+                    <input class="use form-field" type="text" name="courseName" id="req-course" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="courseCode">Código del curso</label>
+                    <input class="use form-field" type="text" name="courseCode" id="req-course-code" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="requisiteCourses">Nombre del curso requisito a levantar</label>
+                    <input class="use form-field" type="text" name="requisiteCourses" id="req-courses" required>
+                </div> 
+            </div>
+        </div>
 
-			<p class="cd-select icon">
-				<select class="budget">
-					<option value="0">Select Budget</option>
-					<option value="1">&lt; $5000</option>
-					<option value="2">$5000 - $10000</option>
-					<option value="3">&gt; $10000</option>
-				</select>
-			</p>
-		</div> 
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="header-label">Tipo de levantamiento</h4>
+                <ul class="cd-form-list">
+                    <li>
+                        <input type="radio" name="requisiteType" id="cd-radio-1 req-req" checked="checked" value="Requisitos">
+                        <label for="cd-radio-1">Requisitos</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="requisiteType" id="cd-radio-2 req-conflict" value="Choque de horario">
+                        <label for="cd-radio-2">Choque de horario</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="requisiteType" id="cd-radio-3 req-rn" value="RN">
+                        <label for="cd-radio-3">RN</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="justification">Justificación del levantamiento (comentarios)</label>
+                    <textarea class="message form-field" name="justification" id="req-justify" required></textarea>
+                </div> 
+            </div>
+        </div>
 
-		<div>
-			<h4 class="header-label">Project type</h4>
-
-			<ul class="cd-form-list">
-				<li>
-					<input type="radio" name="radio-button" id="cd-radio-1" checked>
-					<label for="cd-radio-1">Choice 1</label>
-				</li>
-
-				<li>
-					<input type="radio" name="radio-button" id="cd-radio-2">
-					<label for="cd-radio-2">Choice 2</label>
-				</li>
-
-				<li>
-					<input type="radio" name="radio-button" id="cd-radio-3">
-					<label for="cd-radio-3">Choice 3</label>
-				</li>
-			</ul>
-		</div>
-
-		<div>
-			<h4 class="header-label">Features</h4>
-
-			<ul class="cd-form-list">
-				<li>
-					<input type="checkbox" id="cd-checkbox-1">
-					<label for="cd-checkbox-1">Option 1</label>
-				</li>
-
-				<li>
-					<input type="checkbox" id="cd-checkbox-2">
-					<label for="cd-checkbox-2">Option 2</label>
-				</li>
-
-				<li>
-					<input type="checkbox" id="cd-checkbox-3">
-					<label for="cd-checkbox-3">Option 3</label>
-				</li>
-			</ul>
-		</div>
-
-		<div class="icon">
-			<label class="cd-label" for="cd-textarea">Project description</label>
-			<textarea class="message form-field" name="cd-textarea" id="cd-textarea" required></textarea>
-		</div>
-
-		<div>
-			<input type="submit" value="Send Message">
-		</div>
-	</fieldset>
+        <div>
+            <input type="submit" value="Enviar solicitud">
+        </div>
+    </fieldset>
 </form>
