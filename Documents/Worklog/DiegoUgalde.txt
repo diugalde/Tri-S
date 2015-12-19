@@ -28,6 +28,9 @@ Entregables semana #1 (30 de noviembre, 2015)
 		- Revisión del diagrama de Gantt creado por Luis.
 		- Se suben al Tec Digital y se envían por correo.
 
+	06 de diciembre:
+		- Elaboración de wireframes.
+
 _______________________________________________________________________________________________
 
 Entregables semana #2 (7 de diciembre, 2015)
@@ -54,7 +57,8 @@ Entregables semana #2 (7 de diciembre, 2015)
 
 	11 de diciembre:
 		- Revisión de los entregables.
-		- Subir prototipo y temas de papers al Tec-Digital.
+		- Firma de aceptación del prototipo por parte de Kevin Moraga.
+		- Subir prototipo, carta de aceptación y temas de papers al Tec-Digital.
 		- Comunicación con Ingrid y Priscilla para ver reunión.
 
 	12 de diciembre:
