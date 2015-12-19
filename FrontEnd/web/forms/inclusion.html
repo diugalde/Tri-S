@@ -1,91 +1,163 @@
 <form class="cd-form floating-labels">
-	<fieldset>
-		<legend>
-			<div class="form-header">
-				<img src="images/requestIcons/inclusionComp.png" class="img-responsive"/>
-				<h3>Inclusión para Computación</h3>
-			</div>
-		</legend>
-		
-		<section class="clear-float"></section>
+    <fieldset>
+        <legend>
+            <div class="form-header">
+                <img src="images/requestIcons/inclusionComp.png" class="img-responsive"/>
+                <h3>Inclusión para Computación</h3>
+            </div>
+        </legend>
 
-		<div class="icon">
-			<label class="cd-label" for="cd-name">Name</label>
-			<input class="use form-field" type="text" name="cd-name" id="cd-name" required>
-		</div> 
+        <section class="clear-float"></section>
 
-		<div class="icon">
-			<label class="cd-label" for="cd-company">Company</label>
-			<input class="company form-field bootstrap-datepicker" type="text" name="cd-company" id="cd-company">
-		</div> 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="name">Nombre completo</label>
+                    <input class="use form-field" type="text" name="name" id="inc-name" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label form-field" for="email">Correo electrónico</label>
+                    <input class="email form-field" type="email" name="email" id="inc-email" required>
+                </div>
+            </div>
+        </div>
 
-		<div class="icon">
-			<label class="cd-label form-field" for="cd-email">Email</label>
-			<input class="email form-field" type="email" name="cd-email" id="cd-email" required>
-		</div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="student-id">Carné</label>
+                    <input class="use form-field" type="text" name="student-id" id="inc-student-id" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="tel">Teléfono (opcional)</label>
+                    <input class="use form-field" type="text" name="tel" id="inc-tel" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="cel">Celular</label>
+                    <input class="use form-field" type="text" name="cel" id="inc-cel" required>
+                </div> 
+            </div>
+        </div>
 
-		<div>
-			<h4 class="header-label">Budget</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="career">Carrera</label>
+                    <input class="use form-field" type="text" name="career" id="inc-career" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="course">Nombre del curso</label>
+                    <input class="use form-field" type="text" name="course" id="inc-course" required>
+                </div> 
+            </div>
+        </div>
 
-			<p class="cd-select icon">
-				<select class="budget">
-					<option value="0">Select Budget</option>
-					<option value="1">&lt; $5000</option>
-					<option value="2">$5000 - $10000</option>
-					<option value="3">&gt; $10000</option>
-				</select>
-			</p>
-		</div> 
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="course-code">Código del curso</label>
+                    <input class="use form-field" type="text" name="course-code" id="inc-course-code" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="enroll-day">Día de matricula</label>
+                    <input class="form-field bootstrap-datepicker" type="text" name="enroll-day" id="inc-enroll-day">
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="cd-company">Company</label>
+                    <input class="company form-field bootstrap-datepicker" type="text" name="cd-company" id="cd-company">
+                </div> 
+            </div>
+        </div>
 
-		<div>
-			<h4 class="header-label">Project type</h4>
+        <div class="icon">
+            <label class="cd-label" for="cd-name">Name</label>
+            <input class="use form-field" type="text" name="cd-name" id="cd-name" required>
+        </div> 
 
-			<ul class="cd-form-list">
-				<li>
-					<input type="radio" name="radio-button" id="cd-radio-1" checked>
-					<label for="cd-radio-1">Choice 1</label>
-				</li>
+        <div class="icon">
+            <label class="cd-label" for="cd-company">Company</label>
+            <input class="company form-field bootstrap-datepicker" type="text" name="cd-company" id="cd-company">
+        </div> 
 
-				<li>
-					<input type="radio" name="radio-button" id="cd-radio-2">
-					<label for="cd-radio-2">Choice 2</label>
-				</li>
+        <div class="icon">
+            <label class="cd-label form-field" for="cd-email">Email</label>
+            <input class="email form-field" type="email" name="cd-email" id="cd-email" required>
+        </div>
 
-				<li>
-					<input type="radio" name="radio-button" id="cd-radio-3">
-					<label for="cd-radio-3">Choice 3</label>
-				</li>
-			</ul>
-		</div>
+        <div>
+            <h4 class="header-label">Budget</h4>
 
-		<div>
-			<h4 class="header-label">Features</h4>
+            <p class="cd-select icon">
+                <select class="budget">
+                    <option value="0">Select Budget</option>
+                    <option value="1">&lt; $5000</option>
+                    <option value="2">$5000 - $10000</option>
+                    <option value="3">&gt; $10000</option>
+                </select>
+            </p>
+        </div> 
 
-			<ul class="cd-form-list">
-				<li>
-					<input type="checkbox" id="cd-checkbox-1">
-					<label for="cd-checkbox-1">Option 1</label>
-				</li>
+        <div>
+            <h4 class="header-label">Project type</h4>
 
-				<li>
-					<input type="checkbox" id="cd-checkbox-2">
-					<label for="cd-checkbox-2">Option 2</label>
-				</li>
+            <ul class="cd-form-list">
+                <li>
+                    <input type="radio" name="radio-button" id="cd-radio-1" checked>
+                    <label for="cd-radio-1">Choice 1</label>
+                </li>
 
-				<li>
-					<input type="checkbox" id="cd-checkbox-3">
-					<label for="cd-checkbox-3">Option 3</label>
-				</li>
-			</ul>
-		</div>
+                <li>
+                    <input type="radio" name="radio-button" id="cd-radio-2">
+                    <label for="cd-radio-2">Choice 2</label>
+                </li>
 
-		<div class="icon">
-			<label class="cd-label" for="cd-textarea">Project description</label>
-			<textarea class="message form-field" name="cd-textarea" id="cd-textarea" required></textarea>
-		</div>
+                <li>
+                    <input type="radio" name="radio-button" id="cd-radio-3">
+                    <label for="cd-radio-3">Choice 3</label>
+                </li>
+            </ul>
+        </div>
 
-		<div>
-			<input type="submit" value="Send Message">
-		</div>
-	</fieldset>
+        <div>
+            <h4 class="header-label">Features</h4>
+
+            <ul class="cd-form-list">
+                <li>
+                    <input type="checkbox" id="cd-checkbox-1">
+                    <label for="cd-checkbox-1">Option 1</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cd-checkbox-2">
+                    <label for="cd-checkbox-2">Option 2</label>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="cd-checkbox-3">
+                    <label for="cd-checkbox-3">Option 3</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="icon">
+            <label class="cd-label" for="cd-textarea">Project description</label>
+            <textarea class="message form-field" name="cd-textarea" id="cd-textarea" required></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Send Message">
+        </div>
+    </fieldset>
 </form>
