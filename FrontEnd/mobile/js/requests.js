@@ -19,9 +19,8 @@ var ready = function() {
 		});
 	});
 
-
 	function generateNotification(notificationType, message) {
-		//message = JSON.stringify(message);
+		message = JSON.stringify(message);
 		noty({
 			text        : message,
 			type        : notificationType,
@@ -37,6 +36,7 @@ var ready = function() {
 			}
 		});
 	}
+
 }
 
 $(document).on('page:load', ready);

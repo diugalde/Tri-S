@@ -103,5 +103,16 @@ Entregables semana #3 (14 de diciembre, 2015)
 	18 de diciembre:
 		- Comunicación con el profesor Pablo Gamboa(quién trabajó anteriormente con el TecDigital) para consultarle sobre el acceso a algún web service para recuperar información relacionada a profesores, carreras, cursos, etc).
 		- Agregar el componente de bootstrap que permita poner solamente una hora.
+		- Arreglar el JS del componente toggle.
+		- Investigación de llamadas Rest desde móviles a un servicio web REST. Se pueden probar con jasonplaceholder, una herramienta que trabaja sobre nodejs.
+		- Pruebas desde el front-end usando placeholder, las llamadas REST con Ajax están funcionando bien. Tiene que ser un servidor, no se puede local.
+		- Creación del archivo requests.js que se encarga de enviar el form cuando es clickeado.
+		- Agregar notificaciones de exito o fracaso al enviar un form. (Incluye animaciones con animate.css).
+		- Definición del nombre de atributos para todos los campos de los formularios.
 		- Investigación sobre cómo crear un servicio web RESTful en java spring.
 		- Desarrollo de web service en spring básico.
+
+	19 de diciembre:
+		- Archivo requests.js listo, envía cualquier formulario y muestra notificaciones de error o éxito.
+		- Removiendo cdn y agregando archivos de JS y CSS locales para el módulo móvil.
+		- Subiendo ambos prototipos a mi dominio dieg8.com y dieg8.com/mobile para poder visualizarlo más fácilmente.
