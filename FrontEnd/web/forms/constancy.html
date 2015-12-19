@@ -1,15 +1,15 @@
 <form class="cd-form floating-labels">
-	<fieldset>
-		<legend>
-			<div class="form-header">
-				<img src="images/requestIcons/constancia.png" class="img-responsive"/>
-				<h3>Constancia de estudio</h3>
-			</div>
-		</legend>
-		
-		<section class="clear-float"></section>
+    <fieldset>
+        <legend>
+            <div class="form-header">
+                <img src="images/requestIcons/constancia.png" class="img-responsive"/>
+                <h3>Constancia de estudio</h3>
+            </div>
+        </legend>
 
-		<div class="row">
+        <section class="clear-float"></section>
+
+        <div class="row">
             <div class="col-md-6">
                 <div class="icon">
                     <label class="cd-label" for="name">Nombre completo</label>
@@ -19,7 +19,7 @@
             <div class="col-md-6">
                 <div class="icon">
                     <label class="cd-label form-field" for="email">Correo electrónico</label>
-                    <input class="email form-field" type="email" name="email" id="prof-email" required>
+                    <input class="email form-field" type="email" name="email" id="cons-email" required>
                 </div>
             </div>
         </div>
@@ -28,55 +28,24 @@
             <div class="col-md-6">
                 <div class="icon">
                     <label class="cd-label" for="student-id">Carné</label>
-                    <input class="use form-field" type="text" name="student-id" id="prof-student-id" required>
+                    <input class="use form-field" type="text" name="student-id" id="cons-student-id" required>
                 </div> 
             </div>
             <div class="col-md-6">
                 <div class="icon">
-                    <label class="cd-label" for="telephone">Teléfono (opcional)</label>
-                    <input class="use form-field" type="text" name="telephone" id="prof-telephone" required>
+                    <label class="cd-label" for="id">Cédula</label>
+                    <input class="use form-field" type="text" name="id" id="cons-id" required>
                 </div> 
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="career">Carrera</label>
-                    <input class="use form-field" type="text" name="career" id="prof-career" required>
-                </div> 
-            </div>
-            <div class="col-md-6">
-                <h4 class="header-label">Sede</h4>
-                <p class="cd-select icon">
-                    <select id="prof-site">
-                        <option value="1">Campus Central Cartago</option>
-                        <option value="2">Sede Regional San Carlos</option>
-                        <option value="3">Sede Interuniversitaria Alajuela</option>
-                        <option value="4">Centro Académico San José</option>
-                        <option value="5">Centro Académico Limón</option>
-                    </select>
-                </p> 
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="course">Nombre del curso</label>
-                    <input class="use form-field" type="text" name="course" id="prof-course" required>
-                </div> 
-            </div>
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="course-code">Código del curso</label>
-                    <input class="use form-field" type="text" name="course-code" id="prof-course-code" required>
-                </div> 
-            </div>
-        </div>
+        <div class="icon">
+            <label class="cd-label" for="justify">Motivo de la solicitud</label>
+            <textarea class="message form-field" name="justify" id="cons-justify" required></textarea>
+        </div> 
 
         <div>
             <input type="submit" value="Enviar solicitud">
         </div>
-	</fieldset>
+    </fieldset>
 </form>
