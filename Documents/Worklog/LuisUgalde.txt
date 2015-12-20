@@ -85,3 +85,11 @@ Entregables semana #3 (14 de diciembre, 2015)
 	18 de diciembre:
 		- Actualización de la bitácora personal en Github.
 		- Inicio del desarrollo de los formularios web. 
+
+	19 de diciembre:
+		- Finalización de los formualrios en html para las módulos web y móvil.
+		- Arreglo de algunos tags en los ahtml para su futura función con el API.
+		
+	20 de diciembre:
+		- Inicio de los documentos de ERS, SAD y plan de pruebas
+		- Desarrollo de los manuales de usuario para la aplicacón web y móvil
