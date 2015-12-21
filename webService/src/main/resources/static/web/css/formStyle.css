@@ -110,7 +110,7 @@ Form
 	position: absolute;
 	z-index: 1;
 	right: 16px;
-	top: 50%;
+	top: 35%;
 	margin-top: -8px;
 	display: block;
 	width: 16px;
@@ -279,11 +279,13 @@ Form
 .cd-form .error {
 	border-color: #e94b35 !important;
 }
+
+.cd-form div {
+	/* form element wrapper */
+	margin: 10px 0;
+}
 @media only screen and (min-width: 600px) {
-	.cd-form div {
-		/* form element wrapper */
-		margin: 32px 0;
-	}
+
 	.cd-form legend + div {
 		/* reduce margin-top for first form element after the legend */
 		margin-top: 20px;
@@ -350,14 +352,14 @@ FLoating labels
 	position: absolute;
 	top: 16px;
 	left: 16px;
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	cursor: text;
 	-webkit-transition: top 0.2s, left 0.2s, font-size 0.2s;
 	-moz-transition: top 0.2s, left 0.2s, font-size 0.2s;
 	transition: top 0.2s, left 0.2s, font-size 0.2s;
 }
 .js .floating-labels .icon .cd-label {
-
+	margin-left: 5px;
 }
 .js .floating-labels .cd-label.float {
 	/* move label out the input field */
@@ -438,4 +440,9 @@ Custom form css
 
 .toggle-label {
 	position: static !important;
+}
+
+.icon {
+	padding-bottom: 25px !important;
+	/*margin-top: 20px !important;*/
 }

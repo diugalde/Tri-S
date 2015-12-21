@@ -246,10 +246,10 @@
 	visibility: visible;
 }
 
-.content.content--show div{
+.content.content--show div:not(.row){
 	height: 100%;
 	margin: 0;
-	padding: 0;
+	padding: 0 2px;
 }
 
 /* scroll helper wrap */
@@ -277,11 +277,14 @@
 }
 .content__item p {
 	max-width: 1200px;
-	margin: 1em auto;
 	text-align: justify;
 }
 .content__item p:first-of-type {
 	font-size: 1.35em;
+}
+
+p {
+	margin: 0 !important;
 }
 
 .content__item.content__item--show {
