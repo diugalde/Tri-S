@@ -6,9 +6,10 @@ var ready = function() {
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
 		var form = $(this);
+		var route = form.attr("request");
 		$.ajax({
 			method: 'POST',
-			url: baseURL + "/constancy",
+			url: baseURL + "/" + route,
 			data: form.serializeJSON(),
 			headers: {
 				'Accept': 'application/json',
