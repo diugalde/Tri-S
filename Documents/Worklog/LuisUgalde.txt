@@ -93,3 +93,10 @@ Entregables semana #3 (14 de diciembre, 2015)
 	20 de diciembre:
 		- Inicio de los documentos de ERS, SAD y plan de pruebas
 		- Desarrollo de los manuales de usuario para la aplicacón web y móvil
+		- Finalización y revisión del documento de ERS (requisitos).
+		- Revisión del plan de pruebas.
+		- Finalización de los manuales para web y móvil.
+		
+	21 de diciembre:
+		- Instalación de Gradle para el desarrollo del API.
+		- Desarrollo del SAD (creación de diagramas)
