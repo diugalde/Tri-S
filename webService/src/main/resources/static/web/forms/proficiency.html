@@ -1,0 +1,82 @@
+<form class="cd-form floating-labels">
+    <fieldset>
+        <legend>
+            <div class="form-header">
+                <img src="images/requestIcons/suficiencia.png" class="img-responsive"/>
+                <h3>Examen de suficiencia</h3>
+            </div>
+        </legend>
+
+        <section class="clear-float"></section>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="studentName">Nombre completo</label>
+                    <input class="use form-field" type="text" name="studentName" id="prof-name" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label form-field" for="email">Correo electrónico</label>
+                    <input class="email form-field" type="email" name="email" id="prof-email" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="studentId">Carné</label>
+                    <input class="use form-field" type="text" name="studentId" id="prof-student-id" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="telephone">Teléfono (opcional)</label>
+                    <input class="use form-field" type="text" name="telephone" id="prof-telephone">
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="career">Carrera</label>
+                    <input class="use form-field" type="text" name="career" id="prof-career" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <h4 class="header-label">Sede</h4>
+                <p class="cd-select icon">
+                    <select id="prof-site" name="campus">
+                        <option value="Campus Central Cartago">Campus Central Cartago</option>
+                        <option value="Sede Regional San Carlos">Sede Regional San Carlos</option>
+                        <option value="Sede Interuniversitaria Alajuela">Sede Interuniversitaria Alajuela</option>
+                        <option value="Centro Académico San José">Centro Académico San José</option>
+                        <option value="Centro Académico Limón">Centro Académico Limón</option>
+                    </select>
+                </p> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseName">Nombre del curso</label>
+                    <input class="use form-field" type="text" name="courseName" id="prof-course" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseCode">Código del curso</label>
+                    <input class="use form-field" type="text" name="courseCode" id="prof-course-code" required>
+                </div> 
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar solicitud">
+        </div>
+    </fieldset>
+</form>

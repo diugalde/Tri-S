@@ -116,3 +116,16 @@ Entregables semana #3 (14 de diciembre, 2015)
 		- Archivo requests.js listo, envía cualquier formulario y muestra notificaciones de error o éxito.
 		- Removiendo cdn y agregando archivos de JS y CSS locales para el módulo móvil.
 		- Subiendo ambos prototipos a mi dominio dieg8.com y dieg8.com/mobile para poder visualizarlo más fácilmente.
+		- Plantillas de los documentos plan de pruebas, ERS y SAD en google docs.
+	20 de diciembre:
+		- Elaboración del plan de pruebas.
+		- Sección Introducción del ERS.
+		- Sección Descripción general del ERS.
+		- Añadiendo licencia creative commons a los manuales de usuario.
+		- Revisión manual de usuario web.
+		- Revisión manual de usuario móvil.
+		- Estructurar proyecto (webservice) con gradle.
+		- Corrección de faltas ortográficas en las páginas .html.
+		- Reorganización del repositorio.
+
+
