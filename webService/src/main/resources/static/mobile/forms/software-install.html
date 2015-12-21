@@ -1,0 +1,60 @@
+<div role="main" class="ui-content">
+    <div class="form-title">
+        <img src="images/instalacionSoftware.png">
+        <h3>Instalación de un programa</h3>
+    </div>
+
+    <div class="clear-float"></div>
+
+    <form method="post" action="#main-page" class="cd-form" request="softwareInstallation">
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="studentName">Nombre completo </label>
+                    <input type="text" name="studentName" id="ins-name" placeholder="" required>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="email">Correo electrónico </label>
+                    <input type="email" id="ins-email" name="email" placeholder="" required>
+                </div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-body ui-body-d">
+                    <label for="studentId">Carné </label>
+                    <input type="number" id="ins-student-id" name="studentId" placeholder="" required>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="labId">Identificador del laboratorio </label>
+                    <input type="number" id="ins-lab-id" name="labId" placeholder="" required>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="detail">Descripción de lo que se desea instalar en los equipos </label>
+                <textarea name="detail" id="ins-description" placeholder="" required></textarea>
+                </div>
+            </div>
+            <div class="ui-block-c">
+                <div class="ui-body ui-body-d">
+                    <label for="justify">Justificacion de la instalación </label>
+                    <textarea name="justification" id="ins-justification" placeholder="" required></textarea>
+                </div>
+            </div>
+        </div><!-- /grid-b -->
+
+        <div class="submit-container">
+            <input type="submit" data-inline="true" value="Enviar solicitud" data-theme="b" class="submit-button">
+        </div>
+    </form>
+</div><!-- /content -->
+
+<div data-role="footer">
+    <p class="footer-text">Creative Commons. Tecnológico de Costa Rica. 2015.</p>
+</div><!-- /footer -->

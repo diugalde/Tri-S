@@ -1,0 +1,86 @@
+<div role="main" class="ui-content">
+    <div class="form-title">
+        <img src="images/suficiencia.png">
+        <h3>Examen de suficiencia</h3>
+    </div>
+
+    <div class="clear-float"></div>
+
+    <form method="post" action="#main-page" class="cd-form" request="proficiency">
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="studentName">Nombre completo </label>
+                    <input type="text" name="studentName" id="prof-name" placeholder="" required>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="email">Correo eĺectrónico </label>
+                    <input type="email" id="prof-email" name="email" placeholder="" required>
+                </div>
+            </div>
+        </div><!-- /grid-a -->
+
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="studentId">Carné </label>
+                    <input type="number" name="studentId" id="prof-student-id" placeholder="" required>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="telephone">Teléfono (opcional)</label>
+                    <input type="tel" id="prof-telephone" name="telephone" placeholder="">
+                </div>
+            </div>
+        </div><!-- /grid-a -->
+
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="career">Carrera </label>
+                    <input type="number" name="career" id="prof-career" placeholder="" required>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-block-a">
+                    <div class="ui-field-contain">
+                        <label for="campus">Sede </label>
+                        <select name="campus" id="pro-sites">
+                            <option value="Campus Central Cartago">Campus Central Cartago</option>
+                            <option value="Sede Regional San Carlos">Sede Regional San Carlos</option>
+                            <option value="Centro Académico de Alajuela" selected="selected">Centro Académico de Alajuela</option>
+                            <option value="Centro Académico San José<">Centro Académico San José</option>
+                            <option value="Centro Académico Limón">Centro Académico Limón</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /grid-a -->
+        
+        <div class="ui-grid-a ui-responsive">
+            <div class="ui-block-a">
+                <div class="ui-body ui-body-d">
+                    <label for="courseName">Nombre del curso </label>
+                    <input type="text" name="courseName" id="prof-course" placeholder="" required>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="ui-body ui-body-d">
+                    <label for="courseCode">Código del curso </label>
+                    <input type="text" id="prof-course-code" name="courseCode" placeholder="" required>
+                </div>
+            </div>
+        </div><!-- /grid-a -->
+        
+        <div class="submit-container">
+            <input type="submit" data-inline="true" value="Enviar solicitud" data-theme="b" class="submit-button">
+        </div>
+    </form>
+</div><!-- /content -->
+
+<div data-role="footer">
+    <p class="footer-text">Creative Commons. Tecnológico de Costa Rica. 2015.</p>
+</div><!-- /footer -->

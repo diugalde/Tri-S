@@ -1,0 +1,139 @@
+<form class="cd-form floating-labels" request="inclusion">
+    <fieldset>
+        <legend>
+            <div class="form-header">
+                <img src="images/requestIcons/inclusionComp.png" class="img-responsive"/>
+                <h3>Inclusión para Computación</h3>
+            </div>
+        </legend>
+
+        <section class="clear-float"></section>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="studentName">Nombre completo</label>
+                    <input class="use form-field" type="text" name="studentName" id="inc-name" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label form-field" for="email">Correo electrónico</label>
+                    <input class="email form-field" type="email" name="email" id="inc-email" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="student-id">Carné</label>
+                    <input class="use form-field" type="text" name="studentId" id="inc-student-id" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="telephone">Teléfono (opcional)</label>
+                    <input class="use form-field" type="text" name="telephone" id="inc-telephone">
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="cellphone">Celular</label>
+                    <input class="use form-field" type="text" name="cellphone" id="inc-cellphone" required>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="career">Carrera</label>
+                    <input class="use form-field" type="text" name="career" id="inc-career" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="enrollDate">Día de matrícula</label>
+                    <input class="form-field bootstrap-datepicker" type="text" name="enrollDate" id="inc-enroll-day" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="enrollTime">Hora de matrícula</label>
+                    <input class="form-field bootstrap-timepicker" type="text" name="enrollTime" id="inc-enroll-time" required>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseName">Nombre del curso</label>
+                    <input class="use form-field" type="text" name="courseName" id="inc-course" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseCode">Código del curso</label>
+                    <input class="use form-field" type="text" name="courseCode" id="inc-course-code" required>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="courseGroup">Número de grupo</label>
+                    <input class="use form-field" type="text" name="courseGroup" id="inc-group" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="professorName">Nombre del profesor</label>
+                    <input class="use form-field" type="text" name="professorName" id="inc-prof" required>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon toggle-icon">
+                    <label class="cd-label float toggle-label" for="fulfillRequisites">¿Tiene los requisitos?</label>
+                    <input class="form-field toggle-bootstrap" type="checkbox" name="fulfillRequisites" checked data-toggle="toggle" id="inc-req"> 
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon toggle-icon">
+                        <label class="cd-label float toggle-label" for="hasTimeConflict">¿Tiene choque de horario?</label>
+                        <input class="form-field toggle-bootstrap" type="checkbox" name="hasTimeConflict" checked data-toggle="toggle" id="inc-time-conflict"> 
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="rn">Indique el RN (solo si tiene)</label>
+                    <input class="use form-field" type="text" name="rn" id="inc-rn" required>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="enrolledCourses">Cursos matriculados este semestre (separados por coma)</label>
+                    <textarea class="message form-field" name="enrolledCourses" id="inc-curr-courses" required></textarea>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="justification">Justificación de la inclusión</label>
+                    <textarea class="message form-field" name="justification" id="inc-justify" required></textarea>
+                </div> 
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar solicitud">
+        </div>
+    </fieldset>
+</form>

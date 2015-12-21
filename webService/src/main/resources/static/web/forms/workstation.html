@@ -1,0 +1,82 @@
+<form class="cd-form floating-labels" request="workstation">
+	<fieldset>
+		<legend>
+			<div class="form-header">
+				<img src="images/requestIcons/solicitudLab.png" class="img-responsive"/>
+				<h3>Solicitud de espacios</h3>
+			</div>
+		</legend>
+		
+		<section class="clear-float"></section>
+
+		<div class="row">
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label" for="studentName">Nombre completo</label>
+                    <input class="use form-field" type="text" name="studentName" id="work-name" required>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="icon">
+                    <label class="cd-label form-field" for="email">Correo electrónico</label>
+                    <input class="email form-field" type="email" name="email" id="work-email" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="studentId">Carné</label>
+                    <input class="use form-field" type="text" name="studentId" id="work-student-id" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="id">Cédula</label>
+                    <input class="use form-field" type="text" name="id" id="work-id" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="workstationId">Identificador del espacio</label>
+                    <input class="use form-field" type="text" name="workstationId" id="work-station-id" required>
+                </div> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="icon">
+                    <label class="cd-label" for="justification">Justificación de la solicitud</label>
+                    <textarea class="message form-field" name="justification" id="work-justify" required></textarea>
+                </div> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="useDate">Fecha de uso</label>
+                    <input class="form-field bootstrap-datepicker" type="text" name="useDate" id="work-use-day" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="initialUsetime">Hora de uso (inicial)</label>
+                    <input class="form-field bootstrap-timepicker" type="text" name="initialUseTime" id="work-use-time" required>
+                </div> 
+            </div>
+            <div class="col-md-4">
+                <div class="icon">
+                    <label class="cd-label" for="finalUseTime">Hora de uso (final)</label>
+                    <input class="form-field bootstrap-timepicker" type="text" name="finalUseTime" id="work-end-time" required>
+                </div> 
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar solicitud">
+        </div>
+	</fieldset>
+</form>
