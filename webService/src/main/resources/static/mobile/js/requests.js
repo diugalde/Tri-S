@@ -6,10 +6,9 @@ var ready = function() {
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
 		var form = $(this);
-		var route = form.attr("request");
 		$.ajax({
 			method: 'POST',
-			url: baseURL + "/" + route,
+			url: baseURL + "/request",
 			data: form.serializeJSON(),
 			headers: {
 				'Accept': 'application/json',
@@ -17,9 +16,9 @@ var ready = function() {
 			}
 		}).success(function(data) {
 			console.log(data);
-			generateNotification("success", "Solicituuuuud enviada exitosamente. Se ha enviado un correo de recibido.");
+			generateNotification(data.type, data.msg);
 		}).fail(function(data) {
-			generateNotification("error", "Erroresssssssssss en los campos del formulario.");
+			generateNotification("error", "Hubo un error al enviar el formulario.");
 		}).always(function() {
 			$("html, body").animate({ scrollTop: 0 }, "slow");
 		});
