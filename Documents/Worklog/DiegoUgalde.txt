@@ -127,5 +127,16 @@ Entregables semana #3 (14 de diciembre, 2015)
 		- Estructurar proyecto (webservice) con gradle.
 		- Corrección de faltas ortográficas en las páginas .html.
 		- Reorganización del repositorio.
+	21 de diciembre:
+		- Añadiendo validación de formularios.
+		- Añadiendo manejo de notificaciones.
+		- Pruebas de la aplicación. (Envío de formularios desde web y móvil)
+		- Subir aplicación a heroku -> tri-s.herokuapp.com/web/index.html y tri-s.herokuapp.com/mobile/index.html
+		- Completando ERS -> casos de uso de uso.
+	22 de diciembre:
+		- Creación de la carpeta compartida con la profesora.
+		- Finalización de SAD.
+		- Revisión de documentos de la iteración #1.
+
 
 
