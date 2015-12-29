@@ -2,7 +2,6 @@ var ready = function() {
 
 	var baseURL = "http://localhost:8282";
 
-	
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
 		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
