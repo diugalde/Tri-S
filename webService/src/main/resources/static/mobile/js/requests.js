@@ -28,6 +28,7 @@ var ready = function() {
 			}).fail(function(data) {
 				generateNotification("error", "Hubo un error al enviar el formulario.");
 			}).always(function() {
+				grecaptcha.reset(recaptchaId);
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			});
 		}
