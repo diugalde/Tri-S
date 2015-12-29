@@ -111,3 +111,7 @@ Entregables semana #3 (14 de diciembre, 2015)
 	
 	28 de diciembre:
 		- Finalización de los captcha para ambas aplicaciones (web y móvil)
+		
+	29 de diciembre:
+		- Desarrollo del Back-End de los captchas.
+		- Arreglo de algunos de los estilos de los formularios.
