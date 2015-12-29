@@ -47,8 +47,8 @@
     margin: 0 auto;
     margin-left:auto;
     margin-right:auto;
-    align:center;
-    text-align:center;
+    align: center;
+    text-align: center;
 }
 
 .clear-float {
@@ -81,6 +81,9 @@
 .recaptcha-container {
     transform: scale(0.85);
     -webkit-transform: scale(0.85);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
+    margin: 0 auto;
+}
+
+.recaptcha-container div div {
+    margin: 0 auto !important;
 }

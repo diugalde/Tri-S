@@ -85,3 +85,33 @@ Entregables semana #3 (14 de diciembre, 2015)
 	18 de diciembre:
 		- Actualización de la bitácora personal en Github.
 		- Inicio del desarrollo de los formularios web. 
+
+	19 de diciembre:
+		- Finalización de los formualrios en html para las módulos web y móvil.
+		- Arreglo de algunos tags en los ahtml para su futura función con el API.
+		
+	20 de diciembre:
+		- Inicio de los documentos de ERS, SAD y plan de pruebas
+		- Desarrollo de los manuales de usuario para la aplicacón web y móvil
+		- Finalización y revisión del documento de ERS (requisitos).
+		- Revisión del plan de pruebas.
+		- Finalización de los manuales para web y móvil.
+		
+	21 de diciembre:
+		- Instalación de Gradle para el desarrollo del API.
+		- Desarrollo del SAD (creación de diagramas).
+		- Desarrollo de funciones para la validación de formularios.
+		
+	22 de diciembre:
+		- Finalización del SAD.
+		- Revisión de los documentos para la primera iteración
+		
+	23 de diciembre:
+		- Reunión con Kevin Moraga para la aceptación de lo que se desarrollo en la primera iteración.
+	
+	28 de diciembre:
+		- Finalización de los captcha para ambas aplicaciones (web y móvil)
+		
+	29 de diciembre:
+		- Desarrollo del Back-End de los captchas.
+		- Arreglo de algunos de los estilos de los formularios.
