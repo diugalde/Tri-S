@@ -1,4 +1,6 @@
+
 var ready = function() {
+
 	function loadFormsContent() {
 		$("#form-content-section > div").each(function( index ) {
 			var htmlFile = $(this).attr('linked-form');
@@ -20,7 +22,6 @@ var ready = function() {
 				});
 
 				$(this).find(".toggle-bootstrap").bootstrapToggle();
-
 			});
 		});	
 	}
@@ -43,7 +44,6 @@ var ready = function() {
 	floatLabels();
 
 	$("body").on("click", "label", function() {
-
 		$(this).next().focus();
 	});
 

@@ -112,6 +112,15 @@ var ready = function() {
 			itemID = item.getAttribute("linked-div");
 			$selectedItem = $("#"+itemID);
 			selectedItem = $selectedItem[0];
+
+			rId = "recaptcha-" + $selectedItem.attr("form-name");
+			tempWidgetId = $("#"+rId).attr("widget-id");
+			if(typeof tempWidgetId === "undefined") {
+				tempId = grecaptcha.render(rId, {'sitekey' : '6LdD3RMTAAAAAHOdlx1SDF3XkblVuFh0LYXCLE8d'});
+				$("#"+rId).attr("widget-id", tempId);
+			}else{
+				grecaptcha.reset(tempWidgetId);
+			}
 			//Remove tabs.
 			$(".tabs").fadeOut(500);
 
@@ -166,6 +175,12 @@ var ready = function() {
 		}
 
 		function hideContent() {
+			
+			rId = "recaptcha-" + $selectedItem.attr("form-name");
+			$("#"+rId).html("");
+			//widgetId = $("#"+rId).attr("widget-id");
+			//grecaptcha.reset(widgetId);
+			
 			var gridItem = gridItems[current], contentItem = selectedItem;
 
 			classie.remove(contentItem, 'content__item--show');

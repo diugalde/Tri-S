@@ -2,7 +2,6 @@ package cr.ac.siua.tec.utils;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 import java.util.function.Function;
 
 public class FormValidator {
@@ -40,13 +39,17 @@ public class FormValidator {
     public boolean isValidForm(HashMap<String, String> map) {
         boolean validationResult = true;
         boolean fieldValidation;
-        String fieldName, fieldValue;
+        String fieldName, fieldValue, fieldType;
         for(Map.Entry<String, String> entry : map.entrySet()) {
             fieldName = entry.getKey();
             fieldValue = entry.getValue();
-            fieldValidation = (Boolean) methodsMap.get(fieldTypesMap.get(fieldName)).apply(fieldValue);
-            System.out.println("Validacion para " + fieldName + ":" + fieldValue + "  ->  " + fieldValidation);
-            validationResult &= fieldValidation;
+            fieldType = fieldTypesMap.get(fieldName);
+            fieldValidation = true;
+            if(fieldType != null) {
+                fieldValidation = (Boolean) methodsMap.get(fieldType).apply(fieldValue);
+                System.out.println("Validacion para " + fieldName + ":" + fieldValue + "  ->  " + fieldValidation);
+            }
+            validationResult = validationResult && fieldValidation;
         }
         return validationResult;
     }
@@ -82,7 +85,7 @@ public class FormValidator {
 
     private boolean isValidNumericField(String field) {
         String pattern = "[0-9]+";
-        return field.matches(pattern);
+        return field.matches(pattern) || field.equals("");
     }
 
     private boolean isValidBooleanField(String field) {

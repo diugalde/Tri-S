@@ -5,23 +5,32 @@ var ready = function() {
 
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
-		var form = $(this);
-		$.ajax({
-			method: 'POST',
-			url: baseURL + "/request",
-			data: form.serializeJSON(),
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json'
-			}
-		}).success(function(data) {
-			console.log(data);
-			generateNotification(data.type, data.msg);
-		}).fail(function(data) {
-			generateNotification("error", "Hubo un error al enviar el formulario.");
-		}).always(function() {
-			$("html, body").animate({ scrollTop: 0 }, "slow");
-		});
+		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
+		if(typeof recaptchaId === "undefined") recaptchaResponse = null;
+		else recaptchaResponse = grecaptcha.getResponse(recaptchaId);
+		if(!recaptchaResponse || recaptchaResponse.length === 0) {
+			generateNotification("error", "Debe solucionar el captcha para enviar el formulario.");
+		}else {
+			var form = $(this);
+			var formData = JSON.parse(form.serializeJSON());
+			formData.recaptchaResponse = grecaptcha.getResponse(recaptchaId);
+			$.ajax({
+				method: 'POST',
+				url: baseURL + "/request",
+				data: JSON.stringify(formData),
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				}
+			}).success(function(data) {
+				console.log(data);
+				generateNotification(data.type, data.msg);
+			}).fail(function(data) {
+				generateNotification("error", "Hubo un error al enviar el formulario.");
+			}).always(function() {
+				$("html, body").animate({ scrollTop: 0 }, "slow");
+			});
+		}
 	});
 
 	function generateNotification(notificationType, message) {
