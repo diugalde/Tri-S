@@ -20,4 +20,10 @@ public final class NotificationManager {
         return map;
     }
 
+    public static Map<String, String> getInvalidCaptchaMsg() {
+        Map<String, String> map = new HashMap<>();
+        map.put("type", "error");
+        map.put("msg", "El captcha es inválido.");
+        return map;
+    }
 }
