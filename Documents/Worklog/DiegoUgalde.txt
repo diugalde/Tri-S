@@ -137,6 +137,15 @@ Entregables semana #3 (14 de diciembre, 2015)
 		- Creación de la carpeta compartida con la profesora.
 		- Finalización de SAD.
 		- Revisión de documentos de la iteración #1.
+	28 de diciembre:
+		- Investigación del recaptcha.
+		- Añadiendo recaptcha en la version web.
+		- Añadiendo recaptcha en la version movil.
+		- Haciendo responsive el recaptcha.
+	29 de diciembre:
+		- Back-end del recaptcha.
+		- Arreglando estilos del recaptcha en ambas versiones.
+		- Arreglando project charter y visión, versión 2.0.
 
 
 
