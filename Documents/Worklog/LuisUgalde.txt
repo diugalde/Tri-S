@@ -109,9 +109,21 @@ Entregables semana #3 (14 de diciembre, 2015)
 	23 de diciembre:
 		- Reunión con Kevin Moraga para la aceptación de lo que se desarrollo en la primera iteración.
 	
+_______________________________________________________________________________________________
+
+Entregables semana #4 (04 de enero, 2016)	
+	
 	28 de diciembre:
 		- Finalización de los captcha para ambas aplicaciones (web y móvil)
 		
 	29 de diciembre:
 		- Desarrollo del Back-End de los captchas.
 		- Arreglo de algunos de los estilos de los formularios.
+		
+	30 de diciembre: 
+		- Instalación de la herramienta Request Tracker (RT)
+		- Lectura de la documentación de RT 
+
+	31 de diciembre:
+		- Desarrollo del caso de uso relacionado con la configuración de RT (creación de colas y campos personalizados).
+		- Creación de usuario y grupos, y sus respectivos privilegios con cada cola en RT.
