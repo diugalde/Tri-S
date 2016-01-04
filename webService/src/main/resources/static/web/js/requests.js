@@ -11,7 +11,7 @@ var ready = function() {
 			generateNotification("error", "Debe solucionar el captcha para enviar el formulario.");
 		}else {
 			var form = $(this);
-			var formData = JSON.parse(form.serializeJSON());
+			var formData = form.serializeJSON();
 			formData.recaptchaResponse = grecaptcha.getResponse(recaptchaId);
 			$.ajax({
 				method: 'POST',
