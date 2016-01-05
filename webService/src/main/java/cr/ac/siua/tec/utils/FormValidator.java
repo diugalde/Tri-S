@@ -94,16 +94,18 @@ public class FormValidator {
 
     private Map<String, String[]> getValidationTypeMap() {
         Map<String, String[]> map = new HashMap<>();
-        map.put("email", new String[] {"email"});
-        map.put("boolean", new String[] {"fulfillRequisites", "hasTimeConflict"});
-        map.put("alphanumeric", new String[] {"labId", "deviceId", "courseCode", "workstationId", "justification",
-                "detail", "motive", "assistanceActivities"});
-        map.put("numeric", new String[] {"studentId", "telephone", "cellphone", "courseGroup", "rn", "id",
-                "courseScore", "studentAverageScore", "assistanceTotalHours", "clientAccountNumber"});
-        map.put("string", new String[] {"studentName", "career", "enrollDay", "enrollTime", "courseName", "professorName",
-                "enrolledCourses", "campus", "requisiteCourses", "requisiteType", "assistanceType", "officialName", "bankName"});
-        map.put("date", new String[] {"enrollDay", "useDate"});
-        map.put("time", new String[] {"enrollTime", "initialUseTime", "finalUseTime"});
+        map.put("email", new String[] {"Requestor"});
+        map.put("boolean", new String[] {"Cumple con los requisitos", "Tiene choque de horario"});
+        map.put("alphanumeric", new String[] {"Identificador del laboratorio", "Identificador del equipo",
+                "Código del curso", "Identificador del espacio de trabajo", "Justificación",
+                "Detalle", "Motivo", "Actividades que realizará el asistente"});
+        map.put("numeric", new String[] {"Carné", "Número de teléfono", "Número de celular", "Número de grupo", "RN", "Cédula",
+                "Nota del curso", "Promedio ponderado", "Total de horas", "Número de cuenta cliente"});
+        map.put("string", new String[] {"Nombre del estudiante", "Carrera", "Nombre del curso",
+                "Nombre del profesor", "Cursos matriculados", "Sede", "Cursos requisito",
+                "Tipo de levantamiento", "Tipo de asistencia", "Nombre del funcionario", "Banco"});
+        map.put("date", new String[] {"Día de matrícula", "Fecha de uso"});
+        map.put("time", new String[] {"Hora de matrícula", "Hora inicial", "Hora final"});
         return map;
     }
 }

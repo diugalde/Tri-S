@@ -12,7 +12,9 @@ var ready = function() {
 		}else {
 			var form = $(this);
 			var formData = form.serializeJSON();
-			formData.recaptchaResponse = grecaptcha.getResponse(recaptchaId);
+			formData.Queue = $(this).attr("request");
+			formData.Requestor = "dua.0695@gmail.com";
+			console.log(formData);
 			$.ajax({
 				method: 'POST',
 				url: baseURL + "/request",
