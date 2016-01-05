@@ -1,5 +1,6 @@
 package cr.ac.siua.tec.controllers;
 
+import cr.ac.siua.tec.services.RTService;
 import cr.ac.siua.tec.services.RecaptchaService;
 import cr.ac.siua.tec.utils.FormValidator;
 import cr.ac.siua.tec.utils.NotificationManager;
@@ -23,8 +24,11 @@ public class FormController {
     @Autowired
     private RecaptchaService recaptchaService;
 
+    @Autowired
+    private RTService rtService;
+
     @RequestMapping(value="/request", method = RequestMethod.POST)
-    public ResponseEntity<HashMap<String, String>> createTicket(@RequestBody HashMap<String, String> map) {
+    public ResponseEntity<HashMap<String, String>> getRequest(@RequestBody HashMap<String, String> map) {
         HashMap<String, String> responseMap;
         if(!recaptchaService.isResponseValid("", map.get("recaptchaResponse"))) {
             responseMap = (HashMap) NotificationManager.getInvalidCaptchaMsg();
@@ -35,6 +39,7 @@ public class FormController {
             responseMap = (HashMap) NotificationManager.getValidFormMsg();
         }
         System.out.println("___________________________________________________");
+        rtService.createTicket(map);
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
 

@@ -2,7 +2,6 @@ var ready = function() {
 
 	var baseURL = "http://localhost:8282";
 
-	
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
 		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
@@ -12,7 +11,7 @@ var ready = function() {
 			generateNotification("error", "Debe solucionar el captcha para enviar el formulario.");
 		}else {
 			var form = $(this);
-			var formData = JSON.parse(form.serializeJSON());
+			var formData = form.serializeJSON();
 			formData.recaptchaResponse = grecaptcha.getResponse(recaptchaId);
 			$.ajax({
 				method: 'POST',
