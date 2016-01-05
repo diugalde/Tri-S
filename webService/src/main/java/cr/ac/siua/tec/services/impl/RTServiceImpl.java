@@ -35,11 +35,7 @@ public class RTServiceImpl implements RTService {
     public int createTicket(HashMap<String, String> formValues) {
         String url = this.baseUrl + "/ticket/new";
 
-        System.out.println("DEBUG1 con url: " +  url);
-
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
-
-            System.out.println("DEBUG2");
 
             HttpPost post = new HttpPost(url);
 
@@ -50,18 +46,12 @@ public class RTServiceImpl implements RTService {
 
             post.setEntity(new UrlEncodedFormEntity(urlParameters, HTTP.UTF_8));
 
-            System.out.println("debug3 con params: " + post.getParams().toString());
-
             HttpResponse response = client.execute(post);
-
-            System.out.println("DEBUG4");
 
             System.out.println("\nSending 'POST' request to URL : " + url);
             System.out.println("Post parameters : " + post.getEntity());
             System.out.println("Response Code : " +
                     response.getStatusLine().getStatusCode());
-
-            System.out.println("DEBUG5");
 
             BufferedReader rd = new BufferedReader(
                     new InputStreamReader(response.getEntity().getContent()));
