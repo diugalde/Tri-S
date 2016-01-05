@@ -138,5 +138,30 @@ Entregables semana #3 (14 de diciembre, 2015)
 		- Finalización de SAD.
 		- Revisión de documentos de la iteración #1.
 
+_______________________________________________________________________________________________
 
+Entregables semana #4 (04 de enero, 2016).
 
+	28 de diciembre:
+		- Investigación del recaptcha.
+		- Añadiendo recaptcha en la version web.
+		- Añadiendo recaptcha en la version movil.
+		- Haciendo responsive el recaptcha.
+	29 de diciembre:
+		- Back-end del recaptcha.
+		- Arreglando estilos del recaptcha en ambas versiones.
+		- Arreglando project charter y visión, versión 2.0.
+		- Añadiendo a heroku la nueva versión con captcha.
+	30 de diciembre:
+		- Instalación de RT.
+		- Lectura de la documentación de RT.
+	31 de diciembre:
+		- Creación documento de casos de uso faltantes.}
+		- Explorar más a fondo RT.
+		- Investigación sobre extensiones de RT.
+		- Investigación sobre los dumps mysql.
+	02 de enero:
+		- Lectura guía de elaboración de artículos científicos.
+		- Búsqueda de template para artículo en LaTex -> https://www.overleaf.com/latex/templates/ieee-demo-template-for-computer-science-journals/fxrxvtcsjqmm#.Vonm7HUrLH5
+		
+		
