@@ -19,6 +19,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class RTServiceImpl implements RTService {
@@ -33,42 +34,65 @@ public class RTServiceImpl implements RTService {
     private String baseUrl;
 
     public int createTicket(HashMap<String, String> formValues) {
+
+        int status = 1;
         String url = this.baseUrl + "/ticket/new";
 
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
 
             HttpPost post = new HttpPost(url);
 
-            List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
+            List<NameValuePair> urlParameters = new ArrayList<>();
             urlParameters.add(new BasicNameValuePair("user", this.rtUser));
             urlParameters.add(new BasicNameValuePair("pass", this.rtPw));
-            urlParameters.add(new BasicNameValuePair("content", "Queue: Reporte de daños\nSubject: Computadora mala\nCF-Carné: 2323232232321111\n"));
+            urlParameters.add(new BasicNameValuePair("content", getTicketParamsString(formValues)));
+
 
             post.setEntity(new UrlEncodedFormEntity(urlParameters, HTTP.UTF_8));
 
             HttpResponse response = client.execute(post);
 
-            System.out.println("\nSending 'POST' request to URL : " + url);
-            System.out.println("Post parameters : " + post.getEntity());
-            System.out.println("Response Code : " +
-                    response.getStatusLine().getStatusCode());
-
-            BufferedReader rd = new BufferedReader(
-                    new InputStreamReader(response.getEntity().getContent()));
-
-            StringBuffer result = new StringBuffer();
-            String line = "";
-            while ((line = rd.readLine()) != null) {
-                result.append(line);
-            }
-
-            System.out.println(result.toString());
+            printResponse(response);
 
         }catch (IOException e) {
             System.out.println("Excepcion al hacer el POST a RT.");
             e.printStackTrace();
-            return -1;
+            status = -1;
+        }finally {
+            return status;
         }
-        return 1;
+    }
+
+    private void printResponse(HttpResponse response) throws IOException {
+        System.out.println("Response Code : " + response.getStatusLine().getStatusCode());
+        BufferedReader rd = new BufferedReader(
+                new InputStreamReader(response.getEntity().getContent()));
+
+        StringBuffer result = new StringBuffer();
+        String line = "";
+        while ((line = rd.readLine()) != null) {
+            result.append(line);
+        }
+        System.out.println(result.toString());
+    }
+
+    private String getTicketParamsString(HashMap<String, String> formValues) {
+        formValues.remove("g-recaptcha-response");
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Queue: " + formValues.get("Queue") + "\n");
+        sb.append("Subject: Solicitado por " + formValues.get("RequestorName") + "\n");
+        sb.append("Requestor: " + formValues.get("Requestor") + "\n");
+        formValues.remove("Queue");
+        formValues.remove("Requestor");
+        formValues.remove("RequestorName");
+
+        String fieldName, fieldValue;
+        for(Map.Entry<String, String> entry : formValues.entrySet()) {
+            fieldName = entry.getKey();
+            fieldValue = entry.getValue();
+            sb.append("CF-" + fieldName + ": " + fieldValue + "\n");
+        }
+        return sb.toString();
     }
 }

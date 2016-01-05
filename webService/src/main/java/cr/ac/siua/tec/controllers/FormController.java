@@ -30,17 +30,15 @@ public class FormController {
     @RequestMapping(value="/request", method = RequestMethod.POST)
     public ResponseEntity<HashMap<String, String>> getRequest(@RequestBody HashMap<String, String> map) {
         HashMap<String, String> responseMap;
-        if(!recaptchaService.isResponseValid("", map.get("recaptchaResponse"))) {
+        if(!recaptchaService.isResponseValid("", map.get("g-recaptcha-response"))) {
             responseMap = (HashMap) NotificationManager.getInvalidCaptchaMsg();
         }
         else if(!validator.isValidForm(map)) {
             responseMap = (HashMap) NotificationManager.getInvalidFormMsg();
         }else {
             responseMap = (HashMap) NotificationManager.getValidFormMsg();
+            rtService.createTicket(map);
         }
-        System.out.println("___________________________________________________");
-        rtService.createTicket(map);
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
-
 }

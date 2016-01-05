@@ -2,7 +2,6 @@ var ready = function() {
 
 	var baseURL = "http://localhost:8282";
 
-
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
 		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
@@ -13,7 +12,9 @@ var ready = function() {
 		}else {
 			var form = $(this);
 			var formData = form.serializeJSON();
-			formData.recaptchaResponse = grecaptcha.getResponse(recaptchaId);
+			formData.Queue = $(this).attr("request");
+			formData.RequestorName = $(this).find(".requestor-name").val();
+			console.log(formData);
 			$.ajax({
 				method: 'POST',
 				url: baseURL + "/request",
@@ -33,6 +34,7 @@ var ready = function() {
 			});
 		}
 	});
+
 
 	function generateNotification(notificationType, message) {
 		message = JSON.stringify(message);
