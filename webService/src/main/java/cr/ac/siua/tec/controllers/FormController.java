@@ -37,10 +37,8 @@ public class FormController {
             responseMap = (HashMap) NotificationManager.getInvalidFormMsg();
         }else {
             responseMap = (HashMap) NotificationManager.getValidFormMsg();
+            rtService.createTicket(map);
         }
-        System.out.println("___________________________________________________");
-        rtService.createTicket(map);
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
-
 }

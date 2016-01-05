@@ -27,12 +27,13 @@ public class FormValidator {
     private void initMethodsMap() {
         methodsMap = new HashMap<>();
         methodsMap.put("email", (field) -> isValidEmailAddress((String)field));
-        methodsMap.put("boolean", (field) -> isValidBooleanField((String)field));
-        methodsMap.put("alphanumeric", (field) -> isValidAlphanumericField((String)field));
-        methodsMap.put("numeric", (field) -> isValidNumericField((String)field));
+        methodsMap.put("boolean", (field) -> isValidBooleanField((String) field));
+        methodsMap.put("alphanumeric", (field) -> isValidAlphanumericField((String) field));
+        methodsMap.put("numeric", (field) -> isValidNumericField((String) field));
         methodsMap.put("string", (field) -> isValidStringField((String) field));
         methodsMap.put("date", (field) -> isValidDateField((String) field));
-        methodsMap.put("time", (field) -> isValidTimeField((String)field));
+        methodsMap.put("time", (field) -> isValidTimeField((String) field));
+        methodsMap.put("any", (field) -> isValidAnyField((String) field));
     }
 
 
@@ -51,6 +52,7 @@ public class FormValidator {
             }
             validationResult = validationResult && fieldValidation;
         }
+        System.out.println("____________________________________________\n");
         return validationResult;
     }
 
@@ -64,6 +66,10 @@ public class FormValidator {
     private boolean isValidStringField(String field) {
         String pattern = "^[\\p{L} .'-]+$";
         return field.matches(pattern);
+    }
+
+    private boolean isValidAnyField(String field) {
+        return !field.equals("");
     }
 
     private boolean isValidDateField(String field) {
@@ -89,7 +95,8 @@ public class FormValidator {
     }
 
     private boolean isValidBooleanField(String field) {
-        return field.equalsIgnoreCase("true") || field.equalsIgnoreCase("false");
+        return field.equalsIgnoreCase("true") || field.equalsIgnoreCase("false")
+                || field.equalsIgnoreCase("Si") || field.equalsIgnoreCase("No") || field.equalsIgnoreCase("Sí");
     }
 
     private Map<String, String[]> getValidationTypeMap() {
@@ -97,15 +104,15 @@ public class FormValidator {
         map.put("email", new String[] {"Requestor"});
         map.put("boolean", new String[] {"Cumple con los requisitos", "Tiene choque de horario"});
         map.put("alphanumeric", new String[] {"Identificador del laboratorio", "Identificador del equipo",
-                "Código del curso", "Identificador del espacio de trabajo", "Justificación",
-                "Detalle", "Motivo", "Actividades que realizará el asistente"});
-        map.put("numeric", new String[] {"Carné", "Número de teléfono", "Número de celular", "Número de grupo", "RN", "Cédula",
+                "Código del curso", "Identificador del espacio de trabajo"});
+        map.put("numeric", new String[] {"Carné", "Número de celular", "Número de grupo", "RN", "Cédula",
                 "Nota del curso", "Promedio ponderado", "Total de horas", "Número de cuenta cliente"});
         map.put("string", new String[] {"Nombre del estudiante", "Carrera", "Nombre del curso",
-                "Nombre del profesor", "Cursos matriculados", "Sede", "Cursos requisito",
-                "Tipo de levantamiento", "Tipo de asistencia", "Nombre del funcionario", "Banco"});
+                "Nombre del profesor", "Sede", "Tipo de levantamiento", "Tipo de asistencia", "Nombre del funcionario", "Banco"});
         map.put("date", new String[] {"Día de matrícula", "Fecha de uso"});
         map.put("time", new String[] {"Hora de matrícula", "Hora inicial", "Hora final"});
+        map.put("any", new String[] {"Justificación", "Detalle", "Motivo", "Actividades que realizará el asistente",
+                "Cursos requisito", "Cursos matriculados"});
         return map;
     }
 }

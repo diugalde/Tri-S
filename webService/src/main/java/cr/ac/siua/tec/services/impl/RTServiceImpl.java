@@ -35,8 +35,6 @@ public class RTServiceImpl implements RTService {
 
     public int createTicket(HashMap<String, String> formValues) {
 
-        System.out.println(getTicketParamsString(formValues));
-
         int status = 1;
         String url = this.baseUrl + "/ticket/new";
 
@@ -48,6 +46,7 @@ public class RTServiceImpl implements RTService {
             urlParameters.add(new BasicNameValuePair("user", this.rtUser));
             urlParameters.add(new BasicNameValuePair("pass", this.rtPw));
             urlParameters.add(new BasicNameValuePair("content", getTicketParamsString(formValues)));
+
 
             post.setEntity(new UrlEncodedFormEntity(urlParameters, HTTP.UTF_8));
 
@@ -82,10 +81,11 @@ public class RTServiceImpl implements RTService {
         StringBuilder sb = new StringBuilder();
 
         sb.append("Queue: " + formValues.get("Queue") + "\n");
-        sb.append("Subject: " + formValues.get("Queue") + "\n");
+        sb.append("Subject: Solicitado por " + formValues.get("RequestorName") + "\n");
         sb.append("Requestor: " + formValues.get("Requestor") + "\n");
         formValues.remove("Queue");
         formValues.remove("Requestor");
+        formValues.remove("RequestorName");
 
         String fieldName, fieldValue;
         for(Map.Entry<String, String> entry : formValues.entrySet()) {
