@@ -1,4 +1,4 @@
-<form class="cd-form floating-labels" request="requirements">
+<form class="cd-form floating-labels" request="Levantamiento de requisitos">
 	<fieldset>
 		<legend>
 			<div class="form-header">
@@ -12,14 +12,14 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="icon">
-					<label class="cd-label" for="studentName">Nombre completo</label>
-					<input class="use form-field" type="text" name="studentName" id="req-name" required>
+					<label class="cd-label" for="Nombre del estudiante">Nombre completo</label>
+					<input class="use form-field" type="text" name="Nombre del estudiante" id="req-name" class="requestor-name" required>
 				</div> 
 			</div>
 			<div class="col-md-6">
 				<div class="icon">
-					<label class="cd-label form-field" for="email">Correo electrónico</label>
-					<input class="email form-field" type="email" name="email" id="req-email" required>
+					<label class="cd-label form-field" for="Requestor">Correo electrónico</label>
+					<input class="email form-field" type="email" name="Requestor" id="req-email" required>
 				</div>
 			</div>
 		</div>
@@ -27,20 +27,20 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="icon">
-					<label class="cd-label" for="studentId">Carné</label>
-					<input class="use form-field" type="text" name="studentId" id="req-student-id" required>
+					<label class="cd-label" for="Carné">Carné</label>
+					<input class="use form-field" type="text" name="Carné" id="req-student-id" required>
 				</div> 
 			</div>
 			<div class="col-md-4">
 				<div class="icon">
-					<label class="cd-label" for="telephone">Teléfono (opcional)</label>
-					<input class="use form-field" type="text" name="telephone" id="req-telephone" >
+					<label class="cd-label" for="Número de teléfono">Teléfono (opcional)</label>
+					<input class="use form-field" type="text" name="Número de teléfono" id="req-telephone" >
 				</div> 
 			</div>
 			<div class="col-md-4">
-				<label class="cd-label float" for="campus">Sede</label>
+				<label class="cd-label float" for="Sede">Sede</label>
 				<p class="cd-select icon">
-					<select class="use form-field" id="req-site" name="campus">
+					<select class="use form-field" id="req-site" name="Sede">
 						<option value="Campus Central Cartago">Campus Central Cartago</option>
 						<option value="Sede Regional San Carlos">Sede Regional San Carlos</option>
 						<option value="Centro Académico de Alajuela">Centro Académico de Alajuela</option>
@@ -54,20 +54,20 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="icon">
-					<label class="cd-label" for="courseName">Nombre del curso que desea matricular</label>
-					<input class="use form-field" type="text" name="courseName" id="req-course" required>
+					<label class="cd-label" for="Nombre del curso">Nombre del curso que desea matricular</label>
+					<input class="use form-field" type="text" name="Nombre del curso" id="req-course" required>
 				</div> 
 			</div>
 			<div class="col-md-4">
 				<div class="icon">
-					<label class="cd-label" for="courseCode">Código del curso</label>
-					<input class="use form-field" type="text" name="courseCode" id="req-course-code" required>
+					<label class="cd-label" for="Código del curso">Código del curso</label>
+					<input class="use form-field" type="text" name="Código del curso" id="req-course-code" required>
 				</div> 
 			</div>
 			<div class="col-md-4">
 				<div class="icon">
-					<label class="cd-label" for="requisiteCourses">Nombre del curso requisito a levantar</label>
-					<input class="use form-field" type="text" name="requisiteCourses" id="req-courses" required>
+					<label class="cd-label" for="Cursos requisito">Nombre del curso requisito a levantar</label>
+					<input class="use form-field" type="text" name="Cursos requisito" id="req-courses" required>
 				</div> 
 			</div>
 		</div>
@@ -77,23 +77,23 @@
 				<h4 class="header-label">Tipo de levantamiento</h4>
 				<ul class="cd-form-list">
 					<li>
-						<input type="radio" name="requisiteType" id="cd-radio-1 req-req" checked="checked" value="Requisitos">
+						<input type="radio" name="Tipo de levantamiento" id="cd-radio-1 req-req" checked="checked" value="Requisitos">
 						<label for="cd-radio-1">Requisitos</label>
 					</li>
 					<li>
-						<input type="radio" name="requisiteType" id="cd-radio-2 req-conflict" value="Choque de horario">
+						<input type="radio" name="Tipo de levantamiento" id="cd-radio-2 req-conflict" value="Choque de horario">
 						<label for="cd-radio-2">Choque de horario</label>
 					</li>
 					<li>
-						<input type="radio" name="requisiteType" id="cd-radio-3 req-rn" value="RN">
+						<input type="radio" name="Tipo de levantamiento" id="cd-radio-3 req-rn" value="RN">
 						<label for="cd-radio-3">RN</label>
 					</li>
 				</ul>
 			</div>
 			<div class="col-md-6">
 				<div class="icon">
-					<label class="cd-label" for="justification">Justificación del levantamiento (comentarios)</label>
-					<textarea class="message form-field" name="justification" id="req-justify" required></textarea>
+					<label class="cd-label" for="Justificación">Justificación del levantamiento (comentarios)</label>
+					<textarea class="message form-field" name="Justificación" id="req-justify" required></textarea>
 				</div> 
 			</div>
 		</div>
