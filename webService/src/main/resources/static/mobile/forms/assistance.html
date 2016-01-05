@@ -6,18 +6,18 @@
 
     <div class="clear-float"></div>
 
-    <form method="post" action="#main-page" class="cd-form" request="assistance">
+    <form method="post" action="#main-page" class="cd-form" request="Nombramiento de asistentes">
         <div class="ui-grid-a ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
-                    <label for="studentName">Nombre completo </label>
-                    <input type="text" name="studentName" id="assist-name" placeholder="" required>
+                    <label for="Nombre del estudiante">Nombre completo </label>
+                    <input type="text" name="Nombre del estudiante" id="assist-name" placeholder="" class="requestor-name" required>
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="email">Correo electrónico </label>
-                    <input type="email" id="assist-email" name="email" placeholder="" required>
+                    <label for="Requestor">Correo electrónico </label>
+                    <input type="email" id="assist-email" name="Requestor" placeholder="" required>
                 </div>
             </div>
         </div><!-- /grid-a -->
@@ -25,20 +25,20 @@
         <div class="ui-grid-b ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
-                    <label for="studentId">Carné </label>
-                    <input type="number" name="studentId" id="assist-student-id" placeholder="" required>
+                    <label for="Carné">Carné </label>
+                    <input type="number" name="Carné" id="assist-student-id" placeholder="" required>
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="telephone">Teléfono (opcional)</label>
-                    <input type="tel" id="assist-telephone" name="telephone" placeholder="">
+                    <label for="Número de teléfono">Teléfono (opcional)</label>
+                    <input type="tel" id="assist-telephone" name="Número de teléfono" placeholder="">
                 </div>
             </div>
             <div class="ui-block-c">
                 <div class="ui-body ui-body-d">
-                    <label for="id">Cédula </label>
-                    <input type="number" name="id" id="assist-id" placeholder="" required>
+                    <label for="Cédula">Cédula </label>
+                    <input type="number" name="Cédula" id="assist-id" placeholder="" required>
                 </div>
             </div>
         </div><!-- /grid-b -->
@@ -46,14 +46,14 @@
         <div class="ui-grid-a ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
-                    <label for="career">Carrera </label>
-                    <input type="text" name="career" id="assist-career" placeholder="" required>
+                    <label for="Carrera">Carrera </label>
+                    <input type="text" name="Carrera" id="assist-career" placeholder="" required>
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="officialName">Nombre del funcionario que voy a asistir </label>
-                    <input type="text" id="assist-official-name" name="officialName" placeholder="" required>
+                    <label for="Nombre del funcionario">Nombre del funcionario que voy a asistir </label>
+                    <input type="text" id="assist-official-name" name="Nombre del funcionario" placeholder="" required>
                 </div>
             </div>
         </div><!-- /grid-a -->
@@ -64,18 +64,18 @@
                     <fieldset data-role="controlgroup">
                         <legend>Tipo de asistencia</legend>
                         <label for="assist-assitant">Horas asistente</label>
-                        <input type="radio" name="assistanceType" id="assist-assitant" value="Horas asistente">
+                        <input type="radio" name="Tipo de asistencia" id="assist-assitant" value="Horas asistente">
                         <label for="assist-student">Horas estudiante</label>
-                        <input type="radio" name="assistanceType" id="assist-student" value="Horas estudiante" checked="checked">
+                        <input type="radio" name="Tipo de asistencia" id="assist-student" value="Horas estudiante" checked="checked">
                         <label for="assist-special">Asistencia especial</label>
-                        <input type="radio" name="assistanceType" id="assist-special" value="Asistencia especial">
+                        <input type="radio" name="Tipo de asistencia" id="assist-special" value="Asistencia especial">
                     </fieldset>
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="assistanceActivities">Actividades que realizará el estudiante </label>
-                    <textarea name="assistanceActivities" id="assist-activities" placeholder="" required></textarea>
+                    <label for="Actividades que realizará el asistente">Actividades que realizará el estudiante </label>
+                    <textarea name="Actividades que realizará el asistente" id="assist-activities" placeholder="" required></textarea>
                 </div>
             </div>
         </div><!-- /grid-a -->
@@ -83,20 +83,20 @@
         <div class="ui-grid-b ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
-                    <label for="courseScore">Nota del curso (Si aplica)</label>
-                    <input type="number" name="courseScore" id="assist-course-code" placeholder="">
+                    <label for="Nota del curso">Nota del curso (Si aplica)</label>
+                    <input type="number" name="Nota del curso" id="assist-course-code" placeholder="">
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="studentAverageScore">Promedio ponderado del semestre pasado</label>
-                    <input type="number" id="assist-avg-score" name="studentAverageScore" placeholder="" required>
+                    <label for="Promedio ponderado">Promedio ponderado del semestre pasado</label>
+                    <input type="number" id="assist-avg-score" name="Promedio ponderado" placeholder="" required>
                 </div>
             </div>
             <div class="ui-block-c">
                 <div class="ui-body ui-body-d">
-                    <label for="assistanceTotalHours">Total de horas </label>
-                    <input type="number" name="assistanceTotalHours" id="assist-hours" placeholder="" required>
+                    <label for="Total de horas">Total de horas </label>
+                    <input type="number" name="Total de horas" id="assist-hours" placeholder="" required>
                 </div>
             </div>
         </div><!-- /grid-b -->
@@ -107,18 +107,18 @@
                     <fieldset data-role="controlgroup">
                         <legend>Banco</legend>
                         <label for="assist-credit-bank">Banco Crédito Agrícola</label>
-                        <input type="radio" name="bankName" id="assist-credit-bank" value="Banco Crédito Agrícola">
+                        <input type="radio" name="Banco" id="assist-credit-bank" value="Banco Crédito Agrícola">
                         <label for="assist-nat-bank">Banco Nacional</label>
-                        <input type="radio" name="bankName" id="assist-nat-bank" value="Banco Nacional" checked="checked">
+                        <input type="radio" name="Banco" id="assist-nat-bank" value="Banco Nacional" checked="checked">
                         <label for="assist-pop-bank">Banco Popular</label>
-                        <input type="radio" name="bankName" id="assist-pop-bank" value="Banco Popular">
+                        <input type="radio" name="Banco" id="assist-pop-bank" value="Banco Popular">
                     </fieldset>
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
-                    <label for="clientAccountNumber">Número de cuenta cliente </label>
-                    <input type="number" name="clientAccountNumber" id="assist-client" placeholder="" required>
+                    <label for="Número de cuenta cliente">Número de cuenta cliente </label>
+                    <input type="number" name="Número de cuenta cliente" id="assist-client" placeholder="" required>
                 </div>
             </div>
         </div><!-- /grid-a -->
