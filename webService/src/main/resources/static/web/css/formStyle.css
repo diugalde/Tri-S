@@ -446,3 +446,27 @@ Custom form css
 	padding-bottom: 25px !important;
 	/*margin-top: 20px !important;*/
 }
+
+.info-accordion-section {
+    margin: 1em auto;
+}
+
+.custom-panel-heading {
+	padding: 0px !important;
+	background-color: #E5E5E5;
+}
+
+.tab-accordion-title {
+	padding: 15px 0px 15px 5px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.info-list {
+	margin-top: 5px;
+	margin-left: 18px;
+}
+
+.panel-collapse p {
+	font-size: 1.35em !important;
+}

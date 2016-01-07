@@ -74,6 +74,14 @@
     text-align: center !important;
 }
 
+.ui-tabs-nav li a {
+    text-overflow: ellipsis !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+
 .toggle-label {
     width: auto !important;
 }
@@ -86,6 +94,44 @@
 
 .recaptcha-container div div {
     margin: 0 auto !important;
+}
+
+@media all and (max-width: 310px) {
+
+    #tabs div ul li a {
+        font-size: 10px !important;
+    }
+
+    .ui-tabs-nav li a {
+        font-size: 10px !important;
+    }
+
+    .form-link img {
+        -webkit-transform: scale(0.60); /* Saf3.1+, Chrome */
+        -moz-transform: scale(0.60); /* FF3.5+ */
+        -ms-transform: scale(0.60); /* IE9 */
+        -o-transform: scale(0.60); /* Opera 10.5+ */
+        transform: scale(0.60);
+    }
+}
+
+.ui-tabs-nav {
+    display: flex !important;
+}
+
+.navbar-btn {
+    border: solid 1px #EDEDED!important;
+    display:flex !important;
+}
+
+.navbar-btn a{
+    border: none !important; 
+    display: block !important;
+    width: 100% !important;
+}
+
+.navbar-btn a:visited, .navbar-btn a:hover, {
+    background-color: none !important;
 }
 
 .info {

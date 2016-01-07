@@ -163,5 +163,21 @@ Entregables semana #4 (04 de enero, 2016).
 	02 de enero:
 		- Lectura guía de elaboración de artículos científicos.
 		- Búsqueda de template para artículo en LaTex -> https://www.overleaf.com/latex/templates/ieee-demo-template-for-computer-science-journals/fxrxvtcsjqmm#.Vonm7HUrLH5
+	03 de enero:
+		- Configuración RT
+	04 de enero:
+		- Trabajo en el servicioRT para creación de tiquetes.
+		- Pruebas de envío de todos los formularios.
+	05 de enero:
+		- Definición de la información adicional de cada formulario.
+		- Trabajo en el plan de pruebas.
+	06 de enero:
+		- Trabajo en la parte web de muestra de información adicional.
+		- Arreglando la flecha de volver de cada formulario en la versión web.
+		- Arreglando los tabs de la aplicación móvil.
+		- Arreglando textos de la aplicación móvil cuando el display es muy pequeño.
+		- Mejorando fluidez de la interfaz web.
+	07 de enero:
+		- Finalización de información adicional de cada formulario. 
 		
 		
