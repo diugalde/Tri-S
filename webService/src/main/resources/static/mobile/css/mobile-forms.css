@@ -87,3 +87,12 @@
 .recaptcha-container div div {
     margin: 0 auto !important;
 }
+
+.info {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.ui-collapsible-themed-content .ui-collapsible-content {
+    border-color: #bbb;
+}
