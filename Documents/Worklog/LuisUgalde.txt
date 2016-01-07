@@ -127,3 +127,12 @@ Entregables semana #4 (04 de enero, 2016)
 	31 de diciembre:
 		- Desarrollo del caso de uso relacionado con la configuración de RT (creación de colas y campos personalizados).
 		- Creación de usuario y grupos, y sus respectivos privilegios con cada cola en RT.
+
+	5 de enero:
+		- Agregando la parte de los captchas a los manuales de usuario.
+		- Finalización del manual de instalación de RT.
+		- Revisión del plan de pruebas para la iteración 2.
+		
+	6 de enero:
+		- Añadiendo tabs de información a los formularios para móvil.
+		- Modificación de los manuales de usuario. 

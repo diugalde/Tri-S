@@ -134,4 +134,11 @@
     background-color: none !important;
 }
 
+.info {
+    text-align: justify;
+    text-justify: inter-word;
+}
 
+.ui-collapsible-themed-content .ui-collapsible-content {
+    border-color: #bbb;
+}

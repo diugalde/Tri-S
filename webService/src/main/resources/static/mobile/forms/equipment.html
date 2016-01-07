@@ -6,6 +6,13 @@
 
     <div class="clear-float"></div>
 
+    <div data-role="collapsible-set" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+        <div data-role="collapsible" class="info">
+            <h3>Información</h3>
+            <p>En caso de necesitar algún equipo (ordenadores, raspberry pi, teclados, etc) para fines académicos o investigación, puede hacerlo llenando el siguiente formulario. Se le enviará un correo indicando si su solicitud de préstamo de equipo fue aprobada.</p>
+        </div>
+    </div>
+
     <form method="post" action="#main-page" class="cd-form" request="Préstamo de equipo">
         <div class="ui-grid-a ui-responsive">
             <div class="ui-block-a">
@@ -36,22 +43,22 @@
                 </div>
             </div>
         </div><!-- /grid-a -->
-        
+
         <div class="ui-grid-a ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
                     <label for="Detalle">Descripción del equipo a solicitar </label>
-                <textarea name="Detalle" id="equip-description" placeholder="" required></textarea>
+                    <textarea name="Detalle" id="equip-description" placeholder="" required></textarea>
                 </div>
             </div>
             <div class="ui-block-b">
                 <div class="ui-body ui-body-d">
                     <label for="Justificación">Justificación de la solicitud </label>
-                <textarea name="Justificación" id="equip-justify" placeholder="" required></textarea>
+                    <textarea name="Justificación" id="equip-justify" placeholder="" required></textarea>
                 </div>
             </div>
         </div><!-- /grid-a -->
-        
+
         <div class="ui-grid-b ui-responsive">
             <div class="ui-block-a">
                 <div class="ui-body ui-body-d">
@@ -74,7 +81,7 @@
         </div><!-- /grid-b -->
 
         <div id="recaptcha-equipment" class="recaptcha-container"></div>
-        
+
         <div class="submit-container">
             <input type="submit" data-inline="true" value="Enviar solicitud" data-theme="b" class="submit-button">
         </div>
