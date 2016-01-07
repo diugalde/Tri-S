@@ -191,14 +191,11 @@ var ready = function() {
 			setTimeout(function() {
 				var dummy = gridItemsContainer.querySelector('.placeholder');
 
-				//classie.removeClass(bodyEl, 'noscroll');
-
 				dummy.style.WebkitTransform = 'translate3d(' + 0 + 'px, ' + 0 + 'px, 0px) scale3d(' + gridItem.offsetWidth/gridItemsContainer.offsetWidth + ',' + gridItem.offsetHeight/getViewport('y') + ',1)';
 				dummy.style.transform = 'translate3d(' + gridItem.offsetLeft + 'px, ' + 0 + 'px, 0px) scale3d(' + gridItem.offsetWidth/gridItemsContainer.offsetWidth + ',' + gridItem.offsetHeight/getViewport('y') + ',1)';
 
 				onEndTransition(dummy, function() {
-					// reset content scroll..
-					//contentItem.parentNode.scrollTop = 0;
+
 					gridItemsContainer.removeChild(dummy);
 					classie.remove(gridItem, 'grid__item--loading');
 					classie.remove(gridItem, 'grid__item--animate');
@@ -213,7 +210,7 @@ var ready = function() {
 
 				// reset current
 				current = -1;
-			}, 25);
+			}, 5);
 		}
 
 		init();
