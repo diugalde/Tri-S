@@ -179,5 +179,6 @@ Entregables semana #4 (04 de enero, 2016).
 		- Mejorando fluidez de la interfaz web.
 	07 de enero:
 		- Finalización de información adicional de cada formulario. 
+		- Arreglando responsiveness de la aplicación web para dispositivos muy pequeños.
 		
 		
