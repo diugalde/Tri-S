@@ -1,5 +1,4 @@
 <form class="cd-form floating-labels" request="Nombramiento de asistentes">
-    <fieldset>
         <legend>
             <div class="form-header">
                 <img src="images/requestIcons/solicitudAsistente.png" class="img-responsive"/>
@@ -126,7 +125,7 @@
             </div>
             <div class="col-md-4">
                 <div class="icon">
-                    <label class="cd-label" for="Promedio ponderado">Promedio ponderado</label>
+                    <label class="cd-label" for="Promedio ponderado">Promedio semestre anterior</label>
                     <input class="use form-field" type="text" name="Promedio ponderado" id="assist-avg-score" required>
                 </div> 
             </div>
@@ -164,10 +163,11 @@
             </div>
         </div>
 
-        <div id="recaptcha-assistance" class="recaptcha-container"></div>
-        
-        <div>
-            <input type="submit" value="Enviar solicitud">
+        <div class="row">
+            <div id="recaptcha-assistance" class="recaptcha-container"></div>
         </div>
-    </fieldset>
+
+        <div class="row">
+            <input type="submit" value="Enviar solicitud" class="submit-btn">
+        </div>
 </form>

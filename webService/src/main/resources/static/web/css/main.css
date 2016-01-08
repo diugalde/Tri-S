@@ -191,6 +191,7 @@ a:focus {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 0.95em !important;
 }
 .portfolio-item .overlay {
   position: absolute;
