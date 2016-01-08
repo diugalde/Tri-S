@@ -56,45 +56,45 @@ public class FormValidator {
         return validationResult;
     }
 
-    private boolean isValidEmailAddress(String email) {
+    public boolean isValidEmailAddress(String email) {
         String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
         java.util.regex.Matcher m = p.matcher(email);
         return m.matches();
     }
 
-    private boolean isValidStringField(String field) {
+    public boolean isValidStringField(String field) {
         String pattern = "^[\\p{L} .'-]+$";
         return field.matches(pattern);
     }
 
-    private boolean isValidAnyField(String field) {
+    public boolean isValidAnyField(String field) {
         return !field.equals("");
     }
 
-    private boolean isValidDateField(String field) {
+    public boolean isValidDateField(String field) {
         String pattern1 = "([0-9]{2})-([0-9]{2})-([0-9]{4})";
         String pattern2 = "([0-9]{2})/([0-9]{2})/([0-9]{4})";
         return field.matches(pattern1) || field.matches(pattern2);
     }
 
-    private boolean isValidTimeField(String field) {
+    public boolean isValidTimeField(String field) {
         String pattern1 = "([01]?[0-9]|2[0-3]):[0-5][0-9]";
         String pattern2 = "(1[012]|0[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)";
         return field.matches(pattern1) || field.matches(pattern2);
     }
 
-    private boolean isValidAlphanumericField(String field) {
+    public boolean isValidAlphanumericField(String field) {
         String pattern = "^[a-zA-Z0-9]*$";
         return field.matches(pattern);
     }
 
-    private boolean isValidNumericField(String field) {
+    public boolean isValidNumericField(String field) {
         String pattern = "[0-9]+";
         return field.matches(pattern) || field.equals("");
     }
 
-    private boolean isValidBooleanField(String field) {
+    public boolean isValidBooleanField(String field) {
         return field.equalsIgnoreCase("true") || field.equalsIgnoreCase("false")
                 || field.equalsIgnoreCase("Si") || field.equalsIgnoreCase("No") || field.equalsIgnoreCase("Sí");
     }
