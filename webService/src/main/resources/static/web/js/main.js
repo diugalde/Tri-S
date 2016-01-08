@@ -6,7 +6,8 @@ jQuery(function($) {
 		$portfolio = $('.portfolio-items');
 		var currPortfolioWidth = parseFloat($portfolio.css('width'));
 		var currElements = Math.floor(currPortfolioWidth/elementSize);
-		var newPadding = Math.floor((currPortfolioWidth-(currElements*elementSize))/2.0);
+		if(currElements <= 0) newPadding = 0;
+		else newPadding = Math.floor((currPortfolioWidth-(currElements*elementSize))/2.0);
 		$portfolio.css('margin-left', (newPadding+20) + 'px');
 		$portfolio.css('margin-right', newPadding + 'px');
 	}
