@@ -1,112 +1,114 @@
 <form class="cd-form floating-labels" request="Préstamo de equipo">
-	<fieldset>
-		<legend>
-			<div class="form-header">
-				<img src="images/requestIcons/prestamoEquipo.png" class="img-responsive"/>
-				<h3>Préstamo de equipo</h3>
-			</div>
-		</legend>
-		
-		<section class="clear-float"></section>
 
-        <div class="row">
-            <div class="col-md-12">
-                <section class="info-accordion-section">
-                    <section class="panel-group" id="accordion-equipment" role="tablist" aria-multiselectable="true">
-                      <section class="panel panel-default">
+    <legend>
+        <div class="form-header">
+            <img src="images/requestIcons/prestamoEquipo.png" class="img-responsive"/>
+            <h3>Préstamo de equipo</h3>
+        </div>
+    </legend>
+
+    <section class="clear-float"></section>
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="info-accordion-section">
+                <section class="panel-group" id="accordion-equipment" role="tablist" aria-multiselectable="true">
+                    <section class="panel panel-default">
                         <section class="panel-heading custom-panel-heading" role="tab">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-equipment" href="#collapse-equipment" aria-expanded="false" aria-controls="collapse-equipment">
-                              <h3 class="panel-title tab-accordion-title">
-                                  <i class="fa fa-plus-circle"></i><b> Información</b>
-                              </h3>
-                          </a>
+                                <h3 class="panel-title tab-accordion-title">
+                                    <i class="fa fa-plus-circle"></i><b> Información</b>
+                                </h3>
+                            </a>
                         </section>
                         <section id="collapse-equipment" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                          <section class="panel-body">
-                            <p class="lead">
-                            En caso de necesitar algún equipo (ordenadores, raspberry pi, teclados, etc) para fines académicos, puede hacerlo llenando el siguiente formulario. 
-                            </p>
-                            <p class="lead">
-                            Se le enviará un correo indicando si su solicitud de préstamo de equipo fue aprobada.
-                            </p>
-                          </section>
+                            <section class="panel-body">
+                                <p class="lead">
+                                    En caso de necesitar algún equipo (ordenadores, raspberry pi, teclados, etc) para fines académicos, puede hacerlo llenando el siguiente formulario. 
+                                </p>
+                                <p class="lead">
+                                    Se le enviará un correo indicando si su solicitud de préstamo de equipo fue aprobada.
+                                </p>
+                            </section>
                         </section>
-                      </section>
                     </section>
                 </section>
-            </div>
-        </div> 
+            </section>
+        </div>
+    </div> 
 
-		<div class="row">
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="Nombre del estudiante">Nombre completo</label>
-                    <input class="use form-field requestor-name" type="text" name="Nombre del estudiante" id="equip-name" required>
-                </div> 
-            </div>
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label form-field" for="Requestor">Correo electrónico</label>
-                    <input class="email form-field" type="email" name="Requestor" id="equip-email" required>
-                </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Nombre del estudiante">Nombre completo</label>
+                <input class="use form-field requestor-name" type="text" name="Nombre del estudiante" id="equip-name" required>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label form-field" for="Requestor">Correo electrónico</label>
+                <input class="email form-field" type="email" name="Requestor" id="equip-email" required>
             </div>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="Carné">Carné</label>
-                    <input class="use form-field" type="text" name="Carné" id="equip-student-id" required>
-                </div> 
-            </div>
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="Cédula">Cédula</label>
-                    <input class="use form-field" type="text" name="Cédula" id="equip-id" required>
-                </div> 
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Carné">Carné</label>
+                <input class="use form-field" type="text" name="Carné" id="equip-student-id" required>
+            </div> 
         </div>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="Detalle">Descripción del equipo a solicitar</label>
-                    <textarea class="message form-field" name="Detalle" id="work-description" required></textarea>
-                </div> 
-            </div>
-            <div class="col-md-6">
-                <div class="icon">
-                    <label class="cd-label" for="Justificación">Justificación de la solicitud</label>
-                    <textarea class="message form-field" name="Justificación" id="work-justify" required></textarea>
-                </div> 
-            </div>
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Cédula">Cédula</label>
+                <input class="use form-field" type="text" name="Cédula" id="equip-id" required>
+            </div> 
         </div>
-        
-        <div class="row">
-            <div class="col-md-4">
-                <div class="icon">
-                    <label class="cd-label" for="Fecha de uso">Fecha de uso</label>
-                    <input class="form-field bootstrap-datepicker" type="text" name="Fecha de uso" id="equip-use-day" required>
-                </div> 
-            </div>
-            <div class="col-md-4">
-                <div class="icon">
-                    <label class="cd-label" for="Hora inicial">Hora de uso (inicial)</label>
-                    <input class="form-field bootstrap-timepicker" type="text" name="Hora inicial" id="equip-use-time" required>
-                </div> 
-            </div>
-            <div class="col-md-4">
-                <div class="icon">
-                    <label class="cd-label" for="Hora final">Hora de uso (final)</label>
-                    <input class="form-field bootstrap-timepicker" type="text" name="Hora final" id="equip-end-time" required>
-                </div> 
-            </div>
-        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Detalle">Descripción del equipo a solicitar</label>
+                <textarea class="message form-field" name="Detalle" id="work-description" required></textarea>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Justificación">Justificación de la solicitud</label>
+                <textarea class="message form-field" name="Justificación" id="work-justify" required></textarea>
+            </div> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="icon">
+                <label class="cd-label" for="Fecha de uso">Fecha de uso</label>
+                <input class="form-field bootstrap-datepicker" type="text" name="Fecha de uso" id="equip-use-day" required>
+            </div> 
+        </div>
+        <div class="col-md-4">
+            <div class="icon">
+                <label class="cd-label" for="Hora inicial">Hora de uso (inicial)</label>
+                <input class="form-field bootstrap-timepicker" type="text" name="Hora inicial" id="equip-use-time" required>
+            </div> 
+        </div>
+        <div class="col-md-4">
+            <div class="icon">
+                <label class="cd-label" for="Hora final">Hora de uso (final)</label>
+                <input class="form-field bootstrap-timepicker" type="text" name="Hora final" id="equip-end-time" required>
+            </div> 
+        </div>
+    </div>
+
+    <div class="row">
         <div id="recaptcha-equipment" class="recaptcha-container"></div>
+    </div>
 
-        <div>
-            <input type="submit" value="Enviar solicitud">
-        </div>
-	</fieldset>
+    <div class="row">
+        <input type="submit" value="Enviar solicitud" class="submit-btn">
+    </div>
+
 </form>
