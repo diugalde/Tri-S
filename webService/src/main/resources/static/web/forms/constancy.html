@@ -1,83 +1,85 @@
 <form class="cd-form floating-labels" request="Constancias de estudio">
-	<fieldset>
-		<legend>
-			<div class="form-header">
-				<img src="images/requestIcons/constancia.png" class="img-responsive"/>
-				<h3>Constancia de estudio</h3>
-			</div>
-		</legend>
 
-		<section class="clear-float"></section>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<section class="info-accordion-section">
-					<section class="panel-group" id="accordion-constancy" role="tablist" aria-multiselectable="true">
-					  <section class="panel panel-default">
-					    <section class="panel-heading custom-panel-heading" role="tab">
-					    	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-constancy" href="#collapse-constancy" aria-expanded="false" aria-controls="collapse-constancy">
-						      <h3 class="panel-title tab-accordion-title">
-						          <i class="fa fa-plus-circle"></i> <b> Información</b>
-						      </h3>
-					      </a>
-					    </section>
-					    <section id="collapse-constancy" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-					      <section class="panel-body">
-					      	<p class="lead">
-						        Una constancia de estudio es un documento emitido por el Instituto Tecnológico de Costa Rica para hacer constar que el solicitante es estudiante activo de la carrera. Si desea una constancia especial indíquelo en el campo de motivo de la solicitud.
-							</p>
-							<p class="lead">Se le enviará un correo cuando la constancia de estudio esté lista para retirar en las oficinas del Centro Académico de Alajuela.</p>
-					      </section>
-					    </section>
-					  </section>
-					</section>
-				</section>
-			</div>
-		</div>
+    <legend>
+        <div class="form-header">
+            <img src="images/requestIcons/constancia.png" class="img-responsive"/>
+            <h3>Constancia de estudio</h3>
+        </div>
+    </legend>
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="icon">
-					<label class="cd-label" for="Nombre del estudiante">Nombre completo</label>
-					<input class="use form-field requestor-name" type="text" name="Nombre del estudiante" id="cons-name" required>
-				</div> 
-			</div>
-			<div class="col-md-6">
-				<div class="icon">
-					<label class="cd-label form-field" for="Requestor">Correo electrónico</label>
-					<input class="email form-field" type="email" name="Requestor" id="cons-email" required>
-				</div>
-			</div>
-		</div>
+    <section class="clear-float"></section>
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="icon">
-					<label class="cd-label" for="Carné">Carné</label>
-					<input class="use form-field" type="text" name="Carné" id="cons-student-id" required>
-				</div> 
-			</div>
-			<div class="col-md-6">
-				<div class="icon">
-					<label class="cd-label" for="Cédula">Cédula</label>
-					<input class="use form-field" type="text" name="Cédula" id="cons-id" required>
-				</div> 
-			</div>
-		</div>
+    <div class="row">
+        <div class="col-md-12">
+            <section class="info-accordion-section">
+                <section class="panel-group" id="accordion-constancy" role="tablist" aria-multiselectable="true">
+                    <section class="panel panel-default">
+                        <section class="panel-heading custom-panel-heading" role="tab">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-constancy" href="#collapse-constancy" aria-expanded="false" aria-controls="collapse-constancy">
+                                <h3 class="panel-title tab-accordion-title">
+                                    <i class="fa fa-plus-circle"></i> <b> Información</b>
+                                </h3>
+                            </a>
+                        </section>
+                        <section id="collapse-constancy" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <section class="panel-body">
+                                <p class="lead">
+                                    Una constancia de estudio es un documento emitido por el Instituto Tecnológico de Costa Rica para hacer constar que el solicitante es estudiante activo de la carrera. Si desea una constancia especial indíquelo en el campo de motivo de la solicitud.
+                                </p>
+                                <p class="lead">Se le enviará un correo cuando la constancia de estudio esté lista para retirar en las oficinas del Centro Académico de Alajuela.</p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<div class="icon">
-					<label class="cd-label" for="Motivo">Motivo de la solicitud</label>
-					<textarea class="message form-field" name="Motivo" id="cons-justify" required></textarea>
-				</div>
-			</div>
-		</div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Nombre del estudiante">Nombre completo</label>
+                <input class="use form-field requestor-name" type="text" name="Nombre del estudiante" id="cons-name" required>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label form-field" for="Requestor">Correo electrónico</label>
+                <input class="email form-field" type="email" name="Requestor" id="cons-email" required>
+            </div>
+        </div>
+    </div>
 
-		<div id="recaptcha-constancy" class="recaptcha-container"></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Carné">Carné</label>
+                <input class="use form-field" type="text" name="Carné" id="cons-student-id" required>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Cédula">Cédula</label>
+                <input class="use form-field" type="text" name="Cédula" id="cons-id" required>
+            </div> 
+        </div>
+    </div>
 
-		<div>
-			<input type="submit" value="Enviar solicitud">
-		</div>
-	</fieldset>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="icon">
+                <label class="cd-label" for="Motivo">Motivo de la solicitud</label>
+                <textarea class="message form-field" name="Motivo" id="cons-justify" required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="recaptcha-constancy" class="recaptcha-container"></div>
+    </div>
+
+    <div class="row">
+        <input type="submit" value="Enviar solicitud" class="submit-btn">
+    </div>
+
 </form>
