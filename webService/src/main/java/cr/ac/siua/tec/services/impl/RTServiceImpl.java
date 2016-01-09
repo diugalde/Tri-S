@@ -74,7 +74,7 @@ public class RTServiceImpl implements RTService {
         System.out.println(result.toString());
     }
 
-    private String getTicketParamsString(HashMap<String, String> formValues) {
+    public String getTicketParamsString(HashMap<String, String> formValues) {
         formValues.remove("g-recaptcha-response");
         StringBuilder sb = new StringBuilder();
 
