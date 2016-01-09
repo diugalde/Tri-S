@@ -33,3 +33,6 @@ proguard/
 .gradle/
 build/
 bin/
+
+#Spring application.properties
+src/main/resources/application.properties
