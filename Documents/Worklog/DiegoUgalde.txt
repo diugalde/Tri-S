@@ -180,5 +180,8 @@ Entregables semana #4 (04 de enero, 2016).
 	07 de enero:
 		- Finalización de información adicional de cada formulario. 
 		- Arreglando responsiveness de la aplicación web para dispositivos muy pequeños.
+		- Revisión plan de pruebas e informe de ejecución de pruebas de la iteración #1.
+	08 de enero:
+		- 
 		
 		
