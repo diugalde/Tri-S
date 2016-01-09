@@ -36,8 +36,10 @@ public class FormController {
         else if(!validator.isValidForm(map)) {
             responseMap = (HashMap) NotificationManager.getInvalidFormMsg();
         }else {
-            responseMap = (HashMap) NotificationManager.getValidFormMsg();
-            rtService.createTicket(map);
+
+            int status = rtService.createTicket(map);
+            if(status == 1) responseMap = (HashMap) NotificationManager.getValidFormMsg();
+            else responseMap = (HashMap) NotificationManager.getRTCrashedMsg();
         }
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }

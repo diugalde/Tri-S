@@ -26,4 +26,11 @@ public final class NotificationManager {
         map.put("msg", "El captcha es inválido.");
         return map;
     }
+
+    public static Map<String, String> getRTCrashedMsg() {
+        Map<String, String> map = new HashMap<>();
+        map.put("type", "error");
+        map.put("msg", "Hubo un problema con el servidor. Inténtelo más tarde.");
+        return map;
+    }
 }

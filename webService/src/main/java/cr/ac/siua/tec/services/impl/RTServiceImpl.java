@@ -35,7 +35,6 @@ public class RTServiceImpl implements RTService {
 
     public int createTicket(HashMap<String, String> formValues) {
 
-        int status = 1;
         String url = this.baseUrl + "/ticket/new";
 
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
@@ -47,19 +46,18 @@ public class RTServiceImpl implements RTService {
             urlParameters.add(new BasicNameValuePair("pass", this.rtPw));
             urlParameters.add(new BasicNameValuePair("content", getTicketParamsString(formValues)));
 
-
             post.setEntity(new UrlEncodedFormEntity(urlParameters, HTTP.UTF_8));
 
             HttpResponse response = client.execute(post);
 
             printResponse(response);
 
+            return 1;
+
         }catch (IOException e) {
             System.out.println("Excepcion al hacer el POST a RT.");
             e.printStackTrace();
-            status = -1;
-        }finally {
-            return status;
+            return -1;
         }
     }
 
