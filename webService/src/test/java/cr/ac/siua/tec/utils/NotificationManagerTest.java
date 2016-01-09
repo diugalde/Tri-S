@@ -6,6 +6,8 @@ import java.util.Map;
 
 import static cr.ac.siua.tec.utils.NotificationManager.getInvalidFormMsg;
 import static cr.ac.siua.tec.utils.NotificationManager.getValidFormMsg;
+import static cr.ac.siua.tec.utils.NotificationManager.getInvalidCaptchaMsg;
+import static cr.ac.siua.tec.utils.NotificationManager.getRTCrashedMsg;
 import static org.junit.Assert.*;
 
 public class NotificationManagerTest {
@@ -22,5 +24,19 @@ public class NotificationManagerTest {
         Map<String, String> result = getInvalidFormMsg();
         assertEquals(result.get("type"), "error");
         assertEquals(result.get("msg"), "Error al procesar el formulario. Revise los campos llenados.");
+    }
+
+    @Test
+    public void testGetInvalidCaptchaMsg() throws Exception {
+        Map<String, String> result = getInvalidCaptchaMsg();
+        assertEquals(result.get("type"), "error");
+        assertEquals(result.get("msg"), "El captcha es inválido.");
+    }
+
+    @Test
+    public void testGetRTCrashedMsg() throws Exception {
+        Map<String, String> result = getRTCrashedMsg();
+        assertEquals(result.get("type"), "error");
+        assertEquals(result.get("msg"), "Hubo un problema con el servidor. Inténtelo más tarde.");
     }
 }
