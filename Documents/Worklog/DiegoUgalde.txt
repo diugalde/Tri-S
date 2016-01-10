@@ -187,5 +187,11 @@ Entregables semana #4 (04 de enero, 2016).
 		- Arreglando el manejo de excepciones al crear un tiquete en RT.
 		- Definición casos de prueba iteración #2.
 	09 de enero:
+		- Finalización SAD.
+		- Cambio de estilos RT.
+		- Reunión con Kevin Moraga para mostrar avances de la iteración #2.
+	10 de enero:
+		- Investigación sobre PDFBOX.
+		- Trabajo en el artículo.
 		
 		
