@@ -55,13 +55,33 @@ public class RTServiceImpl implements RTService {
 
             HttpGet get = new HttpGet(requestUrl.toString());
             HttpResponse response = client.execute(get);
-            printResponse(response);
+            String responseString = getResponseString(response);
+            System.out.println(responseString);
+            ticketContent = ticketStringToHashMap(responseString);
             return ticketContent;
         }catch (IOException e) {
             System.out.println("Exception while trying to get RT Ticket using GET.");
             e.printStackTrace();
             return null;
         }
+    }
+
+    public HashMap<String, String> ticketStringToHashMap(String ticket) {
+        HashMap<String, String> result = new HashMap<String, String>();
+        String[] pairs = ticket.split("\n");
+        // Adding queue value to HashMap
+        String[] queue = pairs[3].split(": ");
+        System.out.println(queue[0]);
+        result.put(queue[0], queue[1]);
+        // Adding requestor value to HashMap
+        String[] requestor = pairs[11].split(": ");
+        result.put(requestor[0], requestor[1]);
+        // Adding custom fields to HashMap
+        for(int i = 24; i < pairs.length; i++) {
+            String[] keyValue = pairs[i].split(": ");
+            result.put(keyValue[0].substring(4, keyValue[0].length()-1), keyValue[1]);
+        }
+        return result;
     }
 
     public int createTicket(HashMap<String, String> formValues) {
@@ -78,7 +98,7 @@ public class RTServiceImpl implements RTService {
 
             post.setEntity(new UrlEncodedFormEntity(urlParameters, StandardCharsets.UTF_8));
             HttpResponse response = client.execute(post);
-            printResponse(response);
+            System.out.println(getResponseString(response));
 
             return 1;
         }catch (IOException e) {
@@ -88,7 +108,7 @@ public class RTServiceImpl implements RTService {
         }
     }
 
-    private void printResponse(HttpResponse response) throws IOException {
+    private String getResponseString(HttpResponse response) throws IOException {
         System.out.println("Response Code : " + response.getStatusLine().getStatusCode());
         BufferedReader rd = new BufferedReader(
                 new InputStreamReader(response.getEntity().getContent()));
@@ -96,9 +116,9 @@ public class RTServiceImpl implements RTService {
         StringBuffer result = new StringBuffer();
         String line = "";
         while ((line = rd.readLine()) != null) {
-            result.append(line);
+            result.append(line + "\n");
         }
-        System.out.println(result.toString());
+        return result.toString();
     }
 
     public String getTicketParamsString(HashMap<String, String> formValues) {
