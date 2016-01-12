@@ -27,7 +27,7 @@ public class ExportController {
     public ResponseEntity<HashMap<String, String>> export() {
 
         //El parametro debería ser map.get("ticketId") que lo recibe del JSON.
-        HashMap<String, String> ticketContent = rtService.getTicket("3");
+        HashMap<String, String> ticketContent = rtService.getTicket("8");
 
         //String pdfContent = exportService.getPDF(ticketContent);
 
