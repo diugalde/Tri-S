@@ -7,7 +7,7 @@ import java.util.function.Function;
 public class FormValidator {
 
     private Map<String, String> fieldTypesMap;
-    private Map<String, Function> methodsMap;
+    private Map<String, Function<String, Boolean>> methodsMap;
 
     public FormValidator() {
         initMethodsMap();
@@ -16,7 +16,7 @@ public class FormValidator {
 
     private void initFieldTypesMap() {
         fieldTypesMap = new HashMap<>();
-        HashMap<String, String[]> validationCategoryMap = (HashMap) getValidationTypeMap();
+        HashMap<String, String[]> validationCategoryMap = (HashMap<String, String[]>) getValidationTypeMap();
         for(Map.Entry<String, String[]> entry : validationCategoryMap.entrySet()) {
             String key = entry.getKey();
             String[] fields = entry.getValue();

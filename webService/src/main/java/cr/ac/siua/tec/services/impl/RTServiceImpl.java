@@ -5,7 +5,9 @@ import cr.ac.siua.tec.services.RTService;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,12 +36,39 @@ public class RTServiceImpl implements RTService {
     @Value("${rt.rest-base-url}")
     private String baseUrl;
 
+
+    public HashMap<String, String> getTicket(String ticketId) {
+
+        HashMap<String, String> ticketContent = null;
+
+        String url = this.baseUrl + "/ticket/" + ticketId + "/show";
+
+        try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
+
+            List<NameValuePair> urlParameters = new ArrayList<>();
+            urlParameters.add(new BasicNameValuePair("user", this.rtUser));
+            urlParameters.add(new BasicNameValuePair("pass", this.rtPw));
+            StringBuilder requestUrl = new StringBuilder(url);
+            String queryString = URLEncodedUtils.format(urlParameters, "utf-8");
+            requestUrl.append("?");
+            requestUrl.append(queryString);
+
+            HttpGet get = new HttpGet(requestUrl.toString());
+            HttpResponse response = client.execute(get);
+            printResponse(response);
+            return ticketContent;
+        }catch (IOException e) {
+            System.out.println("Exception while trying to get RT Ticket using GET.");
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public int createTicket(HashMap<String, String> formValues) {
 
         String url = this.baseUrl + "/ticket/new";
 
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
-
             HttpPost post = new HttpPost(url);
 
             List<NameValuePair> urlParameters = new ArrayList<>();
@@ -46,16 +76,13 @@ public class RTServiceImpl implements RTService {
             urlParameters.add(new BasicNameValuePair("pass", this.rtPw));
             urlParameters.add(new BasicNameValuePair("content", getTicketParamsString(formValues)));
 
-            post.setEntity(new UrlEncodedFormEntity(urlParameters, HTTP.UTF_8));
-
+            post.setEntity(new UrlEncodedFormEntity(urlParameters, StandardCharsets.UTF_8));
             HttpResponse response = client.execute(post);
-
             printResponse(response);
 
             return 1;
-
         }catch (IOException e) {
-            System.out.println("Excepcion al hacer el POST a RT.");
+            System.out.println("Exception while trying to create RT Ticket using POST.");
             e.printStackTrace();
             return -1;
         }

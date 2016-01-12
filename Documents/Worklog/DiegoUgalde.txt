@@ -182,6 +182,23 @@ Entregables semana #4 (04 de enero, 2016).
 		- Arreglando responsiveness de la aplicación web para dispositivos muy pequeños.
 		- Revisión plan de pruebas e informe de ejecución de pruebas de la iteración #1.
 	08 de enero:
-		- 
+		- Trabajo en ERS Iteración #2.
+		- Intento de arreglar el envío de correos.
+		- Arreglando el manejo de excepciones al crear un tiquete en RT.
+		- Definición casos de prueba iteración #2.
+	09 de enero:
+		- Finalización SAD.
+		- Cambio de estilos RT.
+		- Reunión con Kevin Moraga para mostrar avances de la iteración #2.
+	10 de enero:
+		- Investigación sobre PDFBOX.
+		- Trabajo en el artículo.
+		- Programación de las clases para exportar.
+	11 de enero: 
+		- Cuerpo del método getTicket en el RTService.
+		- Respaldo de la BD.
+		- Arreglando warnings de compilación -> deprecated y unchecked.
+		- Añadiendo loading div a la aplicación web.
+
 		
 		
