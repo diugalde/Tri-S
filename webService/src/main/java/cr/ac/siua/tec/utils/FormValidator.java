@@ -34,6 +34,7 @@ public class FormValidator {
         methodsMap.put("date", (field) -> isValidDateField((String) field));
         methodsMap.put("time", (field) -> isValidTimeField((String) field));
         methodsMap.put("any", (field) -> isValidAnyField((String) field));
+        methodsMap.put("phone", (field) -> isValidPhoneField((String) field));
     }
 
 
@@ -94,6 +95,11 @@ public class FormValidator {
         return field.matches(pattern) || field.equals("");
     }
 
+    public boolean isValidPhoneField(String field) {
+        String pattern = "[+]?[0-9-]+";
+        return field.matches(pattern) || field.equals("");
+    }
+
     public boolean isValidBooleanField(String field) {
         return field.equalsIgnoreCase("true") || field.equalsIgnoreCase("false")
                 || field.equalsIgnoreCase("Si") || field.equalsIgnoreCase("No") || field.equalsIgnoreCase("Sí");
@@ -105,7 +111,7 @@ public class FormValidator {
         map.put("boolean", new String[] {"Cumple con los requisitos", "Tiene choque de horario"});
         map.put("alphanumeric", new String[] {"Identificador del laboratorio", "Identificador del equipo",
                 "Código del curso", "Identificador del espacio de trabajo"});
-        map.put("numeric", new String[] {"Carné", "Número de celular", "Número de grupo", "RN", "Cédula",
+        map.put("numeric", new String[] {"Carné", "Número de grupo", "RN", "Cédula",
                 "Nota del curso", "Promedio ponderado", "Total de horas", "Número de cuenta cliente"});
         map.put("string", new String[] {"Nombre del estudiante", "Carrera", "Nombre del curso",
                 "Nombre del profesor", "Sede", "Tipo de levantamiento", "Tipo de asistencia", "Nombre del funcionario", "Banco"});
@@ -113,6 +119,7 @@ public class FormValidator {
         map.put("time", new String[] {"Hora de matrícula", "Hora inicial", "Hora final"});
         map.put("any", new String[] {"Justificación", "Detalle", "Motivo", "Actividades que realizará el asistente",
                 "Cursos requisito", "Cursos matriculados"});
+        map.put("phone", new String[] {"Número de celular", "Número de teléfono"});
         return map;
     }
 }
