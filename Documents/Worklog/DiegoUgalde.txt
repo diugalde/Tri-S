@@ -193,5 +193,12 @@ Entregables semana #4 (04 de enero, 2016).
 	10 de enero:
 		- Investigación sobre PDFBOX.
 		- Trabajo en el artículo.
+		- Programación de las clases para exportar.
+	11 de enero: 
+		- Cuerpo del método getTicket en el RTService.
+		- Respaldo de la BD.
+		- Arreglando warnings de compilación -> deprecated y unchecked.
+		- Añadiendo loading div a la aplicación web.
+
 		
 		

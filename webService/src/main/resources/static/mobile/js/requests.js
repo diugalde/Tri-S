@@ -4,6 +4,7 @@ var ready = function() {
 
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
+		$("#loading-div").addClass("show-loading");
 		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
 		if(typeof recaptchaId === "undefined") recaptchaResponse = null;
 		else recaptchaResponse = grecaptcha.getResponse(recaptchaId);
@@ -30,6 +31,7 @@ var ready = function() {
 				generateNotification("error", "Hubo un error al enviar el formulario.");
 			}).always(function() {
 				grecaptcha.reset(recaptchaId);
+				$("#loading-div").removeClass("show-loading");
 				$("html, body").animate({ scrollTop: 0 }, "slow");
 			});
 		}

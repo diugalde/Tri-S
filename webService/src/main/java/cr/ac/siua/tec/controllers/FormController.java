@@ -31,15 +31,15 @@ public class FormController {
     public ResponseEntity<HashMap<String, String>> getRequest(@RequestBody HashMap<String, String> map) {
         HashMap<String, String> responseMap;
         if(!recaptchaService.isResponseValid("", map.get("g-recaptcha-response"))) {
-            responseMap = (HashMap) NotificationManager.getInvalidCaptchaMsg();
+            responseMap = (HashMap<String, String>) NotificationManager.getInvalidCaptchaMsg();
         }
         else if(!validator.isValidForm(map)) {
-            responseMap = (HashMap) NotificationManager.getInvalidFormMsg();
+            responseMap = (HashMap<String, String>) NotificationManager.getInvalidFormMsg();
         }else {
 
             int status = rtService.createTicket(map);
-            if(status == 1) responseMap = (HashMap) NotificationManager.getValidFormMsg();
-            else responseMap = (HashMap) NotificationManager.getRTCrashedMsg();
+            if(status == 1) responseMap = (HashMap<String, String>) NotificationManager.getValidFormMsg();
+            else responseMap = (HashMap<String, String>) NotificationManager.getRTCrashedMsg();
         }
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }

@@ -27,11 +27,19 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework:spring-web")
     compile("org.apache.httpcomponents:httpclient:4.5.1")
-    compile("org.apache.pdfbox:pdfbox:1.8.4")
+    compile("org.apache.pdfbox:pdfbox:1.8.10")
     testCompile 'junit:junit:[4,)'
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
