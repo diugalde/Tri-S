@@ -199,6 +199,16 @@ Entregables semana #4 (04 de enero, 2016).
 		- Respaldo de la BD.
 		- Arreglando warnings de compilación -> deprecated y unchecked.
 		- Añadiendo loading div a la aplicación web.
+		- Caso de uso de envío de correos funcionando.
+	12 de enero:
+		- Lectura de referencias de artículo.
+		- Creando borrador del artículo.
+		- Mejorando velocidad de la UI móvil.
+		- Bibliografía artículo.
+	13 de enero:
+		- Reunión con la profesora María Estrada para revisión de iteración #1 y #2.
+		- Arreglando estilos de RT.
+		- Finalización artículo.
 
 		
 		

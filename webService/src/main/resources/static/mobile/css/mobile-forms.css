@@ -142,3 +142,8 @@
 .ui-collapsible-themed-content .ui-collapsible-content {
     border-color: #bbb;
 }
+
+.in, .out {
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 350ms !important;
+}
