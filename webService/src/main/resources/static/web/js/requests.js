@@ -3,7 +3,6 @@ var ready = function() {
 	var baseURL = "http://localhost:8282";
 
 	$("body").on("submit", ".cd-form", function(event) {
-		$("#loading-div").addClass('show-loading');
 		event.preventDefault();
 		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
 		if(typeof recaptchaId === "undefined") recaptchaResponse = null;
@@ -11,6 +10,7 @@ var ready = function() {
 		if(!recaptchaResponse || recaptchaResponse.length === 0) {
 			generateNotification("error", "Debe solucionar el captcha para enviar el formulario.");
 		}else {
+			$("#loading-div").addClass('show-loading');
 			var form = $(this);
 			var formData = form.serializeJSON();
 			formData.Queue = $(this).attr("request");

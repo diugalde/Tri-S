@@ -4,13 +4,14 @@ var ready = function() {
 
 	$("body").on("submit", ".cd-form", function(event) {
 		event.preventDefault();
-		$("#loading-div").addClass("show-loading");
+		
 		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
 		if(typeof recaptchaId === "undefined") recaptchaResponse = null;
 		else recaptchaResponse = grecaptcha.getResponse(recaptchaId);
 		if(!recaptchaResponse || recaptchaResponse.length === 0) {
 			generateNotification("error", "Debe solucionar el captcha para enviar el formulario.");
 		}else {
+			$("#loading-div").addClass("show-loading");
 			var form = $(this);
 			var formData = form.serializeJSON();
 			formData.Queue = $(this).attr("request");

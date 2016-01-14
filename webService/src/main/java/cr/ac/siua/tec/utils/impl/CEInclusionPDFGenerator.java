@@ -4,13 +4,21 @@ import cr.ac.siua.tec.utils.PDFGenerator;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import java.util.HashMap;
 
 @Component("CEInclusion")
+@PropertySource(value={"classpath:application-data.properties"})
 public class CEInclusionPDFGenerator extends PDFGenerator{
+
+    @Value("${coordinator.name}")
+    private String coordinatorName;
 
     @Override
     public String generate(HashMap<String, String> formValues) {
@@ -21,6 +29,11 @@ public class CEInclusionPDFGenerator extends PDFGenerator{
 
 
     private String populateAndCopy(String originalPdf) {
+        try {
+            System.out.println("\n\n" + new String(coordinatorName.getBytes("ISO-8859-1"), "UTF-8") + "\n\n");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         try {
             PDDocument _pdfDocument = PDDocument.load(originalPdf);
             PDDocumentCatalog docCatalog = _pdfDocument.getDocumentCatalog();

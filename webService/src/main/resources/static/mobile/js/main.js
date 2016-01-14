@@ -7,6 +7,7 @@ var ready = function() {
             $(".ui-tabs-active").children().first().addClass("ui-btn-active");
         }
     });
+
 }
 
 $(document).on('page:load', ready);
