@@ -209,6 +209,8 @@ Entregables semana #4 (04 de enero, 2016).
 		- Reunión con la profesora María Estrada para revisión de iteración #1 y #2.
 		- Arreglando estilos de RT.
 		- Finalización artículo.
+	14 de enero:
+		- Agregando botón de agregar cursos matriculados en el formulario de inclusión. Funcionando en ambas aplicaciones.
 
 		
 		
