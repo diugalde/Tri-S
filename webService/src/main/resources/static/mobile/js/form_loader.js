@@ -4,7 +4,7 @@ var ready = function() {
         $(this).load("forms/" + htmlFile + ".html");
     });
 
-    $("body").on("tap", "#addcourse-btn", function(ev) {
+    $("body").on("tap click", "#addcourse-btn", function(ev) {
     	ev.preventDefault();
 		courseCode = $("#dynamic-course-code").val();
 		courseName = $("#dynamic-course-name").val();
@@ -19,7 +19,7 @@ var ready = function() {
 		}
     });
 
-    $("body").on("tap", "#resetcourses-btn", function(ev) {
+    $("body").on("tap click", "#resetcourses-btn", function(ev) {
     	ev.preventDefault();
 		$("#dynamic-courses").val("");
     });
