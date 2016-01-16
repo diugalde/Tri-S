@@ -3,7 +3,6 @@ package cr.ac.siua.tec.utils;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.pdfbox.exceptions.COSVisitorException;
 import org.apache.pdfbox.pdmodel.PDDocument;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.HashMap;

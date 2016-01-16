@@ -5,7 +5,6 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.springframework.stereotype.Component;
-
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -16,12 +15,7 @@ public class AssistancePDFGenerator extends PDFGenerator {
 
     @Override
     public String generate(HashMap<String, String> formValues) {
-        String templateName = "asistente.pdf";
-        String pdfPath = PDFGenerator.RESOURCES_PATH + templateName;
-        return populateAndCopy(pdfPath, formValues);
-    }
-
-    private String populateAndCopy(String originalPdf, HashMap<String, String> formValues) {
+        String originalPdf = PDFGenerator.RESOURCES_PATH + "asistente.pdf";
         try {
             PDDocument _pdfDocument = PDDocument.load(originalPdf);
             PDDocumentCatalog docCatalog = _pdfDocument.getDocumentCatalog();
@@ -30,16 +24,12 @@ public class AssistancePDFGenerator extends PDFGenerator {
             Calendar cal = Calendar.getInstance();
             int year = cal.get(Calendar.YEAR);
             int month = cal.get(Calendar.MONTH)+1;
-            if(month > 10 || month < 5) {
-                acroForm.getField("Semestre").setValue("PRIMER");
-            } else {
-                acroForm.getField("Semestre").setValue("SEGUNDO");
-            }
-            if(month > 10 && acroForm.getField("Semestre").getValue().equals("PRIMER")) {
-                year++;
-            }
-            acroForm.getField("Año").setValue(String.valueOf(year));
+            if(month > 10 || month < 5) acroForm.getField("Semestre").setValue("PRIMER");
+            else acroForm.getField("Semestre").setValue("SEGUNDO");
 
+            if(month > 10 && acroForm.getField("Semestre").getValue().equals("PRIMER")) year++;
+
+            acroForm.getField("Año").setValue(String.valueOf(year));
             formValues.remove("Queue");
             acroForm.getField(formValues.get("Banco")).setValue("x");
             formValues.remove("Banco");
@@ -52,7 +42,8 @@ public class AssistancePDFGenerator extends PDFGenerator {
             return encodePDF(_pdfDocument);
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Excepción al llenar el PDF.");
+            return null;
         }
-        return "1";
     }
 }

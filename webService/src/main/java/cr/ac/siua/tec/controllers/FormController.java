@@ -7,13 +7,7 @@ import cr.ac.siua.tec.utils.NotificationManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
+import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 
 @RestController
@@ -27,8 +21,9 @@ public class FormController {
     @Autowired
     private RTService rtService;
 
+    //@CrossOrigin(origins = "http://localhost:8686")
     @RequestMapping(value="/request", method = RequestMethod.POST)
-    public ResponseEntity<HashMap<String, String>> getRequest(@RequestBody HashMap<String, String> map) {
+    public ResponseEntity<HashMap<String, String>> createTicket(@RequestBody HashMap<String, String> map) {
         HashMap<String, String> responseMap;
         if(!recaptchaService.isResponseValid("", map.get("g-recaptcha-response"))) {
             responseMap = (HashMap<String, String>) NotificationManager.getInvalidCaptchaMsg();
@@ -36,7 +31,6 @@ public class FormController {
         else if(!validator.isValidForm(map)) {
             responseMap = (HashMap<String, String>) NotificationManager.getInvalidFormMsg();
         }else {
-
             int status = rtService.createTicket(map);
             if(status == 1) responseMap = (HashMap<String, String>) NotificationManager.getValidFormMsg();
             else responseMap = (HashMap<String, String>) NotificationManager.getRTCrashedMsg();

@@ -211,6 +211,18 @@ Entregables semana #4 (04 de enero, 2016).
 		- Finalización artículo.
 	14 de enero:
 		- Agregando botón de agregar cursos matriculados en el formulario de inclusión. Funcionando en ambas aplicaciones.
+		- Investigación sobre traducción en RT.
+		- Traducción es.po.
+		- Lista de las tareas faltantes para división con Luis.
+		- Trabajando en el caso de uso de exportar a TSV.
+	15 de enero:
+		- Empaquetando aplicación en phonegap. Haciendo pruebas.
+		- Agregando botón de exportar en cada tiquete de RT.
+		- Ordenando todo el código Java.
+		- Correcciones en los formularios HTML.
+	16 de enero:
+		- Implementación clase de exportar inclusiones a PDF.
+		- Arreglando excepción cuando se exporta un tiquete que no tiene todos los campos llenos.
 
 		
 		
