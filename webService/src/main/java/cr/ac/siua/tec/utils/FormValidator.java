@@ -37,7 +37,6 @@ public class FormValidator {
         methodsMap.put("phone", (field) -> isValidPhoneField((String) field));
     }
 
-
     public boolean isValidForm(HashMap<String, String> map) {
         boolean validationResult = true;
         boolean fieldValidation;
@@ -49,11 +48,9 @@ public class FormValidator {
             fieldValidation = true;
             if(fieldType != null) {
                 fieldValidation = (Boolean) methodsMap.get(fieldType).apply(fieldValue);
-                System.out.println("Validacion para " + fieldName + ":" + fieldValue + "  ->  " + fieldValidation);
             }
             validationResult = validationResult && fieldValidation;
         }
-        System.out.println("____________________________________________\n");
         return validationResult;
     }
 
@@ -122,4 +119,5 @@ public class FormValidator {
         map.put("phone", new String[] {"Número de celular", "Número de teléfono"});
         return map;
     }
+
 }

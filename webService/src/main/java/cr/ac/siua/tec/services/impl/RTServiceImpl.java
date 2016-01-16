@@ -1,6 +1,5 @@
 package cr.ac.siua.tec.services.impl;
 
-
 import cr.ac.siua.tec.services.RTService;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -11,10 +10,8 @@ import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,15 +33,11 @@ public class RTServiceImpl implements RTService {
     @Value("${rt.rest-base-url}")
     private String baseUrl;
 
-
     public HashMap<String, String> getTicket(String ticketId) {
-
         HashMap<String, String> ticketContent = null;
-
         String url = this.baseUrl + "/ticket/" + ticketId + "/show";
 
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
-
             List<NameValuePair> urlParameters = new ArrayList<>();
             urlParameters.add(new BasicNameValuePair("user", this.rtUser));
             urlParameters.add(new BasicNameValuePair("pass", this.rtPw));
@@ -56,7 +49,6 @@ public class RTServiceImpl implements RTService {
             HttpGet get = new HttpGet(requestUrl.toString());
             HttpResponse response = client.execute(get);
             String responseString = getResponseString(response);
-            System.out.println(responseString);
             ticketContent = ticketStringToHashMap(responseString);
             return ticketContent;
         }catch (IOException e) {
@@ -67,8 +59,8 @@ public class RTServiceImpl implements RTService {
     }
 
     public HashMap<String, String> ticketStringToHashMap(String ticket) {
-        HashMap<String, String> result = new HashMap<String, String>();
-        String[] pairs = ticket.split("\n");
+        HashMap<String, String> result = new HashMap<>();
+        String[] pairs = ticket.split("\n(?!\\s{4})");
         // Adding queue value to HashMap
         String[] queue = pairs[3].split(": ");
         result.put(queue[0], queue[1]);
@@ -78,18 +70,17 @@ public class RTServiceImpl implements RTService {
         // Adding custom fields to HashMap
         for(int i = 24; i < pairs.length; i++) {
             String[] keyValue = pairs[i].split(": ");
-            result.put(keyValue[0].substring(4, keyValue[0].length()-1), keyValue[1]);
+            if(keyValue.length == 2) result.put(keyValue[0].substring(4, keyValue[0].length()-1), keyValue[1]);
+            else if(!keyValue[0].equals("")) result.put(keyValue[0].substring(4, keyValue[0].length()-1), "");
         }
         return result;
     }
 
     public int createTicket(HashMap<String, String> formValues) {
-
         String url = this.baseUrl + "/ticket/new";
 
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
             HttpPost post = new HttpPost(url);
-
             List<NameValuePair> urlParameters = new ArrayList<>();
             urlParameters.add(new BasicNameValuePair("user", this.rtUser));
             urlParameters.add(new BasicNameValuePair("pass", this.rtPw));
@@ -98,7 +89,6 @@ public class RTServiceImpl implements RTService {
             post.setEntity(new UrlEncodedFormEntity(urlParameters, StandardCharsets.UTF_8));
             HttpResponse response = client.execute(post);
             System.out.println(getResponseString(response));
-
             return 1;
         }catch (IOException e) {
             System.out.println("Exception while trying to create RT Ticket using POST.");
@@ -135,6 +125,11 @@ public class RTServiceImpl implements RTService {
         for(Map.Entry<String, String> entry : formValues.entrySet()) {
             fieldName = entry.getKey();
             fieldValue = entry.getValue();
+            String lines[] = fieldValue.split("\n");
+            if(lines.length > 1) {
+                fieldValue = "";
+                for(String line : lines) fieldValue += " " + line + "\n";
+            }
             sb.append("CF-" + fieldName + ": " + fieldValue + "\n");
         }
         return sb.toString();

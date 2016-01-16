@@ -2,14 +2,10 @@ package cr.ac.siua.tec.controllers;
 
 import cr.ac.siua.tec.services.ExportService;
 import cr.ac.siua.tec.services.RTService;
-import cr.ac.siua.tec.services.RecaptchaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
@@ -22,18 +18,17 @@ public class ExportController {
     @Autowired
     private RTService rtService;
 
-    //Falta el @RequestBody HashMap<String, String> map como parametro de export() para que reciba el json.
+    @CrossOrigin(origins = "http://localhost:8484")
     @RequestMapping(value="/export", method = RequestMethod.GET)
-    public ResponseEntity<HashMap<String, String>> export() {
-
-        //El parametro debería ser map.get("ticketId") que lo recibe del JSON.
-        HashMap<String, String> ticketContent = rtService.getTicket("3");
-
-        String pdfContent = exportService.getPDF(ticketContent);
-
+    public ResponseEntity<HashMap<String, String>> export(@RequestParam("ticketId") String ticketId) {
+        HashMap<String, String> ticketContent = rtService.getTicket(ticketId);
         HashMap<String, String> responseMap = new HashMap<>();
-        responseMap.put("content", pdfContent);
-
+        if(ticketContent != null) {
+            String pdfContent = exportService.getPDF(ticketContent);
+            responseMap.put("content", pdfContent);
+        }else {
+            responseMap.put("content", "RT Server is down.");
+        }
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
 }

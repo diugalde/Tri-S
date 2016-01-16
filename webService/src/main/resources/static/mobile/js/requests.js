@@ -29,6 +29,7 @@ var ready = function() {
 				console.log(data);
 				generateNotification(data.type, data.msg);
 			}).fail(function(data) {
+				console.log(data);
 				generateNotification("error", "Hubo un error al enviar el formulario.");
 			}).always(function() {
 				grecaptcha.reset(recaptchaId);
@@ -47,7 +48,7 @@ var ready = function() {
 			theme       : 'relax',
 			dismissQueue: true,
 			layout      : 'topRight',
-			timeout			: false,
+			timeout		: false,
 			maxVisible  : 1,
 			killer			: true,
 			animation   : {

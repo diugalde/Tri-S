@@ -6,4 +6,5 @@ import java.util.HashMap;
 public interface ExportService {
 
     String getPDF(HashMap<String, String> ticketContent);
+
 }
