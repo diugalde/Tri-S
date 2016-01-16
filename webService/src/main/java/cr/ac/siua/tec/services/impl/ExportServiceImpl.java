@@ -15,8 +15,7 @@ public class ExportServiceImpl implements ExportService {
 
     public String getPDF(HashMap<String, String> ticketContent) {
 
-        //String formType = ticketContent.get("Queue");
-        String formType = "CEInclusion";
+        String formType = ticketContent.get("Queue");
         String pdfContent = pdfGeneratorFactory.getPDFGenerator(formType).generate(ticketContent);
         return pdfContent;
     }
