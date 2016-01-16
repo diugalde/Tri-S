@@ -71,7 +71,6 @@ public class RTServiceImpl implements RTService {
         String[] pairs = ticket.split("\n");
         // Adding queue value to HashMap
         String[] queue = pairs[3].split(": ");
-        System.out.println(queue[0]);
         result.put(queue[0], queue[1]);
         // Adding requestor value to HashMap
         String[] requestor = pairs[11].split(": ");
