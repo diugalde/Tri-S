@@ -69,6 +69,8 @@ Form
 .cd-form input[type="text"],
 .cd-form input[type="email"],
 .cd-form input[type="date"],
+.cd-form input[type="number"],
+.cd-form input[type="tel"],
 .cd-form textarea,
 .cd-form select,
 .cd-form legend {
@@ -82,7 +84,9 @@ Form
 }
 .cd-form input[type="text"],
 .cd-form input[type="email"],
+.cd-form input[type="number"],
 .cd-form input[type="date"],
+.cd-form input[type="tel"],
 .cd-form textarea,
 .cd-form select {
 	/* general style for input elements */
@@ -296,6 +300,8 @@ Form
 	}
 	.cd-form input[type="text"],
 	.cd-form input[type="email"],
+	.cd-form input[type="number"],
+	.cd-form input[type="tel"],
 	.cd-form textarea,
 	.cd-form select {
 		padding: 16px;
