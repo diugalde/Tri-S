@@ -3,8 +3,8 @@ var ready = function() {
 	var baseURL = "http://localhost:8282";
 
 	$("body").on("submit", ".cd-form", function(event) {
+		$clickedForm = $(this);
 		event.preventDefault();
-		
 		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
 		if(typeof recaptchaId === "undefined") recaptchaResponse = null;
 		else recaptchaResponse = grecaptcha.getResponse(recaptchaId);
@@ -28,8 +28,12 @@ var ready = function() {
 			}).success(function(data) {
 				console.log(data);
 				generateNotification(data.type, data.msg);
+				if(data.type === "success") {
+					$clickedForm.trigger("reset");
+					$('input').removeClass('wrong-field');
+				}
+				else highlightWrongFields($clickedForm, data.wrongFields.split(","));
 			}).fail(function(data) {
-				console.log(data);
 				generateNotification("error", "Hubo un error al enviar el formulario.");
 			}).always(function() {
 				grecaptcha.reset(recaptchaId);
@@ -40,9 +44,16 @@ var ready = function() {
 	});
 
 
+	function highlightWrongFields(form, wrongFields) {
+		for(var i = 0; i < wrongFields.length; i++) {
+			form.find("input[name='" + wrongFields[i] +"']").addClass("wrong-field");
+		}
+	}
+
+
 	function generateNotification(notificationType, message) {
 		message = JSON.stringify(message);
-		noty({
+		notyObject = noty({
 			text        : message,
 			type        : notificationType,
 			theme       : 'relax',
@@ -56,6 +67,7 @@ var ready = function() {
 				close : 'animated flipOutX'
 			}
 		});
+		notyObject.setTimeout(6000);
 	}
 
 }

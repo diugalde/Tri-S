@@ -52,4 +52,8 @@ jQuery(function($) {
 		}
 	});	
 
+	$("body").on("click", "#go-back-form", function() {
+		$('input').removeClass('wrong-field');
+	});
+
 });

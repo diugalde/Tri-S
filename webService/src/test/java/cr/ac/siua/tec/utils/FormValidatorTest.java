@@ -12,30 +12,6 @@ public class FormValidatorTest {
     private FormValidator formValidator = new FormValidator();
 
     @Test
-    public void testIsValidForm() throws Exception {
-        HashMap<String, String> form = new HashMap<>();
-        form.put("Nombre del estudiante", "prueba");
-        form.put("Requestor", "email@gmail.com");
-        form.put("Carné", "2013");
-        form.put("Cédula", "2020");
-        form.put("Motivo", "Esto es una prueba... 123");
-        boolean result = formValidator.isValidForm(form);
-        assertTrue(result);
-    }
-
-    @Test
-    public void testIsInvalidForm() throws Exception {
-        HashMap<String, String> form = new HashMap<>();
-        form.put("Nombre del estudiante", "prueba");
-        form.put("Requestor", "email@gmail.com");
-        form.put("Carné", "2013ABC");
-        form.put("Cédula", "2020");
-        form.put("Motivo", "Esto es una prueba... 123");
-        boolean result = formValidator.isValidForm(form);
-        assertFalse(result);
-    }
-
-    @Test
     public void testIsValidEmailAddress() throws Exception {
         boolean result = formValidator.isValidEmailAddress("test@email.com");
         assertTrue(result);

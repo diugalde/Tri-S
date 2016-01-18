@@ -2,6 +2,8 @@ package cr.ac.siua.tec.utils;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import static cr.ac.siua.tec.utils.NotificationManager.getInvalidFormMsg;
@@ -21,7 +23,8 @@ public class NotificationManagerTest {
 
     @Test
     public void testGetInvalidFormMsg() throws Exception {
-        Map<String, String> result = getInvalidFormMsg();
+        List<String> list = new ArrayList<>();
+        Map<String, String> result = getInvalidFormMsg(list);
         assertEquals(result.get("type"), "error");
         assertEquals(result.get("msg"), "Error al procesar el formulario. Revise los campos llenados.");
     }

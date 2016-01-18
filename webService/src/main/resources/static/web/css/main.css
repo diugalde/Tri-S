@@ -512,3 +512,15 @@ textarea#message {
     right : 0;
     top : 0;
 }
+
+.wrong-field {
+  border: 3px solid #972C15 !important;
+}
+
+.noty_type_error {
+  background-color: #972C15 !important;
+}
+
+.noty_text {
+  font-weight: 200 !important;
+}

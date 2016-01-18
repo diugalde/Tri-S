@@ -1,6 +1,8 @@
 package cr.ac.siua.tec.utils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -37,21 +39,20 @@ public class FormValidator {
         methodsMap.put("phone", (field) -> isValidPhoneField((String) field));
     }
 
-    public boolean isValidForm(HashMap<String, String> map) {
-        boolean validationResult = true;
+    public List<String> getFormWrongFields(HashMap<String, String> map) {
         boolean fieldValidation;
         String fieldName, fieldValue, fieldType;
+        List<String> wrongFields = new ArrayList<>();
         for(Map.Entry<String, String> entry : map.entrySet()) {
             fieldName = entry.getKey();
             fieldValue = entry.getValue();
             fieldType = fieldTypesMap.get(fieldName);
-            fieldValidation = true;
             if(fieldType != null) {
                 fieldValidation = (Boolean) methodsMap.get(fieldType).apply(fieldValue);
+                if(!fieldValidation) wrongFields.add(fieldName);
             }
-            validationResult = validationResult && fieldValidation;
         }
-        return validationResult;
+        return wrongFields;
     }
 
     public boolean isValidEmailAddress(String email) {

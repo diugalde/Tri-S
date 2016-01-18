@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
+import java.util.List;
 
 @RestController
 public class FormController {
@@ -27,13 +28,15 @@ public class FormController {
         HashMap<String, String> responseMap;
         if(!recaptchaService.isResponseValid("", map.get("g-recaptcha-response"))) {
             responseMap = (HashMap<String, String>) NotificationManager.getInvalidCaptchaMsg();
-        }
-        else if(!validator.isValidForm(map)) {
-            responseMap = (HashMap<String, String>) NotificationManager.getInvalidFormMsg();
         }else {
-            int status = rtService.createTicket(map);
-            if(status == 1) responseMap = (HashMap<String, String>) NotificationManager.getValidFormMsg();
-            else responseMap = (HashMap<String, String>) NotificationManager.getRTCrashedMsg();
+            List<String> wrongFields = validator.getFormWrongFields(map);
+            if(!wrongFields.isEmpty()) {
+                responseMap = (HashMap<String, String>) NotificationManager.getInvalidFormMsg(wrongFields);
+            }else{
+                int status = rtService.createTicket(map);
+                if(status == 1) responseMap = (HashMap<String, String>) NotificationManager.getValidFormMsg();
+                else responseMap = (HashMap<String, String>) NotificationManager.getRTCrashedMsg();
+            }
         }
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
