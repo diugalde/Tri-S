@@ -232,6 +232,7 @@ Entregables semana #4 (04 de enero, 2016).
 		- Revisando manual de usuario de la tercera iteración con Luis.
 		- Agregando fastclick.js
 		- Implementando el highlight de los campos erróneos.
-
+		- Limpiando base de datos.
+		- Arreglando los tipos de los input de los formularios web.
 		
 		
