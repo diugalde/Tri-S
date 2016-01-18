@@ -136,3 +136,45 @@ Entregables semana #4 (04 de enero, 2016)
 	6 de enero:
 		- Añadiendo tabs de información a los formularios para móvil.
 		- Modificación de los manuales de usuario. 
+	
+	7 de enero:
+		- Creación del informe de pruebas de la iteración #1.
+		
+	8 de enero:
+		- Revisión del ERS y Plan de pruebas para la segunda iteración.
+		
+	9 de enero:
+		- Finalización del SAD para la segunda iteración.
+		- Reunión con Kevin Moraga para mostrarle los avances de la iteración #2.
+		
+	10 de enero:
+		- Trabajo en una interfaz (de java) para la exportación de tiquetes a PDF.
+		- Definición de como se va separar el trabajo para la tercera iteración (individual).
+		
+	11 de enero:
+		- Implementación del método getTicket para tomar la información de un tiquete de RT y manipularla desde java.
+	
+	13 de enero:
+		- Reunión con la profesora María Estrada para revisión de las primeras iteraciónes.
+		- ACtualización de las base de datos de RT.
+		
+	14 de enero:
+		- Implementación del método de exportación para las solicitudes de nombramiento de asistente y de examen por 			suficiencia.
+	
+	15 de enero:
+		- Implementación del método de exportación para las solicitudes de constacias de estudio.
+		- Modificación de los manuales de usuario.
+		- Finalización de la parte de ejecución para la tercera iteración.
+		
+	16 de enero:
+		- Creación del plan de pruebas para la iteración #3.
+		- Creación del ERS para la iteración #3.
+		
+	17 de enero:
+		- Finalización del trabajo para la iteración #3.
+		- Creación del manual para exportar en RT.
+		
+	18 de enero:
+		- Creación de un usuario restapi en RT para utilizar en el servicio web para crear los tiquetes.
+		- Modificación de los permisos de algunos usuarios en RT.
+	
