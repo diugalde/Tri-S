@@ -218,11 +218,15 @@ Entregables semana #4 (04 de enero, 2016).
 	15 de enero:
 		- Empaquetando aplicación en phonegap. Haciendo pruebas.
 		- Agregando botón de exportar en cada tiquete de RT.
+		- Añadiendo notificaciones en caso de error al exportar en RT.
 		- Ordenando todo el código Java.
 		- Correcciones en los formularios HTML.
 	16 de enero:
 		- Implementación clase de exportar inclusiones a PDF.
 		- Arreglando excepción cuando se exporta un tiquete que no tiene todos los campos llenos.
+		- Arreglando bug al exportar tiquetes con campos multilínea.
+		- Cambiando respuestas automáticas RT para envío de correos.
+		- Documentos ERS y Plan de pruebas.
 
 		
 		

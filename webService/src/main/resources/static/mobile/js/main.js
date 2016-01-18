@@ -8,6 +8,8 @@ var ready = function() {
         }
     });
 
+    FastClick.attach(document.body);
+
 }
 
 $(document).on('page:load', ready);
