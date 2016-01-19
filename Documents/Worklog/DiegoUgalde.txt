@@ -234,5 +234,13 @@ Entregables semana #4 (04 de enero, 2016).
 		- Implementando el highlight de los campos erróneos.
 		- Limpiando base de datos.
 		- Arreglando los tipos de los input de los formularios web.
+	18 de enero:
+		- Instalación RT en la sede.
+		- Muestra de tercera iteración a Kevin Moraga.
+		- Implementación de respuestas específicas de correo para cada cola.
+		- Creación de artículos.
+		- Uso de keepass.
+	19 de enero:
+		- Quitando captcha de aplicación móvil.
 		
 		

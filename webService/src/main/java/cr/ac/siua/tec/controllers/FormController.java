@@ -29,15 +29,28 @@ public class FormController {
         if(!recaptchaService.isResponseValid("", map.get("g-recaptcha-response"))) {
             responseMap = (HashMap<String, String>) NotificationManager.getInvalidCaptchaMsg();
         }else {
-            List<String> wrongFields = validator.getFormWrongFields(map);
-            if(!wrongFields.isEmpty()) {
-                responseMap = (HashMap<String, String>) NotificationManager.getInvalidFormMsg(wrongFields);
-            }else{
-                int status = rtService.createTicket(map);
-                if(status == 1) responseMap = (HashMap<String, String>) NotificationManager.getValidFormMsg();
-                else responseMap = (HashMap<String, String>) NotificationManager.getRTCrashedMsg();
-            }
+            responseMap = getRequestResponseMap(map);
         }
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
+    }
+
+
+    @RequestMapping(value="/mobileRequest", method = RequestMethod.POST)
+    public ResponseEntity<HashMap<String, String>> createMobileTicket(@RequestBody HashMap<String, String> map) {
+        return new ResponseEntity<>(getRequestResponseMap(map), HttpStatus.OK);
+    }
+
+
+    private HashMap<String, String> getRequestResponseMap(HashMap<String, String> formMap) {
+        HashMap<String, String> responseMap;
+        List<String> wrongFields = validator.getFormWrongFields(formMap);
+        if(!wrongFields.isEmpty()) {
+            responseMap = (HashMap<String, String>) NotificationManager.getInvalidFormMsg(wrongFields);
+        }else{
+            int status = rtService.createTicket(formMap);
+            if(status == 1) responseMap = (HashMap<String, String>) NotificationManager.getValidFormMsg();
+            else responseMap = (HashMap<String, String>) NotificationManager.getRTCrashedMsg();
+        }
+        return responseMap;
     }
 }
