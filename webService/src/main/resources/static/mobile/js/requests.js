@@ -5,42 +5,35 @@ var ready = function() {
 	$("body").on("submit", ".cd-form", function(event) {
 		$clickedForm = $(this);
 		event.preventDefault();
-		var recaptchaId = $(this).find(".recaptcha-container").attr("widget-id");
-		if(typeof recaptchaId === "undefined") recaptchaResponse = null;
-		else recaptchaResponse = grecaptcha.getResponse(recaptchaId);
-		if(!recaptchaResponse || recaptchaResponse.length === 0) {
-			generateNotification("error", "Debe solucionar el captcha para enviar el formulario.");
-		}else {
-			$("#loading-div").addClass("show-loading");
-			var form = $(this);
-			var formData = form.serializeJSON();
-			formData.Queue = $(this).attr("request");
-			formData.RequestorName = $(this).find(".requestor-name").val();
-			console.log(formData);
-			$.ajax({
-				method: 'POST',
-				url: baseURL + "/request",
-				data: JSON.stringify(formData),
-				headers: {
-					'Accept': 'application/json',
-					'Content-Type': 'application/json'
-				}
-			}).success(function(data) {
-				console.log(data);
-				generateNotification(data.type, data.msg);
-				if(data.type === "success") {
-					$clickedForm.trigger("reset");
-					$('input').removeClass('wrong-field');
-				}
-				else highlightWrongFields($clickedForm, data.wrongFields.split(","));
-			}).fail(function(data) {
-				generateNotification("error", "Hubo un error al enviar el formulario.");
-			}).always(function() {
-				grecaptcha.reset(recaptchaId);
-				$("#loading-div").removeClass("show-loading");
-				$("html, body").animate({ scrollTop: 0 }, "slow");
-			});
-		}
+		$("#loading-div").addClass("show-loading");
+		var form = $(this);
+		var formData = form.serializeJSON();
+		formData.Queue = $(this).attr("request");
+		formData.RequestorName = $(this).find(".requestor-name").val();
+		console.log(formData);
+		$.ajax({
+			method: 'POST',
+			url: baseURL + "/mobileRequest",
+			data: JSON.stringify(formData),
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			}
+		}).success(function(data) {
+			console.log(data);
+			generateNotification(data.type, data.msg);
+			if(data.type === "success") {
+				$clickedForm.trigger("reset");
+				$('input').removeClass('wrong-field');
+			}
+			else highlightWrongFields($clickedForm, data.wrongFields.split(","));
+		}).fail(function(data) {
+			generateNotification("error", "Hubo un error al enviar el formulario.");
+		}).always(function() {
+			$("#loading-div").removeClass("show-loading");
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+		});
+
 	});
 
 
