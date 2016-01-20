@@ -7,7 +7,7 @@
 
 var ready = function() {
 
-	var baseURL = "http://ws.tec.siua.ac.cr";
+	var baseURL = appSettings.postBaseURL;
 
 	//When a form is submitted, it creates a JSON with the field information and sends it to the Java Web Service.
 	$("body").on("submit", ".cd-form", function(event) {
@@ -21,7 +21,7 @@ var ready = function() {
 		console.log(formData);
 		$.ajax({
 			method: 'POST',
-			url: baseURL + "/mobileRequest",
+			url: baseURL + appSettings.submitURL,
 			data: JSON.stringify(formData),
 			headers: {
 				'Accept': 'application/json',
