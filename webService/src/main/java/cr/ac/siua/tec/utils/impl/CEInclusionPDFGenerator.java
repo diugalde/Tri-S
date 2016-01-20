@@ -1,3 +1,10 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
+
 package cr.ac.siua.tec.utils.impl;
 
 import cr.ac.siua.tec.utils.PDFGenerator;
@@ -14,6 +21,9 @@ import java.util.Map;
 @Component("CEInclusion")
 public class CEInclusionPDFGenerator extends PDFGenerator{
 
+    /**
+     * Fills the PDF file (inclusion.pdf) with the ticket values and returns base64 encoded string.
+     */
     @Override
     public String generate(HashMap<String, String> formValues) {
         String originalPdf = PDFGenerator.RESOURCES_PATH + "inclusion.pdf";
@@ -24,6 +34,7 @@ public class CEInclusionPDFGenerator extends PDFGenerator{
             formValues.remove("Queue");
             formValues.remove("Justificación");
 
+            //Set some fields manually.
             Calendar cal = Calendar.getInstance();
             int year = cal.get(Calendar.YEAR);
             int month = cal.get(Calendar.MONTH)+1;
@@ -32,6 +43,7 @@ public class CEInclusionPDFGenerator extends PDFGenerator{
             if(month > 10 && acroForm.getField("Semestre").getValue().equals("I")) year++;
             acroForm.getField("Año").setValue(String.valueOf(year));
 
+            //Fills enrolled courses table.
             String enrolledCourses[] = formValues.get("Cursos matriculados").split("\n");
             for(int i = 0; i < enrolledCourses.length; i++) {
                 String courseRow[] = enrolledCourses[i].split("-");
@@ -41,6 +53,7 @@ public class CEInclusionPDFGenerator extends PDFGenerator{
             }
             formValues.remove("Cursos matriculados");
 
+            //Iterates through remaining custom fields.
             for(Map.Entry<String, String> entry : formValues.entrySet()) {
                 acroForm.getField(entry.getKey()).setValue(entry.getValue());
             }

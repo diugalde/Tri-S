@@ -1,6 +1,14 @@
+/* 
+	TRI-S - Web App
+	Developed by: Diego Ugalde Ávila - Luis E. Ugalde Barrantes. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
 
 var ready = function() {
 
+
+	//Loads every html inside the forms folder. 
 	function loadFormsContent() {
 		$("#form-content-section > div").each(function( index ) {
 			var htmlFile = $(this).attr('linked-form');
@@ -46,6 +54,8 @@ var ready = function() {
 		});	
 	}
 
+
+	//Makes label float over the input box when user starts typing. 
 	function floatLabels() {
 		var inputFields = $('article .content__item .floating-labels .cd-label').next();
 		$('body').on('change keyup', '.form-field', function(){

@@ -1,3 +1,9 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
 package cr.ac.siua.tec.services.impl;
 
 import cr.ac.siua.tec.services.ExportService;
@@ -13,9 +19,13 @@ public class ExportServiceImpl implements ExportService {
     @Autowired
     private PDFGeneratorFactory pdfGeneratorFactory;
 
+    /**
+     * In charge of retreving the base64 String (encoded PDF) for the requested ticket.
+     */
     public String getPDF(HashMap<String, String> ticketContent) {
         String formType = ticketContent.get("Queue");
         try {
+            //It uses the factory pattern to invoke the form's corresponding export method.
             String pdfContent = pdfGeneratorFactory.getPDFGenerator(formType).generate(ticketContent);
             return pdfContent;
         }catch(NoSuchBeanDefinitionException e) {

@@ -1,3 +1,9 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
 package cr.ac.siua.tec.utils.impl;
 
 import cr.ac.siua.tec.utils.PDFGenerator;
@@ -26,6 +32,9 @@ public class ConstancyPDFGenerator extends PDFGenerator {
         initMonthsMap();
     }
 
+    /**
+     * Fills the PDF file (constancia.pdf) with the ticket values and returns base64 encoded string.
+     */
     @Override
     public String generate(HashMap<String, String> formValues) {
         String originalPdf = PDFGenerator.RESOURCES_PATH + "constancia.pdf";
@@ -34,10 +43,12 @@ public class ConstancyPDFGenerator extends PDFGenerator {
             PDDocumentCatalog docCatalog = _pdfDocument.getDocumentCatalog();
             PDAcroForm acroForm = docCatalog.getAcroForm();
 
+            //Set coordinator name using application-data.properties info.
             String coordinator = new String(coordinatorName.getBytes("ISO-8859-1"), "UTF-8");
             acroForm.getField("Coordinador1").setValue(coordinator);
             acroForm.getField("Coordinador2").setValue(coordinator);
 
+            //Set some fields manually.
             Calendar cal = Calendar.getInstance();
             int day = cal.get(Calendar.DAY_OF_MONTH);
             int year = cal.get(Calendar.YEAR);
@@ -49,6 +60,7 @@ public class ConstancyPDFGenerator extends PDFGenerator {
             formValues.remove("Motivo");
             formValues.remove("Requestors");
 
+            //Iterates through remaining custom fields.
             for(Map.Entry<String, String> entry : formValues.entrySet()) {
                 acroForm.getField(entry.getKey()).setValue(entry.getValue());
             }
@@ -60,7 +72,9 @@ public class ConstancyPDFGenerator extends PDFGenerator {
         }
     }
 
-
+    /**
+     * Initializes map for translating months from integer to spanish words.
+     */
     private void initMonthsMap() {
         monthsMap.put(0, "enero");
         monthsMap.put(1, "febrero");

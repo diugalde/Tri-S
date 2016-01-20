@@ -1,3 +1,9 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
 package cr.ac.siua.tec.services.impl;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -34,6 +40,10 @@ public class RecaptchaServiceImpl implements RecaptchaService {
         this.restTemplate = restTemplate;
     }
 
+
+    /**
+     * Validates recaptcha response with Google API using the secret key.
+     */
     @Override
     public boolean isResponseValid(String remoteIp, String response) {
         RecaptchaResponse recaptchaResponse;
@@ -47,6 +57,9 @@ public class RecaptchaServiceImpl implements RecaptchaService {
         return recaptchaResponse.success;
     }
 
+    /**
+     * Creates a hashmap with the parameters required for the Recaptcha Verification.
+     */
     private MultiValueMap<String, String> createBody(String secret, String remoteIp, String response) {
         MultiValueMap<String, String> form = new LinkedMultiValueMap<>();
         form.add("secret", secret);

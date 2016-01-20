@@ -1,3 +1,9 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
 package cr.ac.siua.tec.utils;
 
 import org.apache.commons.codec.binary.Base64;
@@ -13,6 +19,9 @@ public abstract class PDFGenerator {
 
     public abstract String generate(HashMap<String, String> formValues);
 
+    /**
+     * Encodes PDF object (PDDocument) to base4.
+     */
     public String encodePDF(PDDocument document) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         try {

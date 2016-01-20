@@ -1,3 +1,9 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
 package cr.ac.siua.tec.utils;
 
 import java.util.ArrayList;
@@ -16,6 +22,9 @@ public class FormValidator {
         initFieldTypesMap();
     }
 
+    /**
+     * Initializes map containing each form field with its corresponding type.
+     */
     private void initFieldTypesMap() {
         fieldTypesMap = new HashMap<>();
         HashMap<String, String[]> validationCategoryMap = (HashMap<String, String[]>) getValidationTypeMap();
@@ -26,6 +35,9 @@ public class FormValidator {
         }
     }
 
+    /**
+     * Maps field type to validation method using Java 8 Lambdas.
+     */
     private void initMethodsMap() {
         methodsMap = new HashMap<>();
         methodsMap.put("email", (field) -> isValidEmailAddress((String)field));
@@ -39,10 +51,14 @@ public class FormValidator {
         methodsMap.put("phone", (field) -> isValidPhoneField((String) field));
     }
 
+    /**
+     * Retrieves a list of incorrect fields.
+     */
     public List<String> getFormWrongFields(HashMap<String, String> map) {
         boolean fieldValidation;
         String fieldName, fieldValue, fieldType;
         List<String> wrongFields = new ArrayList<>();
+        //Iterates through all form fields and check if the content is valid.
         for(Map.Entry<String, String> entry : map.entrySet()) {
             fieldName = entry.getKey();
             fieldValue = entry.getValue();
@@ -54,6 +70,32 @@ public class FormValidator {
         }
         return wrongFields;
     }
+
+    /**
+     * Maps form fields to validation type. It needs to be outsourced to a file.
+     */
+    private Map<String, String[]> getValidationTypeMap() {
+        Map<String, String[]> map = new HashMap<>();
+        map.put("email", new String[] {"Requestor"});
+        map.put("boolean", new String[] {"Cumple con los requisitos", "Tiene choque de horario"});
+        map.put("alphanumeric", new String[] {"Identificador del laboratorio", "Identificador del equipo",
+                "Código del curso", "Identificador del espacio de trabajo"});
+        map.put("numeric", new String[] {"Carné", "Número de grupo", "RN", "Cédula",
+                "Nota del curso", "Promedio ponderado", "Total de horas", "Número de cuenta cliente"});
+        map.put("string", new String[] {"Nombre del estudiante", "Carrera", "Nombre del curso",
+                "Nombre del profesor", "Sede", "Tipo de levantamiento", "Tipo de asistencia", "Nombre del funcionario", "Banco"});
+        map.put("date", new String[] {"Día de matrícula", "Fecha de uso"});
+        map.put("time", new String[] {"Hora de matrícula", "Hora inicial", "Hora final"});
+        map.put("any", new String[] {"Justificación", "Detalle", "Motivo", "Actividades que realizará el asistente",
+                "Cursos requisito", "Cursos matriculados"});
+        map.put("phone", new String[] {"Número de celular", "Número de teléfono"});
+        return map;
+    }
+
+
+                /*
+                    The remaining methods validates all form field types using regex.
+                 */
 
     public boolean isValidEmailAddress(String email) {
         String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
@@ -101,24 +143,6 @@ public class FormValidator {
     public boolean isValidBooleanField(String field) {
         return field.equalsIgnoreCase("true") || field.equalsIgnoreCase("false")
                 || field.equalsIgnoreCase("Si") || field.equalsIgnoreCase("No") || field.equalsIgnoreCase("Sí");
-    }
-
-    private Map<String, String[]> getValidationTypeMap() {
-        Map<String, String[]> map = new HashMap<>();
-        map.put("email", new String[] {"Requestor"});
-        map.put("boolean", new String[] {"Cumple con los requisitos", "Tiene choque de horario"});
-        map.put("alphanumeric", new String[] {"Identificador del laboratorio", "Identificador del equipo",
-                "Código del curso", "Identificador del espacio de trabajo"});
-        map.put("numeric", new String[] {"Carné", "Número de grupo", "RN", "Cédula",
-                "Nota del curso", "Promedio ponderado", "Total de horas", "Número de cuenta cliente"});
-        map.put("string", new String[] {"Nombre del estudiante", "Carrera", "Nombre del curso",
-                "Nombre del profesor", "Sede", "Tipo de levantamiento", "Tipo de asistencia", "Nombre del funcionario", "Banco"});
-        map.put("date", new String[] {"Día de matrícula", "Fecha de uso"});
-        map.put("time", new String[] {"Hora de matrícula", "Hora inicial", "Hora final"});
-        map.put("any", new String[] {"Justificación", "Detalle", "Motivo", "Actividades que realizará el asistente",
-                "Cursos requisito", "Cursos matriculados"});
-        map.put("phone", new String[] {"Número de celular", "Número de teléfono"});
-        return map;
     }
 
 }

@@ -1,13 +1,10 @@
-/**
- * main.js
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2015, Codrops
- * http://www.codrops.com
- */
+/* 
+	TRI-S - Web App
+	Developed by: Diego Ugalde Ávila - Luis E. Ugalde Barrantes. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
+
 var ready = function() {
 	(function() {
 		
@@ -43,10 +40,6 @@ var ready = function() {
 				lockScroll = false, xscroll, yscroll,
 				isAnimating = false;
 
-		/**
-	 * gets the viewport width and height
-	 * based on http://responsejs.com/labs/dimensions/
-	 */
 		function getViewport( axis ) {
 			var client, inner;
 			if( axis === 'x' ) {
@@ -116,7 +109,7 @@ var ready = function() {
 			rId = "recaptcha-" + $selectedItem.attr("form-name");
 			tempWidgetId = $("#"+rId).attr("widget-id");
 			if(typeof tempWidgetId === "undefined") {
-				tempId = grecaptcha.render(rId, {'sitekey' : '6LdD3RMTAAAAAHOdlx1SDF3XkblVuFh0LYXCLE8d'});
+				tempId = grecaptcha.render(rId, {'sitekey' : '6LdD2xUTAAAAALM_uw03yEXFXAk5PI-tjIYb7nPA'});
 				$("#"+rId).attr("widget-id", tempId);
 			}else{
 				grecaptcha.reset(tempWidgetId);

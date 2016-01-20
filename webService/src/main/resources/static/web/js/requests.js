@@ -1,7 +1,16 @@
+/* 
+	TRI-S - Web App
+	Developed by: Diego Ugalde Ávila - Luis E. Ugalde Barrantes. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
+
 var ready = function() {
 
-	var baseURL = "http://localhost:8282";
+	var baseURL = "http://ws.tec.siua.ac.cr";
 
+
+	//When a form is submitted, it creates a JSON with the field information and sends it to the Java Web Service.
 	$("body").on("submit", ".cd-form", function(event) {
 		$clickedForm = $(this);
 		event.preventDefault();
@@ -43,7 +52,7 @@ var ready = function() {
 		}
 	});
 
-
+	//For every item inside wrongFields list, its input field is highlighted in red.
 	function highlightWrongFields(form, wrongFields) {
 		for(var i = 0; i < wrongFields.length; i++) {
 			form.find("input[name='" + wrongFields[i] +"']").addClass("wrong-field");
@@ -51,6 +60,7 @@ var ready = function() {
 	}
 
 
+	// Shows notification on the top right of the screen.
 	function generateNotification(notificationType, message) {
 		//message = JSON.stringify(message);
 		notyObject = noty({

@@ -1,3 +1,10 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
+
 package cr.ac.siua.tec.controllers;
 
 import cr.ac.siua.tec.services.RTService;
@@ -22,10 +29,14 @@ public class FormController {
     @Autowired
     private RTService rtService;
 
-    //@CrossOrigin(origins = "http://localhost:8686")
+    /**
+     * In charge of receiving web requests (forms) and validating them.
+     */
+    @CrossOrigin(origins = "http://tec.siua.ac.cr")
     @RequestMapping(value="/request", method = RequestMethod.POST)
     public ResponseEntity<HashMap<String, String>> createTicket(@RequestBody HashMap<String, String> map) {
         HashMap<String, String> responseMap;
+        // Verifies recaptcha response with GoogleService.
         if(!recaptchaService.isResponseValid("", map.get("g-recaptcha-response"))) {
             responseMap = (HashMap<String, String>) NotificationManager.getInvalidCaptchaMsg();
         }else {
@@ -34,13 +45,19 @@ public class FormController {
         return new ResponseEntity<>(responseMap, HttpStatus.OK);
     }
 
-
+    /**
+     * In charge of receiving mobile requests (forms) and validating them. No captcha response required.
+     */
     @RequestMapping(value="/mobileRequest", method = RequestMethod.POST)
     public ResponseEntity<HashMap<String, String>> createMobileTicket(@RequestBody HashMap<String, String> map) {
         return new ResponseEntity<>(getRequestResponseMap(map), HttpStatus.OK);
     }
 
 
+    /**
+     * Validates form fields. If the validation was succesful, a ticket is created in RT.
+     * Returns HashMap with the corresponding notification.
+     */
     private HashMap<String, String> getRequestResponseMap(HashMap<String, String> formMap) {
         HashMap<String, String> responseMap;
         List<String> wrongFields = validator.getFormWrongFields(formMap);

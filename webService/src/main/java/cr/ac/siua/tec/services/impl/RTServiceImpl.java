@@ -1,3 +1,9 @@
+/*
+	TRI-S - Web Service
+	Developed by: Luis E. Ugalde Barrantes - Diego Ugalde Ávila. 2016.
+	This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+*/
+
 package cr.ac.siua.tec.services.impl;
 
 import cr.ac.siua.tec.services.RTService;
@@ -33,6 +39,10 @@ public class RTServiceImpl implements RTService {
     @Value("${rt.rest-base-url}")
     private String baseUrl;
 
+
+    /**
+     * Returns all of the ticket's data in a hashmap. If the ticket doesn't exist returns null.
+     */
     public HashMap<String, String> getTicket(String ticketId) {
         HashMap<String, String> ticketContent = null;
         String url = this.baseUrl + "/ticket/" + ticketId + "/show";
@@ -58,6 +68,10 @@ public class RTServiceImpl implements RTService {
         }
     }
 
+    /**
+     * Parses the RT response using split (regex) to form a new hashmap.
+     * Indexes are predetermined to take the needed values.
+     */
     public HashMap<String, String> ticketStringToHashMap(String ticket) {
         HashMap<String, String> result = new HashMap<>();
         String[] pairs = ticket.split("\n(?!\\s{4})");
@@ -76,6 +90,11 @@ public class RTServiceImpl implements RTService {
         return result;
     }
 
+
+    /**
+     * Creates a ticket in RT by sending POST request with the form content (hashmap).
+     * If the ticket was succesfully created, returns 1. Otherwise -1.
+     */
     public int createTicket(HashMap<String, String> formValues) {
         String url = this.baseUrl + "/ticket/new";
 
@@ -97,6 +116,10 @@ public class RTServiceImpl implements RTService {
         }
     }
 
+
+    /**
+     * Parses HttpResponse to String.
+     */
     private String getResponseString(HttpResponse response) throws IOException {
         System.out.println("Response Code : " + response.getStatusLine().getStatusCode());
         BufferedReader rd = new BufferedReader(
@@ -110,10 +133,15 @@ public class RTServiceImpl implements RTService {
         return result.toString();
     }
 
+
+    /**
+     * Builds a string with the structure needed to post a new ticket to RT REST API.
+     */
     public String getTicketParamsString(HashMap<String, String> formValues) {
         formValues.remove("g-recaptcha-response");
         StringBuilder sb = new StringBuilder();
 
+        //Manually appends the queue, subject and requestor fields.
         sb.append("Queue: " + formValues.get("Queue") + "\n");
         sb.append("Subject: Solicitado por " + formValues.get("RequestorName") + "\n");
         sb.append("Requestor: " + formValues.get("Requestor") + "\n");
@@ -121,6 +149,7 @@ public class RTServiceImpl implements RTService {
         formValues.remove("Requestor");
         formValues.remove("RequestorName");
 
+        //Iterates through all custom fields.
         String fieldName, fieldValue;
         for(Map.Entry<String, String> entry : formValues.entrySet()) {
             fieldName = entry.getKey();

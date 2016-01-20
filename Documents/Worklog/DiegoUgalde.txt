@@ -242,5 +242,15 @@ Entregables semana #4 (04 de enero, 2016).
 		- Uso de keepass.
 	19 de enero:
 		- Quitando captcha de aplicación móvil.
-		
-		
+		- Finalización de instalación RT en la sede. Configuración de correos.
+		- Despliegue del front-end de la aplicación web en la Sede.
+		- Redacción de pruebas del sistema.
+		- Documentación del código Java y Javascript.
+	20 de enero:
+		- Ejecución de pruebas de aceptación.
+		- Firma de documentos pendientes con Kevin.
+		- Creación de manual técnico.
+		- Reunión con la profesora María Estrada para muestra de la ejecución de la iteración #3.
+	21 de enero:
+		- Entrega de calificación grupal, evidencias y manual técnico.
+		- Cierre curso y proyecto.
