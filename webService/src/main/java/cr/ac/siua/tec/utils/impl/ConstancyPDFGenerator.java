@@ -23,9 +23,6 @@ import java.util.Map;
 @PropertySource(value={"classpath:application-data.properties"})
 public class ConstancyPDFGenerator extends PDFGenerator {
 
-    @Value("${coordinator.name}")
-    private String coordinatorName;
-
     private Map<Integer, String> monthsMap = new HashMap<>();
 
     public ConstancyPDFGenerator() {
@@ -42,11 +39,6 @@ public class ConstancyPDFGenerator extends PDFGenerator {
             PDDocument _pdfDocument = PDDocument.load(originalPdf);
             PDDocumentCatalog docCatalog = _pdfDocument.getDocumentCatalog();
             PDAcroForm acroForm = docCatalog.getAcroForm();
-
-            //Set coordinator name using application-data.properties info.
-            String coordinator = new String(coordinatorName.getBytes("ISO-8859-1"), "UTF-8");
-            acroForm.getField("Coordinador1").setValue(coordinator);
-            acroForm.getField("Coordinador2").setValue(coordinator);
 
             //Set some fields manually.
             Calendar cal = Calendar.getInstance();
