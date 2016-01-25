@@ -1,0 +1,221 @@
+<!--
+    TRI-S - Web App
+    Developed by: Diego Ugalde Ávila - Luis E. Ugalde Barrantes. 2016.
+    This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+-->
+
+<form class="cd-form floating-labels" request="Inclusión para computación">
+
+	<legend>
+		<div class="form-header">
+			<img src="images/requestIcons/inclusionComp.png" class="img-responsive"/>
+			<h3>Inclusión para Computación</h3>
+		</div>
+	</legend>
+
+	<section class="clear-float"></section>
+
+	<div class="row">
+		<div class="col-md-12">
+			<section class="info-accordion-section">
+				<section class="panel-group" id="accordion-inclusion" role="tablist" aria-multiselectable="true">
+					<section class="panel panel-default">
+						<section class="panel-heading custom-panel-heading" role="tab">
+							<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-inclusion" href="#collapse-inclusion" aria-expanded="false" aria-controls="collapse-inclusion">
+								<h3 class="panel-title tab-accordion-title">
+									<i class="fa fa-plus-circle"></i><b> Información</b>
+								</h3>
+							</a>
+						</section>
+						<section id="collapse-inclusion" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<section class="panel-body">
+								<p class="lead">
+									Este formulario sirve solamente para matricular por inclusión cursos de la Escuela de Computación. A continuación las instrucciones generales: 
+								<ul class="info-list">
+									<li>• La boleta debe de ser completada en su totalidad para dar trámite a su solicitud.  Si hay espacios en blanco o se detecta alguna falsedad en los mismos la boleta no será tramitada.</li>
+									<li>• Para solicitar una inclusión el estudiante debe tener los requisitos aprobados para llevar el curso o que en su defecto haya solicitado el levantamiento en la fecha correspondiente y este haya sido aprobado.</li>
+									<li>• El curso que se solicita incluir no debe provocar un choque de horario en su matrícula ni superar el límite de créditos que le restrinja el RN de ningún curso.</li>
+									<li>• Al entregar esta boleta el estudiante autoriza a que la Escuela de Computación lo matricule en el horario y grupo solicitado si es que se le asigna un cupo en dicho grupo.</li>
+								</ul>
+								</p>
+						</section>
+					</section>
+				</section>
+			</section>
+			</section>
+	</div>
+	</div> 
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="icon">
+			<label class="cd-label" for="Nombre del estudiante">Nombre completo</label>
+			<input class="use form-field requestor-name" type="text" name="Nombre del estudiante" id="inc-name" required>
+		</div> 
+	</div>
+	<div class="col-md-6">
+		<div class="icon">
+			<label class="cd-label form-field" for="Requestor">Correo electrónico</label>
+			<input class="email form-field" type="email" name="Requestor" id="inc-email" required>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<div class="icon">
+			<label class="cd-label" for="Carné">Carné</label>
+			<input class="use form-field" type="number" name="Carné" id="inc-student-id" required>
+		</div> 
+	</div>
+	<div class="col-md-4">
+		<div class="icon">
+			<label class="cd-label" for="Número de teléfono">Teléfono (opcional)</label>
+			<input class="use form-field" type="tel" name="Número de teléfono" id="inc-telephone">
+		</div> 
+	</div>
+	<div class="col-md-4">
+		<div class="icon">
+			<label class="cd-label" for="Número de celular">Número de celular</label>
+			<input class="use form-field" type="tel" name="Número de celular" id="inc-cellphone" required>
+		</div> 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<div class="icon">
+			<label class="cd-label" for="Carrera">Carrera</label>
+			<input class="use form-field" type="text" name="Carrera" id="inc-career" required>
+		</div> 
+	</div>
+	<div class="col-md-4">
+		<div class="icon">
+			<label class="cd-label" for="Día de matrícula">Día de matrícula</label>
+			<input class="form-field bootstrap-datepicker" type="text" name="Día de matrícula" id="inc-enroll-day" required>
+		</div> 
+	</div>
+	<div class="col-md-4">
+		<div class="icon">
+			<label class="cd-label" for="Hora de matrícula">Hora de matrícula</label>
+			<input class="form-field bootstrap-timepicker" type="text" name="Hora de matrícula" id="inc-enroll-time" required>
+		</div> 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="icon">
+			<label class="cd-label" for="Nombre del curso">Nombre del curso</label>
+			<input class="use form-field" type="text" name="Nombre del curso" id="inc-course" required>
+		</div> 
+	</div>
+	<div class="col-md-6">
+		<div class="icon">
+			<label class="cd-label" for="Código del curso">Código del curso</label>
+			<input class="use form-field" type="text" name="Código del curso" id="inc-course-code" required>
+		</div> 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="icon">
+			<label class="cd-label" for="Número de grupo">Número de grupo</label>
+			<input class="use form-field" type="number" name="Número de grupo" id="inc-group" required>
+		</div> 
+	</div>
+	<div class="col-md-6">
+		<div class="icon">
+			<label class="cd-label" for="Nombre del profesor">Nombre del profesor</label>
+			<input class="use form-field" type="text" name="Nombre del profesor" id="inc-prof" required>
+		</div> 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<div class="icon toggle-icon">
+			<label class="cd-label float toggle-label" for="Cumple con los requisitos">¿Tiene los requisitos?</label>
+			<input type="hidden" name="Cumple con los requisitos" value="No"> 
+			<input class="form-field toggle-bootstrap" type="checkbox" name="Cumple con los requisitos" checked data-toggle="toggle" id="inc-req" data-off="No" data-on="Sí" value="Sí"> 
+		</div> 
+	</div>
+	<div class="col-md-4">
+		<div class="icon toggle-icon">
+			<label class="cd-label float toggle-label" for="Tiene choque de horario">¿Tiene choque de horario?</label>
+			<input type="hidden" name="Tiene choque de horario" value="No"> 
+			<input class="form-field toggle-bootstrap" type="checkbox" name="Tiene choque de horario" checked data-toggle="toggle" id="inc-time-conflict" data-off="No" data-on="Sí" value="Sí"> 
+		</div> 
+	</div>
+	<div class="col-md-4">
+		<div class="icon">
+			<label class="cd-label float" for="RN">Indique el RN (solo si tiene)</label>
+			<input class="use form-field" type="number" name="RN" id="inc-rn" value="0" >
+		</div> 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default panel-custom">
+			<div class="panel-heading panel-heading-custom">
+				<h3 class="panel-title panel-title-custom">Agregue los cursos matriculados este semestre</h3>
+			</div>
+			<div class="panel-body panel-body-custom">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="icon">
+							<label class="cd-label" for="Codigo Curso matriculado">Código</label>
+							<input class="use form-field" type="text" id="dynamic-course-code">
+						</div> 
+					</div>
+					<div class="col-md-6">
+						<div class="icon">
+							<label class="cd-label" for="Nombre curso matriculado">Nombre curso</label>
+							<input class="use form-field" type="text" id="dynamic-course-name">
+						</div> 
+					</div>
+					<div class="col-md-3">
+						<div class="icon">
+							<label class="cd-label" for="Numero curso matriculado">No. Grupo</label>
+							<input class="use form-field" type="number" id="dynamic-course-number">
+						</div> 
+					</div>
+				</div>
+				<div class="row addcourse-div">
+					<div class="text-center">
+						<button id="addcourse-btn" class="btn btn-primary dynamic-btn">Agregar curso</button> 
+						<button id="resetcourses-btn" class="btn btn-danger dynamic-btn">Borrar cursos</button> 
+					</div>
+				</div>
+				<div class="row">
+					<div class="enrolledcourses-textarea">
+						<div class="icon">
+							<textarea readonly class="message form-field" name="Cursos matriculados" id="dynamic-courses" required></textarea>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="icon">
+			<label class="cd-label" for="Justificación">Justificación de la inclusión</label>
+			<textarea class="message form-field" name="Justificación" id="inc-justify" required></textarea>
+		</div> 
+	</div>
+</div>
+
+<div class="row">
+	<div id="recaptcha-inclusion" class="recaptcha-container"></div>
+</div>
+
+<div class="row">
+	<input type="submit" value="Enviar solicitud" class="submit-btn">
+</div>
+
+</form>

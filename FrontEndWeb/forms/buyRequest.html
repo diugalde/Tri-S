@@ -1,0 +1,89 @@
+<!--
+    TRI-S - Web App
+    Developed by: Diego Ugalde Ávila - Luis E. Ugalde Barrantes. 2016.
+    This code is licensed under the GNU GENERAL PUBLIC LICENSE (GPL) V3. See LICENSE file for details.
+-->
+
+
+<form class="cd-form floating-labels" request="Solicitudes de compras, copias e impresiones">
+
+    <legend>
+        <div class="form-header">
+            <img src="images/requestIcons/solicitudCompra.png" class="img-responsive"/>
+            <h3>Compras, copias, impresiones</h3>
+        </div>
+    </legend>
+
+    <section class="clear-float"></section>
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="info-accordion-section">
+                <section class="panel-group" id="accordion-buyRequest" role="tablist" aria-multiselectable="true">
+                    <section class="panel panel-default">
+                        <section class="panel-heading custom-panel-heading" role="tab">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion-buyRequest" href="#collapse-buyRequest" aria-expanded="false" aria-controls="collapse-buyRequest">
+                                <h3 class="panel-title tab-accordion-title">
+                                    <i class="fa fa-plus-circle"></i><b> Información</b>
+                                </h3>
+                            </a>
+                        </section>
+                        <section id="collapse-buyRequest" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <section class="panel-body">
+                                <p class="lead">
+                                    Esta solicitud es exclusiva para profesores. Si desea solicitar una compra equipo, copias o imprimir material como exámenes para ser utilizado en labores académicas debe llenar el siguiente formulario.
+                                </p>
+                                <p class="lead">Recibirá un correo con la resolución de la solicitud. </p>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </div>          
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="icon">
+                <label class="cd-label" for="Nombre del profesor">Nombre completo</label>
+                <input class="use form-field requestor-name" type="text" name="Nombre del profesor" id="buy-name" required>
+            </div> 
+        </div>
+        <div class="col-md-4">
+            <div class="icon">
+                <label class="cd-label form-field" for="Requestor">Correo electrónico</label>
+                <input class="email form-field" type="email" name="Requestor" id="buy-email" required>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="icon">
+                <label class="cd-label" for="Cédula">Cédula</label>
+                <input class="use form-field" type="number" name="Cédula" id="cons-id" required>
+            </div> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Detalle">Detalle de la compra</label>
+                <textarea class="message form-field" name="Detalle" id="buy-description" required></textarea>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <div class="icon">
+                <label class="cd-label" for="Justificación">Justificación de la compra</label>
+                <textarea class="message form-field" name="Justificación" id="buy-justify" required></textarea>
+            </div> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="recaptcha-buyRequest" class="recaptcha-container"></div>
+    </div>
+
+    <div class="row">
+        <input type="submit" value="Enviar solicitud" class="submit-btn">
+    </div>
+
+</form>
