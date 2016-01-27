@@ -12,8 +12,15 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 apply plugin:'application'
+apply plugin: 'war'
+
 
 mainClassName = "cr.ac.siua.tec.Application"
+
+war {
+    baseName = 'TRI-S-webService'
+    version =  '1.0.0'
+}
 
 jar {
     baseName = 'TRI-S-webService'
@@ -40,6 +47,7 @@ dependencies {
     compile("org.springframework:spring-web")
     compile("org.apache.httpcomponents:httpclient:4.5.1")
     compile("org.apache.pdfbox:pdfbox:1.8.10")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     testCompile 'junit:junit:[4,)'
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
